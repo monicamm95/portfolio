@@ -84,6 +84,9 @@ a{
 	width: 100%;
 }
 
+.work a{
+	text-decoration: none;
+}
 
 .work-desc{
 	margin: 25px 0 50px;
