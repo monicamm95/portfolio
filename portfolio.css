@@ -92,6 +92,14 @@ a{
 	margin: 25px 0 50px;
 }
 
+.work-desc p{
+	margin-top: 8px;
+}
+
+.work-desc h3{
+	margin-bottom: 0;
+}
+
 .work a:hover{
 	text-decoration: none;
 	color: #5C54AB;
