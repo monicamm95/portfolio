@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monica Moore</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link rel="shortcut icon" href="img/favicon.ico" >
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+</head>
+
+
+<body>
+    <div class="project">
+        <a href="index.html" class="backhome">Monica Moore</a>
+        <h2 class=company>Clio</h2>
+        <h1>Contact Unification</h1>
+            <p>Clio is a software for lawyers to manage their business, including their clients, documents, matters, and payments. There's two products: Clio Grow, which is used for intake, and Clio Manage, which is used for all client and case management post-intake.</p>
+
+            <p>Clio acquired Lexicata in October 2018, rebranded it as Clio Grow, and relaunched it in January 2019 as part of the Clio Suite. Despite the Suite product positioning, Grow and Manage still function as two integrated but separate applications, each with their own database.
+
+            The current contacts experience does not meet customer expectations, resulting in being Clio Grow’s top requested feature with 214 votes. 30% of all the NPS’ detractors are related to dissatisfaction with Grow/Manage integration, which ultimately led to reduced MRR and higher account churn with an estimated impact of over $40,000 USD a month. 
+
+            Our goal is to unify the contacts across both platforms so that they automatically sync - the first step to more complete product unification.</p> 
+
+
+        <h3>Map Out the Current State</h3>
+
+        <p>I began by mapping out all the fields and interfaces involving contacts in both products.</p>
+
+        <img src="img/currentstatecontacts.png">
+
+        <h3>User Interviews</h3>
+        <p>Key research questions to answer:</p>
+        <ul>
+            <li>What workflows do our users have to add and update contacts?</li>
+            <li>What pain points do our users have when managing contacts?</li>
+            <li>What language do our users use to refer to prospects, contacts, and clients?</li>
+            <li>When do users use Grow vs Manage?</li>
+            <li>How do users categorize their contacts in their firm? What defines a client, etc?</li>
+            <li>What do users envision as their ideal contact experience?</li>
+        </ul>
+
+        <h3>Problem Statement</h3>
+        <p>Based on user research, we came up with the following problem statement.</p>
+        <p>Today, contacts in Grow and Manage are stored separately and are not automatically synced with one another. Suite customers can’t rely on Clio as a single “source of truth” for their contact & matter data and they are constantly struggling to keep their firm’s contact data accurate, complete, and up-to-date.
+
+        There are two primary problems related to contact synchronization that is preventing our customers from navigating through their contacts efficiently across Grow and Manage:</p>
+        <h4>1) Manual Processes</h4>
+        <p>The current synchronization is not bi-directional, meaning any contact updates on either Grow or Manage will not be reflected in the other system until a manual export action is taken place. Manual processes are required to ensure contact data is accurate and up to date.</p>
+        <h4>2) Duplicate Contacts</h4>
+        <p>Duplicate contact records with outdated information are often being created because users are unaware when a contact already exists in the other product. Duplicated contacts could lead to errors and incomplete information when our users are working through a matter.</p>
+
+        <h3>User Workflows</h3>
+        <p>I mapped out each interviewed firm's workflow, and then created an ideal workflow. </p>
+        <img src="img/contactsflow.png">
+        <img src="img/idealflow.png">
+
+        <h3>Comparing + Critiquing the Existing UIs</h3>
+        <p>I went through all the existing contact interfaces and added comments on how to improve.</p>
+        <img src="img/crit.png">
+
+        <h3>Lofi Variations</h3>
+        <img src="img/contactlofi.png">
+
+        <h3>Hifi Variations + Feedback</h3>
+        <p>I created several variations and opened them up to async feedback from the design team.</p>
+
+        <img src="img/contactfeedback.png">
+
+        <h4>Contact Creation</h4>
+        <p>In Manage, I updated the contact creation form to be more streamlined, and added the fields that were unique to Grow.</p>
+        <img src="img/managecreatecontact.png">
+
+        <p>In Grow, I updated the creation form to follow the same order and a similar format to Manage, to ensure contact creation was similar throughout both products. I also removed the contact import from Manage functionality.</p>
+
+        <img src="img/growcreatecontact.png">
+
+        <h4>Contact List</h4>
+        <p>I updated the contact lists to show consistent information in a consistent layout, while still retaining the design patterns of each product.</p>
+        <img src="img/managelist.png">
+        <img src="img/growlist.png">
+
+        <h4>Contact Page</h4>
+        <p>I updated the contact information to be consistent across products, while recognizing that the tasks performed in each product are different.</p>
+        <img src="img/managecontact.png">
+        <img src="img/growcontact.png">
+
+        <h3>Usability Testing</h3>
+        <p>I tested the designs out with users and analysed the results using affinity mapping.</p>
+        <img src="img/contacttests.png">
+        <p>We learned a lot, and here are the key findings.</p>
+        <h4>Contact Unification</h4>
+        <ul>
+            <li>The majority of users thought that unifying contacts across Grow and Manage would make their work easier and more seamless.</li>
+            <li>Some users were concerned that Manage would become cluttered by contacts they don’t need to see in Manage.</li>
+            <li>Users expressed concerns that the act of unifying would lead to lots of duplicates, creating a lot of extra work.</li>
+        </ul>
+        <h4>Contact Types and Tags</h4>
+        <ul>
+            <li>Users were excited about being able to use contact types and tags to organize and identify their contacts, provided that they’re customizable.</li>
+            <li>There is a need to categorize and sub-categorize contacts, but the difference between contact types and tags is unclear</li>
+        </ul>
+        <h4>Filters</h4>
+        <ul>
+            <li>The concern around clutter is primarily in regards to the contact list and search results. If users had the ability to easily filter out certain contact types, their concerns could be alleviated.</li>
+            <li>Filters would help users quickly access the contacts they need to see to perform their work more efficiently.</li>
+        </ul>
+
+        <h3>Further Exploration Based on User Feedback</h3>
+        <h4>What's the ideal experience for categorizing contacts?</h4>
+        <p>Users were confused about the difference between contact types and tags, which are labels already being used in Clio Grow. I decided to explore different ways we can group and label contacts, and landed on having one labelling system called Labels. We could have some preset labels, automatic labelling, and allow users to customize.</p>
+        <img src="img/cliolabels.png">
+
+        <h4>How do we prevent contact lists from becoming “cluttered” with Did Not Hires, while still having them available when needed?</h4>
+        <p>Users were concerned that prospective clients that didn't move forward with them would clutter their Clio Manage contacts, since these contacts are currently just in Grow. I experimented with different ways to filter out contact types in order to address this concern.</p>
+        
+        <h3>Prioritization + Scoping</h3>
+        <p>I worked with the PM and Engineering Manager to prioritize the various aspects of the project.</p>
+        <img src="img/prioritize.png">
+        <p>We decided to break the project into 3 phases, while also simultanously working on a way to merge duplicate contacts, since it was discovered that duplicate contacts would be a big issue if not addressed.</p>
+       <img src="img/cliophases.png">
+
+       <h3>Contact Deduplication</h3>
+       <p>We knew that we'd need to build the ability to merge duplicate contacts, as unifying the contacts across Manage and Grow would likely create a lot of duplicates. At the same time, we discovered a bug that had created a lot of duplicates for customers. So, we needed to create a deduplication tool, that could be a stepping stone to merging contacts when they're unified.</p>
+
+       <p>We initially considered having a UI where users could review the duplicates. However, this would be a lot of work to build, and we wanted to fix the duplication issue for users as quickly as possible.</p>
+
+       <img src="img/idealdedupe.png">
+
+       <p>As an MVP, we decided to build an automated process that would remove identical duplicates. While this wouldn't merge unidentical duplicates, it would fix the majority of the duplicates that were created by the bug. If needed later, we can expand to create a more robust tool.</p>
+
+       <p>Users would receive an email notifying them that duplicate contacts had been found in their account with a CTA to clean them up.</p>
+
+       <img src="img/duplicateemail.png">
+
+       <p>They would then be brought to Clio Manage, and can initiate the process. If they wish to review the duplicate contacts, they can download a csv.</p>
+
+       <img src="img/dedupe1.png">
+
+       <p>Removing duplicates can take awhile, so there's a page telling them that the process is underway, and they can leave the page.</p>
+
+       <img src="img/dedupe2.png">
+
+       <p>Lastly, they receive an email confirming that the duplicates were successfully removed.</p>
+
+       <img src="img/dedupe3.png">
+
+        <div class="next">
+            <p>
+            <a href="pofonboarding.html">Next Project: POF Live! Onboarding</a>
+            </p>
+        </div>
+    </div>
+
+
+</body>
+</html>
