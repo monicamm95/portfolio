@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monica Moore</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link rel="shortcut icon" href="img/favicon.ico" >
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+</head>
+
+
+<body>
+    <div class="project">
+        <a href="index.html" class="backhome">Monica Moore</a>
+        <h2 class=company>Abnormal Security</h2>
+        <h1>Detection 360</h1>
+            <p>Abnormal learns the behavior of every identity in a company’s email environment and analyzes the risk of every event to block attacks. By understanding what is normal, Abnormal can detect and prevent the malicious and unwanted emails that bypass traditional solutions.</p> 
+            <p>Sometimes, Abnormal gets it wrong. Detection 360 is the place to go to report missed attacks + false positives, and get a response from Abnormal.</p>
+
+            <h4>Current UI</h4>
+            <img src="img/d360before.png">
+
+            <h3>Hypothesis</h3>
+            <p>For high-profile customers, or bad missed attacks, Abnormal’s Support team will write a document explaining why the attack was missed and how we’re fixing it.</p>
+            <p>If we provide automated insights to the customer, this will save company time, as well as improve the customer experience by being able to provide insights for every case.</p>
+
+            <h3>User Research</h3>
+            <p>I interviewed customers to get a better understanding of why users are using Detection 360 and what their needs are. The research findings are in the presentation below.</p>
+
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="550" src="https://embed.figma.com/proto/1mPTBtCh3IKC2q0HU2Zj3H/Detection-360?node-id=302-939&node-type=frame&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A3807&embed-host=share" allowfullscreen></iframe>
+
+            <h3>Problems with Current Experience</h3>
+            <p>Based on the user research, and my own analysis, I identified problems with the current UI.</p>
+            <img src="img/d360breakdown.png">
+
+            <h3>Detection 360 Table Redesign Goals</h3>
+            <ul>
+                <li>Improve readability</li>
+                <li>Design for addition of detailed insights, which can be lengthy</li>
+                <li>Highlight most important information</li>
+                <li>Ensure information is easy to understand, even when quickly scanning</li>
+            </ul>
+
+            <h3>Redesigned D360</h3>
+            <p>I redesigned the D360 experience, featuring an expandable table, as shown below.</p>
+            <img src="img/d360redesign.png">
+
+            <h4>Alternate Version</h4>
+            <p>I also designed a version where all information is displayed in the table. However, customers preferred having the expandable table so that they can quickly scan it and only gather more info when needed.</p>
+            <img src="img/d360alternate.png">
+
+            <h3>Variations</h3>
+            <p>Many variations needed to be designed, depending on the status of the submission, the outcome, or type of report.</p>
+            <img src="img/d360variation1.png">
+            <img src="img/d360variation2.png">
+            <img src="img/d360variation3.png">
+
+            <h3>Content Design</h3>
+            <p>A significant aspect to this project was designing the messaging in a way that was easy for engineering to implement as an automated response, but still felt human to the user. It needed to provide sufficient detail while also being easily understood.</p>
+            <img src="img/d360content1.png">
+            <img src="img/d360content2.png">
+
+            <h3>Roadmap and Additional Features</h3>
+            <p>After releasing the initial redesign, we followed up with additional iterations based on feedback both from the initial research and post-release. I worked with the PM and engineering to come up with a roadmap.</p>
+            <img src="img/d360roadmap.png">
+            <h4>Filters</h4>
+            <p>Customers needed more filtering options to quickly find the cases they were looking for.</p>
+            <img src="img/d360filters.png">
+            <h4>Email Notifications</h4>
+            <p>We found that users were having to regularly check to see if their report had been addressed, which was a hassle, or they were missing that it had been, because they weren't checking. To resolve this pain, we built email notifications.</p>
+            <img src="img/d360emails.png" style="max-width: 500px; display: block;margin-right: auto; margin-left: auto;">
+            <h4>Downloading</h4>
+            <p>Users need to download the results for reporting purposes.</p>
+            <img src="img/d360download.png">
+            <h4>Contact Support</h4>
+            <p>Users sometimes need to contact support about a case, and we found that it was a convoluted, error-prone process, both for the user and support. We decided to add the ability to contact support directly about a case.</p>
+            <img src="img/d360support.png">
+            <h4>Timestamps in Timeline</h4>
+            <p>Users wanted to know exactly when an attack was remediated and when a case was resolved so we added timestamps to the timeline.</p>
+            <img src="img/d360timestamps.png">
+            <h4>Submission Cancellation</h4>
+            <p>Sometimes users submit reports by mistake, and there's no way to cancel it.</p>
+            <img src="img/d360cancel.png">
+
+            <h3>Outcome</h3>
+            <p>We automated 100% of responses to Detection 360 submissions, saving 177 documents being written per week, or ~90 hours of effort by our security analyst team.</p>
+
+        <div class="next">
+            <p>
+            <a href="introcourse.html">Next Project: Top Hat Intro Course</a>
+            </p>
+        </div>
+    </div>
+
+
+</body>
+</html>
