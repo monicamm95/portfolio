@@ -1,3 +1,7 @@
+        #passwordPrompt {
+            display: none;
+        }
+
 body{
 	background-color: #F1F3E4;
 	color: #062144;

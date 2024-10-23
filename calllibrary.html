@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monica Moore</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link rel="shortcut icon" href="img/favicon.ico" >
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+</head>
+
+
+<body>
+          <script>
+         var password = "vancouver";
+         (function passcodeprotect() {
+            var passcode = prompt("Enter the password");
+            while (passcode !== password) {
+               alert("Incorrect password");
+               var passcode = prompt("Enter the password");
+            }
+         }());
+      </script>
+    <div class="project">
+        <a href="index.html" class="backhome">Monica Moore</a>
+        <h2 class=company>Orum</h2>
+        <h1>Call Library</h1>
+            <p>We built a Call Library as a place for reps and managers to save calls for training and coaching purposes.</p>
+
+            <h3>Objective</h3>
+            <p>One of the main purposes at Orum is to enable sales reps to become book more meetings. While the automated dialer helps them connect with more prospects, we want to help them perform better on the calls as well. Currently, this is largely done through coaching from the Sales Manager.</p>
+
+            <p>We also want to become an indispensible tool for managers, as they're a key decision maker in the adoption of Orum. If they're using Orum to manage their reps, they'll be more likely to renew.</p>
+
+            <h3>User Research</h3>
+            <p>With coaching being our new initiative, I conducted a general research project where I interviewed a dozen SDR managers to learn all about their role and how they coach their teams. I found that there's 3 key aspects to coaching a team of SDRs:</p>
+            <img src="img/keyaspects.png" class="embed">
+            <p>One of the most critical ways to coach a rep is to listen to their calls, spot opportunities for improvement, and give advice. Reps will also learn by listening to strong calls as examples.</p>
+            <p>I compiled the research into a deck. The section relevant to this project, the call feedback, is below.</p>
+
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="550" src="https://embed.figma.com/proto/1mPTBtCh3IKC2q0HU2Zj3H/User-Research?page-id=368%3A929&node-id=368-963&node-type=canvas&viewport=508%2C504%2C0.09&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+
+            <h3>Idea</h3>
+            <p>We found managers were spending a lot of time looking for calls to listen to. They were also compiling documents of training material outside of Orum with links to Orum call recordings. Meanwhile, sales reps were compiling lists of links of calls to bring to their manager to get feedback on.</p>
+
+            <p>A lot of this workflow was utilizing Orum calls, but happened outside of Orum. We decided to build a Call Library where users can save calls for review.</p>
+
+            <h3>Users</h3>
+            <img src="img/calllibraryusers.png">
+
+            <h3>Inspiration</h3>
+            <p>Many other sales tools with call recordings, also have some sort of library, such as Gong and Avoma. I also took a lot of inspiration from other audio players, such as Spotify and Apple Music.</p>
+            <img src="img/calllibraryinspo.png">
+
+            <h3>Call Library Design</h3>
+            <p>I utilized patterns in our Call History, as well as common patterns found in audio players. I wanted the UI to feel familiar to reps.</p>
+
+            <p>By default, the user sees all calls ever added to the Library in a table format, where they can press play, or open the call information.</p>
+            <img class="embed" src="img/libraryallcalls.png">
+
+            <p>When a user clicks play, the transcript opens in a panel, and an audio bar appears on the bottom. The navigation also collapses, mirroring behaviour in other areas of Orum.</p>
+
+            <img class="embed" src="img/librarycallplaying.png">
+
+            <p>Playlists can be made private or shared across the org, fulfulling the need for both teamwide training and individual coaching. Eventually we'd like the ability to share playlists with only selected team members, but it was not crucial for the initial scope.</p>
+
+            <img class="embed" src="img/libraryplaylist.png">
+
+            <p>There are a few variations of the audio bar, one being when the user is in a Salesfloor room.</p>
+
+            <img class="embed" src="img/libraryaudiobar.png">
+
+            <h3>Interfacing Call Library with Call History</h3>
+            <p>The way to add calls to the Library is from Call History, so the two experiences are closely entertwined. Users are listening to calls in History, adding to the Library, then later listening to them in the Library. Users expect a similar experience. However, Call History has many usability problems.</p>
+
+            <p>While I did explore designing Call Library to be consistent with Call History, we decided that it didn't make sense to continue a poor usability pattern, and it was worth it to invest time improving Call History to match. The key difference is being able to play calls from the table, and having an audio bar to easily navigate between calls.</p>
+
+            <img class="embed" src="img/callhistory.png">
+            <img class="embed" src="img/callhistorypanel.png">
+
+            <p>Users can add a call to the library from the call details panel or the audio bar.</p>
+
+            <img src="img/calllibraryadd.png">
+
+            <h3>Feedback and Reception</h3>
+            <p>I conducted usability testing both with our users and on usertesting.com, and feedback was overwhelmingly positive. We tracked usage upon release and saw it being used immediately. One incorrect assumption we made was that only managers should be able to add calls to the general team library. In reality, managers are short on time and rely on reps to help with this. Once changed, we saw a significant increase in usage. We also saw an increase in number of calls listened to in Call History with the new playbar. </p>
+
+
+        <div class="next">
+            <p>
+            <a href="studentcheckout.html">Next Project: Top Hat Student Checkout</a>
+            </p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

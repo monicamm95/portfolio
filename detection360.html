@@ -17,6 +17,17 @@
 
 
 <body>
+    <script>
+         var password = "vancouver";
+         (function passcodeprotect() {
+            var passcode = prompt("Enter the password");
+            while (passcode !== password) {
+               alert("Incorrect password");
+               return passcodeprotect();
+            }
+         }());
+      </script>
+      
     <div class="project">
         <a href="index.html" class="backhome">Monica Moore</a>
         <h2 class=company>Abnormal Security</h2>
