@@ -22,18 +22,22 @@
     (function passcodeprotect() {
         var passcode = prompt("Enter the password");
 
-        // If the user clicks "Cancel", take them back to the previous page
+        // Check if the user cancels the prompt
         if (passcode === null) {
-            window.location.href = "https://www.monicamoore.ca";   // Takes them back to the previous page
+            alert("Redirecting to the homepage.");
+            window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
+            return; // Exit the script
         }
 
+        // Incorrect password loop
         while (passcode !== password) {
-            // Allow them to cancel and return to the previous page
+            passcode = prompt("Incorrect password. Enter the password again or click Cancel to go back.");
+
+            // Check if the user cancels the prompt again
             if (passcode === null) {
-                window.location.href = "https://www.monicamoore.ca";  // Takes them back to the previous page
-            } else {
-                alert("Incorrect password");
-                passcode = prompt("Enter the password again or click Cancel to go back.");
+                alert("Redirecting to the homepage.");
+                window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
+                return; // Exit the script
             }
         }
     }());
