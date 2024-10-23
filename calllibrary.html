@@ -17,16 +17,27 @@
 
 
 <body>
-          <script>
-         var password = "vancouver";
-         (function passcodeprotect() {
-            var passcode = prompt("Enter the password");
-            while (passcode !== password) {
-               alert("Incorrect password");
-               var passcode = prompt("Enter the password");
+<script>
+    var password = "vancouver";
+    (function passcodeprotect() {
+        var passcode = prompt("Enter the password");
+
+        // If the user clicks "Cancel", take them back to the previous page
+        if (passcode === null) {
+            window.location.href = "https://www.monicamoore.ca";   // Takes them back to the previous page
+        }
+
+        while (passcode !== password) {
+            // Allow them to cancel and return to the previous page
+            if (passcode === null) {
+                window.location.href = "https://www.monicamoore.ca";  // Takes them back to the previous page
+            } else {
+                alert("Incorrect password");
+                passcode = prompt("Enter the password again or click Cancel to go back.");
             }
-         }());
-      </script>
+        }
+    }());
+</script>
     <div class="project">
         <a href="index.html" class="backhome">Monica Moore</a>
         <h2 class=company>Orum</h2>
