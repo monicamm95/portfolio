@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monica Moore</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link rel="shortcut icon" href="img/favicon.ico" >
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+</head>
+
+
+<body>
+<script>
+    var password = "vancouver";
+    (function passcodeprotect() {
+        var passcode = prompt("Enter the password");
+
+        // Check if the user cancels the prompt
+        if (passcode === null) {
+            alert("Redirecting to the homepage.");
+            window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
+            return; // Exit the script
+        }
+
+        // Incorrect password loop
+        while (passcode !== password) {
+            passcode = prompt("Incorrect password. Enter the password again or click Cancel to go back.");
+
+            // Check if the user cancels the prompt again
+            if (passcode === null) {
+                alert("Redirecting to the homepage.");
+                window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
+                return; // Exit the script
+            }
+        }
+    }());
+</script>
+    <div class="project">
+        <a href="index.html" class="backhome">Monica Moore</a>
+        <h2 class=company>Orum</h2>
+        <h1>Analytics</h1>
+            <p>Our analytics experience was out of date, sparse, and not meeting our customer's needs. Thus, it was the biggest reasons cited as a cause for churn to our competitors.</p>
+
+            <h3>User Research</h3>
+            <p>Coaching and the SDR manager persona was our team's new initiative to focus on. So, I conducted a general research project where I interviewed a dozen SDR managers to learn all about their role and how they coach their teams. I found that there's 3 key aspects to coaching a team of SDRs:</p>
+            <img src="img/keyaspects.png" class="embed">
+            <p>One of the most critical aspects of an SDR manager's role is to analyze analytics to assess performance and find areas for improvement.</p>
+            <p>I compiled the research into a deck. The section relevant to this project, analytics, is below.</p>
+
+            <iframe class="embed" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="550" src="https://embed.figma.com/proto/1mPTBtCh3IKC2q0HU2Zj3H/User-Research?page-id=437%3A9&node-id=437-11&node-type=canvas&viewport=-48%2C587%2C0.08&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+
+            <p>We combed through the interviews as well as hundreds of tickets in ProductBoard and grouped all the analytics to find themes.</p>
+
+            <img src="img/analyticsfeedback.png">
+
+            <h3>User Stories + Personas</h3>
+            <p>From compiling all the research, we generated the following possible user stories, broken down by role.</p>
+            <img class="embed" src="img/analyticsuserstories.png">
+
+            <p>Some key personas also became apparent. There's the general user types of manager, rep, and sales leader, but we also found there were distinct types of sales managers and reps, who needed different things out of analytics. There were managers who are data obsessed, wanting to know every metric, and managers who just care about the main KPIs. We needed to design an experience for both. New reps and high performing reps also have very different needs.</p>
+
+            <img class="embed" src="img/analyticspersona1.png">
+            <img class="embed" src="img/analyticspersona2.png">
+
+            <img class="embed" src="img/analyticsworkflow.png">
+
+            <h2>Project #1: Improve Analytics Dashboards</h2>
+            <p>For the first project as part of the analytics initiative, the scope was to improve our existing dashboard's usability as well add key data to help users measure their performance. Which data to add in V1 was determined by:</p>
+            <ul>
+                <li>Frequency of user request</li>
+                <li>Significance of impact</li>
+                <li>Technical feasibility</li>
+            </ul>
+
+            <p>Looking at all the user feedback, as well as what competitors had, the main data we decided to add was:</p>
+            <ul>
+                <li>Trends</li>
+                <li>A conversion funnel</li>
+                <li>An Account performance dashboard</li>
+                <li>An Objections dashboard</li>
+                <li>A When to Call dashboard</li>
+            </ul>
+
+            <p>An aspect of this scoping was also looking at what would bring us to parity with, as well as differentiate us from our close competitor, Nooks.</p>
+            <img style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/analyticscomp.png">
+
+            <h3>Usability Issues in Existing Analytics</h3>
+            <p>There was also a lot of feedback around the existing analytics that I wanted to address.</p>
+
+            <img src="img/oldanalytics.png">
+
+            <h3>Low - Mid Fidelity Iterations</h3>
+            <p>More time was spent in this stage than usual, since a big part of analytics design is figuring what to display, and in what format. I was ideating on different ideas, while also collaborating with engineering to figure out what was feasible.</p>
+            <img class="embed" src="img/analyticslofi.png">
+            <img class="embed" src="img/analyticsmedfi.png">
+
+            <h3>High Fidelity Designs</h3>
+            <p>I updated the Rep Performance page to include the overall conversion rates at the top. I removed the need to toggle the performance table, as this was a big annoyance for users. There's also now a conversion funnel and a trends graph, so teams can see whether they're improving. We also improved the disposition graphs so that users can easily filter by outcome, and can see them broken down by rep.</p>
+            <img src="img/repperformance.png">
+
+            <p>There's a new Account Performance page, which is similar to rep performance, but shows the stats for each account.</p>
+            <img src="img/accountperformance.png">
+
+            <p>On the Objections page, managers can see which objections their team is encountering and how well they're overcoming them. They can also see if some team members are doing better than others. This is an invaluable resource for coaching.</p>
+            <img src="img/objections.png">
+
+            <p>Lastly, we added a When to Call tab, where users can see when prospects are most likely to pick up compared to when their reps are dialing. They can use this info to optimize their dialing schedules.</p>
+            <img src="img/whentocall.png">
+
+            <h3>Rollout + Feedback</h3>
+            <p>We rolled out to our customers over the course of a few weeks, and I booked interviews with a dozen customers to get their early impressions. Feedback was overwhelmingly positive, but there were a few things to change here and there, so we created a Jira epic of fast follows that we improved as the feedback came in.</p>
+
+            <h2>Project 2: Enhance Recap Emails with Insights</h2>
+            <p>We received feedback that managers found the recap emails very helpful, but they could be greatly improved. They quickly gave managers an overview of the day/week, and provided them with calls to listen to.</p>
+            <p>Additionally, now that we were providing managers with the data, we want to provide them with advice on how to action on it.</p>
+
+            <h3>Email MVP: Providing Additional Data</h3>
+            <p>The original emails were plain text. I had redesigned them visually, and we had shipped that change several months prior.</p>
+            <img class="embed" src="img/orumemails1.png">
+
+            <p>Now, we want to improve them by including a leaderboard and more KPIs.</p>
+
+            <p>The manager would see an email for the teams they manage.</p>
+
+            <img class="embed" style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/orumemailmvp1.png">
+
+            <p>The reps would receive an email that highlights their personal stats.</p>
+
+            <img class="embed" style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/orumemailmvp2.png">
+
+            <h3>Future Iteration: Utilizing AI to Provide Recommendations</h3>
+            <p>As a next step, we'd like to provide users with actionable insights and recommendations on how to improve, based on what we're seeing.</p>
+            <img style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/orumemailai.png">
+
+            <h2>Project 3: Displaying Live Stats in the Dialer</h2>
+            <p>One of the main uses of analytics for reps is to see if they're hitting their targets. We were finding they were having to jump back and forth between the analytics tab and dialer during their sessions. We hypothesize that integrating live stats into the dialer will help reps meet their targets and be more aware of their performance.</p>
+
+            <p>I designed a widget in the dialer to show the user their stats for the day.</p>
+            <img class="embed" src="img/statsopen.png">
+
+            <p>When the user reaches a goal, they receive a congratulatory toast, and the team can see it in the updates panel.</p>
+            <img class="embed" src="img/goalmet.png">
+
+            <p>We'll also notify them of their personal best.</p>
+            <img class="embed" src="img/personalbest.png">
+
+            <p>Users can set their goals in personal settings.</p>
+            <img class="embed" src="img/personalsettings.png">
+
+            <h3>Summary</h3>
+            <p>While Projects 2 and 3 are still in progress, we believe that together these improvements will provide a robust analytics experience to help managers assess and correct performance, and to help reps monitor and reach their goals.</p>
+
+
+        <div class="next">
+            <p>
+            <a href="calllibrary.html">Next Project: Orum Call Library</a>
+            </p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
