@@ -25,6 +25,7 @@ h1{
 	font-weight: 900;
 }
 
+
 h3{
 	font-family: playfair display;
     font-weight: 600;
@@ -129,6 +130,13 @@ a{
 	font-style: normal;
 }
 
+.project h2{
+	font-family: 'Playfair Display';
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 0.3px;
+}
+
 .project h3{
 	margin: 50px 0 20px;
 }
@@ -177,6 +185,7 @@ video{
 	margin-top:25px;
 }
 
+
 @media screen and (max-width:920px){
 	.profileimg{
 		display: none;
@@ -199,3 +208,4 @@ video{
 		margin-top: 60px;
 	}
 }
+
