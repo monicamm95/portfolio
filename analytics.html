@@ -46,7 +46,13 @@
         <a href="index.html" class="backhome">Monica Moore</a>
         <h2 class=company>Orum</h2>
         <h1>Analytics</h1>
-            <p>Our analytics experience was out of date, sparse, and not meeting our customer's needs. Thus, it was the biggest reasons cited as a cause for churn to our competitors.</p>
+            <p>Our analytics experience was out of date, sparse, and not meeting our customer's needs. Thus, it was one of the biggest reasons cited as a cause for churn to our competitors.</p>
+
+            <h3>User Goal</h3>
+            <p>Enhance the Analytics experience to provide sales teams with the data needed to assess + improve performance + dialing strategy</p>
+
+            <h3>Business Goal</h3>
+            <p>Reduce churn + save key accounts.</p>
 
             <h3>User Research</h3>
             <p>Coaching and the SDR manager persona was our team's new initiative to focus on. So, I conducted a general research project where I interviewed a dozen SDR managers to learn all about their role and how they coach their teams. I found that there's 3 key aspects to coaching a team of SDRs:</p>
@@ -56,23 +62,20 @@
 
             <iframe class="embed" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="550" src="https://embed.figma.com/proto/1mPTBtCh3IKC2q0HU2Zj3H/User-Research?page-id=437%3A9&node-id=437-11&node-type=canvas&viewport=-48%2C587%2C0.08&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
 
-            <p>We combed through the interviews as well as hundreds of tickets in ProductBoard and grouped all the analytics to find themes.</p>
+            <!--<img src="img/analyticsfeedback.png">!-->
 
-            <!--<img src="img/analyticsfeedback.png">-->
+            <h3>Personas</h3>
+            <p>Some key personas also became apparent. There were managers who are data obsessed, wanting to know every metric, and managers who just care about the main KPIs. New reps and high performing reps also have very different needs. How do we make analytics robust enough for the data-obsessed and easy enough for users new to using data?</p>
 
-            <h3>User Stories + Personas</h3>
+            <img class="embed" src="img/personaspectrum.png">
+
+
+            <h3>User Stories + Scoping</h3>
+
             <p>From compiling all the research, we generated the following possible user stories, broken down by role.</p>
             <img class="embed" src="img/analyticsuserstories.png">
 
-            <p>Some key personas also became apparent. There's the general user types of manager, rep, and sales leader, but we also found there were distinct types of sales managers and reps, who needed different things out of analytics. There were managers who are data obsessed, wanting to know every metric, and managers who just care about the main KPIs. We needed to design an experience for both. New reps and high performing reps also have very different needs.</p>
-
-            <img class="embed" src="img/analyticspersona1.png">
-            <img class="embed" src="img/analyticspersona2.png">
-
-            <!--<img class="embed" src="img/analyticsworkflow.png">-->
-
-            <h2 class="analyticsheader">Project #1: Improve Analytics Dashboards</h2>
-            <p>For the first project as part of the analytics initiative, the scope was to improve our existing dashboard's usability as well add key data to help users measure their performance. Which data to add in V1 was determined by:</p>
+            <p>We couldn't do them all, so prioritized based on:</p>
             <ul>
                 <li>Frequency of user request</li>
                 <li>Significance of impact</li>
@@ -90,6 +93,12 @@
                 <li>A When to Call dashboard</li>
             </ul>
 
+            
+            <!--<img class="embed" src="img/analyticspersona1.png">
+            <img class="embed" src="img/analyticspersona2.png">!-->
+
+            <!--<img class="embed" src="img/analyticsworkflow.png">-->
+
             <!--<p>An aspect of this scoping was also looking at what would bring us to parity with, as well as differentiate us from our close competitor, Nooks.</p>
             <img style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/analyticscomp.png">-->
 
@@ -104,13 +113,13 @@
 
             <h3>High Fidelity Designs</h3>
             <p>I updated the Rep Performance page to include the overall conversion rates at the top. I removed the need to toggle the performance table, as this was a big annoyance for users. There's also now a conversion funnel and a trends graph, so teams can see whether they're improving. We also improved the disposition graphs so that users can easily filter by outcome, and can see them broken down by rep.</p>
-            <img src="img/repperformance.png">
+            <img class="embed" src="img/repperformance.png">
 
             <p>There's a new Account Performance page, which is similar to rep performance, but shows the stats for each account.</p>
-            <img src="img/accountperformance.png">
+            <img class="embed" src="img/accountperformance.png">
 
-            <p>On the Objections page, managers can see which objections their team is encountering and how well they're overcoming them. They can also see if some team members are doing better than others. This is an invaluable resource for coaching.</p>
-            <img src="img/objections.png">
+            <p>On the Objections page, managers can see which objections their team is encountering on calls and how well they're overcoming them. They can also see if some team members are doing better than others. This is an invaluable resource for diagnosing issues and coaching.</p>
+            <img class="embed" src="img/objections.png">
 
             <p>Lastly, we added a When to Call tab, where users can see when prospects are most likely to pick up compared to when their reps are dialing. They can use this info to optimize their dialing schedules.</p>
             <img src="img/whentocall.png">
@@ -126,15 +135,10 @@
                 <li>Still monitoring overall impact on churn</li>
             </ul>
 
-            <h2 class="analyticsheader">Project 2: Enhance Recap Emails with Insights</h2>
-            <p>We received feedback that managers found the recap emails very helpful, but they could be greatly improved. They quickly gave managers an overview of the day/week, and provided them with calls to listen to.</p>
-            <p>Additionally, now that we were providing managers with the data, we want to provide them with advice on how to action on it.</p>
+            <h3 class="analyticsheader">Analytics Recap Emails</h3>
+            <p>In the user interviews, we noticed managers were spending considerable time creating performance summaries to send to their teams. We figured we could save them time by supplementing the dashboards with recap emails.</p>
 
-            <h3>Email MVP: Providing Additional Data</h3>
-            <p>The original emails were plain text. I had redesigned them visually, and we had shipped that change several months prior.</p>
-            <img class="embed" src="img/orumemails1.png">
-
-            <p>Now, we want to improve them by including a leaderboard and more KPIs.</p>
+            <p>I designed the emails to play on the fun, competitive nature of sales teams by adding a leaderboard and utilizing a fun visual design.</p>
 
             <p>The manager would see an email for the teams they manage.</p>
 
@@ -145,10 +149,10 @@
             <img class="embed" style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/orumemailmvp2.png">
 
             <h3>Future Iteration: Utilizing AI to Provide Recommendations</h3>
-            <p>As a next step, we'd like to provide users with actionable insights and recommendations on how to improve, based on what we're seeing.</p>
+            <p>As a next step, we'd like to use AI to provide users with actionable insights and recommendations on how to improve, based on what we're seeing.</p>
             <img style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/orumemailai.png">
 
-            <h2 class="analyticsheader">Project 3: Displaying Live Stats in the Dialer</h2>
+            <!--<h2 class="analyticsheader">Project 3: Displaying Live Stats in the Dialer</h2>
             <p>One of the main uses of analytics for reps is to see if they're hitting their targets. We were finding they were having to jump back and forth between the analytics tab and dialer during their sessions. We hypothesize that integrating live stats into the dialer will help reps meet their targets and be more aware of their performance.</p>
 
             <p>I designed a widget in the dialer to show the user their stats for the day.</p>
@@ -164,7 +168,7 @@
             <img class="embed" src="img/personalsettings.png">
 
             <h3>Summary</h3>
-            <p>While Projects 2 and 3 are still in progress, we believe that together these improvements will provide a robust analytics experience to help managers assess and correct performance, and to help reps monitor and reach their goals.</p>
+            <p>While Projects 2 and 3 are still in progress, we believe that together these improvements will provide a robust analytics experience to help managers assess and correct performance, and to help reps monitor and reach their goals.</p>!-->
 
 
         <div class="next">
