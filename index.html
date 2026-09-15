@@ -1,163 +1,217 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Monica Moore</title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d5a0c19ed7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" media="all" href="css/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="portfolio.css">
-    <link rel="shortcut icon" href="img/favicon.ico" >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="I’m a Vancouver-based Senior Product Designer with 8 years of experience designing B2B SaaS and consumer products. I’m drawn to messy, complex problems — from data-heavy workflows to AI-powered tools — and turning them into experiences that feel simple, useful, and measurably better.">
+  <title>Monica Moore — Senior Product Designer</title>
+  <link rel="stylesheet" href="site.css">
 </head>
-
-
 <body>
-    <div class="intro">
-        <div class="intro-text">
-            <h2>Hello! I'm</h2>
-            <h1>Monica Moore</h1>
-            <p>I’m a product designer with 8 years of experience based in Vancouver, Canada (but am willing to relocate!). What I love most about being a designer is solving complex and interesting problems that have a positive impact on users. I have a strong bias for action and thrive in a fast-paced, high-growth environment, where I can help ship great products!</p> 
-            <p>Scroll onwards to read about some of the exciting projects I've worked on!</p>
-            <div class="links">
-                <a href="https://ca.linkedin.com/in/monica-moore-09709b59" target="_blank">
-                    <i class="fa fa-linkedin"></i>
-                </a> 
-                <!--<a href="https://dribbble.com/monicamoore" target="_blank">
-                    <i class="fa fa-dribbble"></i>!-->
-                </a>
-                <a href="mailto:monicamm95@gmail.com">
-                    <i class="fa fa-envelope-o"></i>
-                </a>
-            </div>
-        </div>
-        <div class="profileimg">
-            <img id="monica-img" src="img/monica2024.png">
-        </div>
+<!--
+  EDITING:
+  - Global styles/colors: site.css
+  - Hero copy + links: edit directly below
+  - Project cards: edit directly in this file
+  - Case-study pages are sibling .html files
+-->
+<main class="shell">
+  <section class="home-hero">
+    <div>
+      <h1>Hello! I’m <span class="accent">Monica.</span></h1>
+      <p class="home-bio">I’m a Vancouver-based product designer with 9 years of experience. I'm most motivated by solving complex problems that have a positive impact on users. I have a strong bias for action and thrive in a fast-paced, high-growth environment, where I can help ship great products!</p>
+      <div class="hero-links"><a href="#">Email ↗</a><a href="#">LinkedIn ↗</a><a href="#">Resume ↗</a></div>
     </div>
-    <div class="work">
-        <a href="analytics.html">
-            <img src="img/analyticsmain.png">
-            <div class="work-desc">
-                <h3>Orum Analytics</h3>
-                <p>An experience for users to stay up to date on their performance using data.</p>
-            </div>
-        </a>
-        <a href="calllibrary.html">
-            <img src="img/calllibrary.png">
-            <div class="work-desc">
-                <h3>Orum Call Library + Call History</h3>
-                <p>A place for sales managers and reps to save calls for training and coaching purposes</p>
-            </div>
-        </a>
+    <div class="portrait"><img src="img/monica.jpg" alt="Monica Moore"></div>
+  </section>
 
-        <a href="battlecards.html">
-            <img src="img/battlecards.png">
-            <div class="work-desc">
-                <h3>Orum AI Battlecards</h3>
-                <p>A library of sales battlecards that are surfaced intelligently when the rep needs them most</p>
+  <section class="home-work">
+    <section class="company-section">
+      <div class="company-heading">
+        <h2>Orum</h2>
+        <div class="company-tags">
+          <span class="tag tag--accent">B2B SaaS</span>
+          <span class="tag">Sales Tech</span>
+        </div>
+      </div>
+      <div class="project-grid">
+        <a class="project-card project-card--full" href="analytics.html">
+          <div class="project-media">
+            <img src="img/analyticsHero.png" alt="" loading="lazy" decoding="async">
+          </div>
+          <div class="tags">
+            <span class="tag tag--accent">Analytics</span>
+            <span class="tag">Data</span></div>
+            <h3>Analytics</h3>
+            <p>Redesigning a churn-driving analytics experience so sales teams could understand performance and improve their dialing strategy.</p>
+            <p class="project-impact">+18% daily analytics usage among reps</p>
+          </a>
+          <a class="project-card" href="call-library.html">
+            <div class="project-media">
+              <img src="img/callLibraryHero.png" alt="" loading="lazy" decoding="async"></div><div class="tags">
+                <span class="tag tag--accent">Coaching</span>
+                <span class="tag">0→1</span>
+              </div>
+              <h3>Call Library + Call History</h3>
+              <p>Giving managers and reps a better way to save, review, and learn from calls for coaching and training.</p>
+            </a>
+            <a class="project-card" href="battlecards.html">
+              <div class="project-media">
+                <img src="img/battlecards.png" alt="" loading="lazy" decoding="async"></div>
+                <div class="tags">
+                  <span class="tag tag--accent">AI</span>
+                  <span class="tag">Sales Enablement</span>
+                </div>
+                <h3>Battlecards + AI Assist</h3>
+                <p>Bringing enablement content into the workflow, helping managers author it with AI, and surfacing it when reps need it.</p>
+              </a>
             </div>
+          </section>
+          <section class="company-section">
+            <div class="company-heading">
+              <h2>Abnormal Security</h2>
+              <div class="company-tags">
+                <span class="tag tag--accent">Cybersecurity</span>
+                <span class="tag">Enterprise</span>
+              </div>
+            </div>
+            <div class="project-grid">
+              <a class="project-card project-card--full" href="detection-360.html"><div class="project-media">
+                <img src="img/detection360Hero.png" alt="" loading="lazy" decoding="async"></div>
+                <div class="tags"><span class="tag tag--accent">Automation</span><span class="tag">Redesign</span>
+                </div>
+                <h3>Detection 360</h3>
+                <p>Redesigning and automating the workflow customers use to report missed attacks and false positives.</p>
+                <p class="project-impact">100% of Detection 360 responses automated</p></a></div>
+              </section>
+    <section class="company-section">
+      <div class="company-heading">
+        <h2>Top Hat</h2>
+        <div class="company-tags">
+          <span class="tag tag--accent">EdTech</span>
+          <span class="tag">B2B2C</span>
+        </div>
+      </div>
+      <div class="project-grid">
+      <a class="project-card project-card--full" href="student-checkout.html">
+        <div class="project-media">
+          <img src="img/checkoutHero.png" alt="" loading="lazy" decoding="async">
+        </div>
+          <div class="tags">
+            <span class="tag tag--accent">Ecommerce</span>
+            <span class="tag">Growth</span>
+          </div>
+          <h3>Student Checkout</h3>
+          <p>Rebuilding an outdated, confusing purchase flow for students buying their course materials.</p>
+          <p class="project-impact">3,054 → 820 checkout-related support tickets</p>
+      </a>
+      <a class="project-card" href="intro-courses.html">
+        <div class="project-media">
+          <img src="img/introCourseHero.png" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="tags">
+          <span class="tag tag--accent">Product Strategy</span>
+          <span class="tag">Information Architecture</span>
+        </div>
+        <h3>Intro Courses</h3>
+        <p>Transforming textbooks into full course solutions and redesigning navigation around a new teaching model.</p>
+        <p class="project-impact">10% → 20% sales win rate for the textbook offering</p>
+      </a>
+      <a class="project-card" href="mobile-pages.html">
+        <div class="project-media">
+          <img src="img/mobilePagesHero.png" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="tags">
+          <span class="tag tag--accent">Mobile</span>
+          <span class="tag">Reading Experience</span>
+        </div>
+        <h3>Mobile Pages</h3>
+        <p>Designing a better mobile reading and assignment experience for interactive textbook content.</p>
+      </a>
+      <a class="project-card" href="multi-section-management.html">
+        <div class="project-media">
+          <img src="img/msmHero.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="tags">
+            <span class="tag tag--accent">Enterprise Workflow</span>
+            <span class="tag">Information Architecture</span>
+          </div>
+          <h3>Multi-Section Management</h3>
+          <p>Helping professors manage large, complex courses with many sections and instructors.</p>
+          <p class="project-impact">$3m revenue opportunity enabled by the project</p>
         </a>
-
-        <a href="studentcheckout.html">
-            <img src="img/studentcheckout.png">
-            <div class="work-desc">
-                <h3>Top Hat Student Checkout</h3>
-                <p>Redesigning the experience of students purchasing their course materials through Top Hat</p>
-            </div>
+        <a class="project-card" href="marketplace.html">
+          <div class="project-media">
+            <img src="img/marketplaceHero.png" alt="" loading="lazy" decoding="async">
+          </div>
+          <div class="tags">
+            <span class="tag tag--accent">Ecommerce</span>
+            <span class="tag">Growth</span>
+          </div>
+          <h3>Marketplace</h3>
+          <p>Creating one marketplace for prospective and existing customers to discover and adopt course content.</p>
         </a>
-
-        <a href="detection360.html">
-            <img src="img/detection360.png">
-            <div class="work-desc">
-                <h3>Abnormal Security Detection 360</h3>
-                <p>Redesigning and automating the hub for reporting missed attacks and false positives</p>
-            </div>
+        <a class="project-card" href="test-handback.html">
+          <div class="project-media">
+            <img src="img/testHero.png" alt="" loading="lazy" decoding="async">
+          </div>
+          <div class="tags">
+            <span class="tag tag--accent">Assessment</span>
+            <span class="tag">Workflow</span>
+          </div>
+          <h3>Test Handback</h3>
+          <p>Enabling professors to hand tests back digitally while supporting review and practice workflows.</p>
         </a>
-
-        <a href="introcourse.html">
-            <img src="img/introcourse.png">
-            <div class="work-desc">
-                <h3>Top Hat Intro Courses</h3>
-                <p>Transforming our most popular textbooks into full course solutions to increase adoption + retention</p>
-            </div>
+      </div>
+    </section>
+    <section class="tail-companies">
+      <section class="tail-company">
+        <div class="company-heading">
+          <h2>Plenty of Fish</h2>
+          <div class="company-tags">
+            <span class="tag tag--accent">Consumer</span>
+            <span class="tag">Dating</span>
+          </div>
+        </div>
+        <a class="project-card" href="pof-live-onboarding.html">
+          <div class="project-media">
+            <img src="img/pofHero.png" alt="" loading="lazy" decoding="async">
+          </div>
+          <div class="tags">
+            <span class="tag tag--accent">Onboarding</span>
+            <span class="tag">Growth</span>
+          </div>
+          <h3>Live Onboarding</h3>
+          <p>Redesigning onboarding to improve clarity and activation for a live-streaming experience.</p>
+          <p class="project-impact">+5% activation in A/B testing</p>
         </a>
-
-        <a href="mobilepages.html">
-            <img src="img/mobilepages.png">
-            <div class="work-desc">
-                <h3>Top Hat Mobile Pages</h3>
-                <p>Designing the textbook reading experience in Top Hat's mobile app</p>
-            </div>
+      </section>
+      <section class="tail-company">
+        <div class="company-heading">
+          <h2>Clio</h2>
+          <div class="company-tags">
+            <span class="tag tag--accent">Legal SaaS</span>
+            <span class="tag">CSM</span>
+          </div>
+        </div>
+        <a class="project-card" href="clio-contact-unification.html">
+          <div class="project-media">
+            <img src="img/clioHero.png" alt="" loading="lazy" decoding="async">
+          </div>
+          <div class="tags">
+            <span class="tag tag--accent">Platform</span>
+            <span class="tag">Data Model</span>
+          </div>
+          <h3>Contact Unification</h3>
+          <p>Unifying contact management across Clio Grow and Clio Manage.</p><p class="project-impact">Clio Grow’s top requested feature</p>
         </a>
+      </section>
+    </section>
+  </section>
+</main>
 
-        <a href="multisectionmanagement.html">
-            <img src="img/msm.png">
-            <div class="work-desc">
-                <h3>Top Hat Multi-Section Management</h3>
-                <p>Allowing professors to manage large multi-section courses</p>
-            </div>
-        </a>
-
-        <a href="pofonboarding.html">
-            <img src="img/pofonboarding-main.png">
-            <div class="work-desc">
-                <h3>POF Live Onboarding</h3>
-                <p>Redesigning the onboarding for POF Live to increase product activation and clarity for users</p>
-            </div>
-        </a>
-
-        <a href="marketplace.html">
-            <img src="img/marketplace.png">
-            <div class="work-desc">
-                <h3>Top Hat Marketplace</h3>
-                <p>Designing both an internal and external-facing place for professors to adopt Top Hat content</p>
-            </div>
-        </a>
-
-        <a href="cliocontacts.html">
-            <img src="img/contactunification.png">
-            <div class="work-desc">
-                <h3>Clio Contact Unification</h3>
-                <p>Unifying contacts across Clio's 2 platforms: Clio Grow and Clio Manage</p>
-            </div>
-        </a>
-
-        <a href="testhandback.html">
-            <img src="img/tophattest.png">
-            <div class="work-desc">
-                <h3>Top Hat Test Handback</h3>
-                <p>Enabling professors to hand Top Hat Tests back to students</p>
-            </div>
-        </a>
-
-
-        <!--<a href="pofpersonas.html">
-            <img src="img/pofpersonas.png">
-            <div class="work-desc">
-                <h3>POF Live! Personas</h3>
-                <p>Creating 3 personas for the POF Live product as part of a large research project</p>
-            </div>
-        </a>!-->
-
-        <a href="uberpoolparty.html">
-            <img src="img/uberpoolparty.png">
-            <div class="work-desc">
-                <h3>UberPool Party</h3>
-                <p>An Uber feature allowing users to pick up and drop off their friends enroute</p>
-            </div>
-        </a>
-        
-        <!--<a href="playstationpersonas.html">
-            <img src="img/persona1.png">
-            <div class="work-desc">
-                <h3>PlayStation Store Personas</h3>
-                <p>Personas for users of the PlayStation web store</p>
-            </div>
-        </a>!-->
-        
-    </div>
+<footer class="shell site-footer">
+  <div><strong>Monica Moore</strong><br>Senior Product Designer · Vancouver, Canada</div>
+  <div class="footer-links"><a href="#">Email ↗</a><a href="#">LinkedIn ↗</a><a href="#">Resume ↗</a></div>
+</footer>
 </body>
 </html>

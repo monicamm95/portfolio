@@ -1,137 +1,468 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Monica Moore</title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="all" href="css/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="portfolio.css">
-    <link rel="shortcut icon" href="img/favicon.ico" >
-  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Designing a three-phase battlecard system in Orum: bring sales enablement into the product, help managers author content with AI, and surface the right card during live calls.">
+  <title>Battlecards + AI Assist — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
 </head>
-
-
 <body>
-<script>
-    var password = "vancouver";
-    (function passcodeprotect() {
-        var passcode = prompt("Enter the password");
 
-        // Check if the user cancels the prompt
-        if (passcode === null) {
-            alert("Redirecting to the homepage.");
-            window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
-            return; // Exit the script
-        }
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
 
-        // Incorrect password loop
-        while (passcode !== password) {
-            passcode = prompt("Incorrect password. Enter the password again or click Cancel to go back.");
+<header class="reading case-hero">
+  <p class="case-company">Orum</p>
+  <h1 class="case-title">Battlecards + AI Assist</h1>
 
-            // Check if the user cancels the prompt again
-            if (passcode === null) {
-                alert("Redirecting to the homepage.");
-                window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
-                return; // Exit the script
-            }
-        }
-    }());
-</script>
-    <div class="project">
-        <a href="index.html" class="backhome">Monica Moore</a>
-        <h2 class=company>Orum</h2>
-        <h1>Battlecards and AI Assist</h1>
+  <p class="case-summary">
+    Sales teams relied on battlecards to handle objections and competitors, but the content
+    lived outside Orum and was difficult to access during live calls. I designed a three-phase
+    system that brought battlecards into the product, helped managers create them with AI,
+    and surfaced relevant cards when reps needed them most.
+  </p>
 
-        <h3> Team Objective</h3>
-            <p>One of the main goals at Orum is to enable sales reps to book more meetings. While the automated dialer helps them connect with more prospects, we want to help them perform better on the calls as well. Currently, this is largely done through coaching from the Sales Manager.</p>
+  <div class="tags">
+    <span class="tag tag--accent">AI</span>
+    <span class="tag">Sales Enablement</span>
+  </div>
+</header>
 
-            <p>We also want to become an indispensible tool for managers, as they're a key decision maker in the adoption of Orum. If they're using Orum to manage their reps, they'll be more likely to renew.</p>
+<div class="shell">
+  <figure class="hero-figure">
+    <img
+      src="img/AIassist.png"
+      alt="AI Assist recommending a relevant battlecard during a live sales call"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </figure>
+</div>
 
-        <h3>User Research</h3>
-        <p>With coaching being our new initiative, I conducted a general research project where I interviewed a dozen SDR managers to learn all about their role and how they coach their teams. I found that there's 3 key aspects to coaching a team of SDRs:</p>
-        <img src="img/keyaspects.png" class="embed"> 
-        <p>One aspect to a sales manager role is providing resources to the team to help them succeed, such as scripts and battlecards about competitors and how to handle objections. However, reps are struggling to access these resources during the calls. They live outside Orum, and it can be difficult to pull them up while talking. One manager showed us around the office, and we saw that reps have battlecards printed off and taped all around their desks.</p>
+<main class="reading case-body">
 
-        <p>I compiled the research into a deck. The section relevant to this project, enablement resources, is below.</p>
+  <section class="case-section">
+    <h2>The team objective</h2>
 
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="550" src="https://embed.figma.com/proto/1mPTBtCh3IKC2q0HU2Zj3H/User-Research?page-id=1179%3A924&node-id=1179-931&p=f&viewport=153%2C350%2C0.22&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>   
+    <p>
+      One of Orum’s main goals was to help sales reps book more meetings. The automated dialer
+      helped reps connect with more prospects, but we also wanted to help them perform better
+      once a call connected — something that was largely driven by coaching from Sales Managers.
+    </p>
 
+    <p>
+      Managers were also key decision-makers in whether a team adopted and renewed Orum.
+      Making Orum more useful for coaching and enablement could therefore improve the rep
+      experience while making the product more valuable — and stickier — for the business.
+    </p>
+  </section>
 
-        <h3>Problem</h3>
-        <p>Battlecards are a helpful tool, but are underutilized since they're difficult to find and pull up during a call.</p>
+  <section class="case-section">
+    <h2>Research showed an access problem</h2>
 
-        <h3>Solution</h3>
-        <p>Build a place for battlecards to live in Orum, and use AI to suggest relevant battlecards at the right time. This way, battlecards don't need to be stored in a different platform, and sales reps don't need to scramble to find them during a call.</p>
+    <p>
+      As part of a broader coaching initiative, I interviewed a dozen SDR managers to understand
+      their role and how they supported their teams. Three responsibilities consistently emerged:
+    </p>
 
-        <h3>Phase 1: Bring battlecards into Orum</h3>
-        <p>The most crucial problem we heard was that battlecards are living in other places, like Google Drive, and it would be much easier if they can live and be accessed within Orum.</p>
-
-        <h4>The Library</h4>
-        <p>First, we need a place for battlecards to be authored, as well as to live when a user isn't dialing. Reps may want to familiarize themselves with battlecards and study them before making calls.</p>
-        <p>We already built the Call Library, and had a vision of extending it to host all resources.</p>
-        <img src="img/LibraryVision.png">
-        <img class="embed" src="img/libraryallcalls.png">
-
-        <p>I decided to stick with that vision and rebranded the Call Library into the Library, and added Battlecards to the navigation. Similar to the Call Library, a list of battlecards is viewed in a table. From talking to users, we determined it was critical to have a way to group the cards. Typically sales teams will have several battlecards for different competitors or prospect job titles.</p>
-        <img src="img/allbattlecards.png" class="embed">
-        <p>The battlecards can be viewed in a side panel, consistent with the Call Library pattern.</p>
-        <img src="img/battlecardsidepanel.png" class="embed">
-        <p>When authoring the battlecard, the user can select or create a group, and is given basic text editing tools.</p>
-        <img src="img/newbattlecard.png">
-
-        <h4>Battlecards in the Dialer</h4>
-        <p>After exploring many ways to display them, I landed on having a side navigation with the battlecard in focus on the right. I wanted to prioritize the battlecard so the rep can easily refer to it on the call. We also don't anticipate there being a lot of battlecards, so I prioritized ease of access, figuring it's better to display a card by default rather than forcing the user to navigate. This is also scalable for when we automatically surface battlecards using AI.</p>
-        <img src="img/battlecarddialerv1.png" class="embed">
-
-        <p>We got feedback from users that it still needed to be quicker to find the right battlecard, so we added a search field, as well as the ability to pin battlecards to appear at the top of the list and by default when they switch to the battlecard tab.</p>
-
-        <img src="img/battlecarddialerv2.png">
-
-        <h3>Phase 2: Help users author battlecards</h3>
-        <p>The first phase worked great for sales managers who already had battlecards created. All they had to do was copy and paste the content in, and now it lives in Orum. However, many sales managers do not have the time to create this content, or are not experienced enough to have these resources for the team.</p>
-        <p><span style="font-weight:bold;">Problem:</span> Users find it time consuming and overwhelming to author battlecards. How can we help managers create resources to help their teams be more successful?</p>
-        <p><span style="font-weight:bold;">Solutions explored:</span> Our two main ideas were to provide the users with templates that they could fill out, or to have AI assist them with writing. We decided to go with the AI solution, as it would provide more flexibility and help the users with the writing itself.</p>
-
-        <h4>Write with AI</h4>
-        <p>I added a button called "Write with AI" to the content creation input field.</p>
-        <img src="img/writewithAI.png" class="embed">
-        <p>When clicked, an input opens, where the user can describe what they need to write. The content field will then populate with the AI-generated battlecard, and the user can edit from there.</p>
-        <img src="img/writewithAI2.png">
-
-        <h4>Improve with AI</h4>
-        <p>We also wanted to provide the user with the ability to improve what they've already written with AI. So, when the user has content in the field, the button changes to say "Improve with AI", and the user can then describe how they want to improve it.</p>
-        <img src="img/improvewithAI.png" class="embed">
-        <p>I didn't want to override what the user had written, so opted for a field that shows the existing content next to the suggested content, and the user can opt to keep the original or apply the changes. I explored the ability to provide feedback, or iterate in a conversational way, but decided this would drastically increase scope. </p>
-        <img src="img/AIsidebyside.png">
-
-        <h3>Phase 3: Suggest battlecards using AI</h3>
-        <p>Now that the battlecards are created and hosted in Orum, we want to help reps access and use them more quickly. We already have a lot of AI analysis happening on calls to detect objections, and it would be great to expand this for battlecard purposes. If a competitor is mentioned on a call, AI can suggest a battlecard to use.</p>
-        <p>It was crucial that the AI suggestion be visible, but not annoying. The user shouldn't be forced to look at it, in case the suggestion isn't helpful, or they'd rather use a different battlecard. So, I opted for a clickable suggestion at the top of the nav. If users aren't on the battlecard tab, a little toast pops up notifying them of the suggestion, as well as an animated icon next to the battlecard tab. We also added a field in the create modal for users to input common phrases to listen for when they'd expect the battlecard to appear.</p>
-        <img src="img/AIassist.png">
-
-        <h3>Summary</h3>
-        <p>This 3 phase solution solved many problems:</p>
-        <ul>
-            <li>Migrated battlecards into Orum. While helping users, this also helps the business by making Orum a more all-encompassing sales platform. If sales teams have their resources in Orum, it makes the product more sticky and more of a necessity.</li>
-            <li>Helped sales managers author battlecards. By making this easier for managers, this helps their team be equipped with the resources they need to sell more effectively. This should lead to improved performance of sales reps.</li>
-            <li>Surfaced battlecards quicker to reps both by having them in the dialer, and by having AI Assist. This way, reps are more likely to use the battlecards, and they don't have to scramble to find them while talking to a prospect.</li>
-        </ul>
-
-        <p>Overall, a lot of exploration of various ideas, layouts, and navigations were explored during this design process. Contact me to see more!</p>
-
-        <div class="next">
-            <p>
-            <a href="studentcheckout.html">Next Project: Top Hat Student Checkout</a>
-            </p>
-        </div>
+    <div class="insight-grid insight-grid--3" role="img" aria-label="Three core aspects of SDR coaching">
+      <div class="insight">
+        <span>01</span>
+        <strong>Giving feedback on calls</strong>
+      </div>
+      <div class="insight">
+        <span>02</span>
+        <strong>KPIs and analytics</strong>
+      </div>
+      <div class="insight">
+        <span>03</span>
+        <strong>Providing enablement resources</strong>
+      </div>
     </div>
 
+    <p>
+      Battlecards were one of those enablement resources. Managers used them to help reps talk
+      about competitors, handle objections, and follow scripts. The problem was that the cards
+      typically lived in tools like Google Drive, away from the call itself.
+    </p>
 
+    <blockquote>
+      One manager showed us around the office and reps literally had battlecards printed out
+      and taped around their desks because digital versions were too difficult to pull up mid-call.
+    </blockquote>
+
+    <div class="goal-grid">
+      <div>
+        <span class="eyebrow">Problem</span>
+        <p>Battlecards were helpful, but underused because they were difficult to find and access during a call.</p>
+      </div>
+
+      <div>
+        <span class="eyebrow">Solution direction</span>
+        <p>Bring battlecards into Orum, then use AI to make them easier to create and surface at the right moment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>A three-phase solution</h2>
+
+    <p>
+      Rather than treat this as one isolated feature, we approached the problem in stages.
+      Each phase solved a different barrier to battlecard adoption.
+    </p>
+
+    <div class="decision-list">
+      <div class="decision">
+        <strong>Phase 1</strong>
+        <p>
+          Bring battlecards into Orum so managers can author and organize them and reps can
+          access them without leaving the product.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>Phase 2</strong>
+        <p>
+          Reduce the effort of creating useful battlecards by helping managers write and improve
+          content with AI.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>Phase 3</strong>
+        <p>
+          Make the right battlecard easier to use during a live conversation by having AI suggest
+          relevant cards based on what is being said.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+
+    <h2>Phase 1 — bring battlecards into Orum</h2>
+
+    <p>The most crucial problem we heard was that battlecards are living in other places, like Google Drive, and it would be much easier if they can live and be accessed within Orum.</p>
+
+    <h3>Build on the Library rather than create another destination</h3>
+
+    <p>
+      We already had a Call Library where reps and managers could save calls for coaching.
+      We also had a longer-term vision for that area to become a home for multiple types of
+      sales resources.
+    </p>
+
+    <p>
+      I decided to keep that direction: rebrand Call Library as the broader Library and add
+      Battlecards alongside Calls.
+    </p>
+
+    <div class="figure-grid figure-grid--2">
+      <figure class="figure">
+        <div class="figure__frame">
+          <img
+            src="img/libraryallcalls.png"
+            alt="Existing Orum Call Library"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>The existing Call Library established the foundation.</figcaption>
+      </figure>
+
+      <figure class="figure">
+        <div class="figure__frame">
+          <img
+            src="img/LibraryVision.png"
+            alt="Long-term Orum Library vision for multiple sales resources"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>The longer-term Library vision included more than calls.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Make a growing set of cards easy to organize</h3>
+
+    <p>
+      Similar to Call Library, battlecards use a table for scanning. From research, grouping
+      was critical: teams often have separate cards for competitors, personas, objections,
+      and other sales situations.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/allbattlecards.png"
+          alt="All Battlecards view with groups for competitors, personas, and objections"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <figcaption>Battlecards can be searched, filtered, and grouped by the way a sales team works.</figcaption>
+    </figure>
+
+    <h3>Keep reading and authoring lightweight</h3>
+
+    <p>
+      Opening a battlecard uses a side panel, consistent with the Call Library pattern,
+      so users can review the content without navigating away from the list.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/battlecardsidepanel.png"
+          alt="Battlecard open in a side panel in Orum"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <p>
+      When creating a card, managers can assign it to a group and use basic text-formatting tools.
+      The first version deliberately kept authoring straightforward.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/newbattlecard.png"
+          alt="Creating a new battlecard in Orum"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>Bring battlecards into the dialer</h3>
+
+    <p>
+      The most important moment for a battlecard is while the rep is actually speaking to a prospect.
+      I explored several layouts before landing on side navigation with the selected card in focus.
+      The design prioritizes readable content and shows a card by default rather than making the rep
+      navigate through another layer first.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/battlecarddialerv1.png"
+          alt="Initial battlecard experience in the Orum dialer"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <figcaption>Initial dialer concept.</figcaption>
+    </figure>
+
+    <p>
+      Users told us that finding the right card still needed to be faster. We added search and
+      pinning so important cards could appear at the top of the list and be selected by default.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/battlecarddialerv2.png"
+          alt="Updated battlecard dialer with search and pinned battlecards"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <figcaption>Updated dialer experience after user feedback.</figcaption>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Phase 2 — help managers author battlecards</h2>
+
+    <p>
+      Phase 1 worked well for managers who already had battlecards: they could copy their
+      existing content into Orum and immediately make it available to reps.
+    </p>
+
+    <p>
+      But many managers either didn’t have time to create these resources or didn’t feel
+      experienced enough to know what a strong battlecard should say.
+    </p>
+
+    <div class="goal-grid">
+      <div>
+        <span class="eyebrow">Problem</span>
+        <p>Creating battlecards felt time-consuming and overwhelming, especially from a blank page.</p>
+      </div>
+
+      <div>
+        <span class="eyebrow">Ideas explored</span>
+        <p>We considered fill-in templates and AI-assisted writing. We chose AI because it could help with the writing itself and work across many kinds of cards.</p>
+      </div>
+    </div>
+
+    <h3>Write with AI</h3>
+
+    <p>
+      I added a “Write with AI” action directly to the battlecard editor, keeping the AI
+      inside the existing authoring workflow rather than creating a separate experience.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/writewithAI.png"
+          alt="Write with AI action inside the battlecard editor"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <p>
+      Clicking it opens a lightweight prompt where the manager describes what they need.
+      The generated content is placed into the normal editor so it can be reviewed and changed.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/writewithAI2.png"
+          alt="Prompt field for generating a battlecard with AI"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>Improve with AI</h3>
+
+    <p>
+      Once content already exists, the action changes to “Improve with AI.” The manager can
+      describe how they want the writing changed — for example making it shorter, more formal,
+      or easier to use during a call.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/improvewithAI.png"
+          alt="Improve with AI experience for an existing battlecard"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>AI assistance without silently overwriting the user</h3>
+
+    <p>
+      I didn’t want an AI rewrite to replace a manager’s work automatically. Instead, the
+      original and suggested versions appear side by side, and the user explicitly chooses
+      whether to keep the original or apply the suggestion.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/AIsidebyside.png"
+          alt="Original battlecard shown beside an AI-generated suggestion"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <figcaption>The user keeps control over whether the AI suggestion is applied.</figcaption>
+    </figure>
+
+    <p>
+      I also explored letting users give feedback and iterate conversationally, but decided
+      against it for this release because it would have increased the scope substantially.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Phase 3 — suggest the right battlecard with AI</h2>
+
+    <p>
+      Once battlecards were created and accessible inside Orum, the next problem was speed:
+      how could we get a relevant card in front of a rep without requiring them to search for it?
+    </p>
+
+    <p>
+      Orum was already analyzing live calls to detect objections. We could extend that capability
+      so a competitor or other expected phrase could trigger a relevant battlecard suggestion.
+      Managers could also define common phrases they expected to hear when creating the card.
+    </p>
+
+    <h3>Make the suggestion visible, not disruptive</h3>
+
+    <p>
+      It was important that AI Assist never forced a rep into a card. The suggestion appears
+      as a clickable item at the top of the navigation. If the rep is on another dialer tab,
+      a lightweight toast and animated icon notify them that a suggestion is available.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/AIassist.png"
+          alt="AI Assist suggesting a relevant battlecard in the Orum dialer"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <figcaption>AI Assist surfaces a relevant card while leaving the rep in control.</figcaption>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>What the three phases accomplished</h2>
+
+    <div class="decision-list">
+      <div class="decision">
+        <strong>One home for resources</strong>
+        <p>
+          Battlecards moved into Orum instead of living across external documents. That made
+          the product more useful to users and more deeply embedded in a team’s sales workflow.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>Lower authoring effort</strong>
+        <p>
+          AI assistance reduced the blank-page problem and helped managers create stronger
+          resources even when they didn’t already have polished content.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>Faster access for reps</strong>
+        <p>
+          Putting battlecards inside the dialer — and later surfacing them with AI Assist —
+          made reps more likely to use them without scrambling for information mid-conversation.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="detection-360.html">Abnormal Security — Detection 360 →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
 
 </body>
 </html>

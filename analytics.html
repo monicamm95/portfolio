@@ -1,182 +1,139 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Monica Moore</title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="all" href="css/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="portfolio.css">
-    <link rel="shortcut icon" href="img/favicon.ico" >
-  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Analytics had become one of the biggest reasons customers cited for churning to competitors. I redesigned the experience to help managers and reps understand performance, diagnose what was going wrong, and decide where to focus.">
+  <title>Analytics — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
 </head>
-
-
 <body>
-<!--<script>
-    var password = "vancouver";
-    (function passcodeprotect() {
-        var passcode = prompt("Enter the password");
+<!--
+  EDITING:
+  - Shared visual system: site.css
+  - Project hero/summary/tags/metrics: edit directly in this file
+  - Case-study story: edit the <main class="reading case-body"> sections
+  - Existing product images are referenced from monicamoore.ca/img/
+-->
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
 
-        // Check if the user cancels the prompt
-        if (passcode === null) {
-            alert("Redirecting to the homepage.");
-            window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
-            return; // Exit the script
-        }
+<header class="reading case-hero">
+  <p class="case-company">Orum</p>
+  <h1 class="case-title">Analytics</h1>
+  <p class="case-summary">Analytics had become one of the biggest reasons customers cited for churning to competitors. I redesigned the experience to help managers and reps understand performance, diagnose what was going wrong, and decide where to focus.</p>
+  <div class="tags"><span class="tag tag--accent">Analytics</span><span class="tag">Data</span></div>
+</header>
 
-        // Incorrect password loop
-        while (passcode !== password) {
-            passcode = prompt("Incorrect password. Enter the password again or click Cancel to go back.");
+<div class="shell">
+  <figure class="hero-figure">
+    <img src="img/repperformance.png" alt="Analytics project image" fetchpriority="high" decoding="async">
+  </figure>
+  <div class="metric-grid metric-grid--3"><div class="metric"><strong>+18%</strong><span>daily analytics usage among reps</span></div><div class="metric"><strong>22 → 30 min</strong><span>average analytics session time</span></div><div class="metric"><strong>4</strong><span>major at-risk accounts helped retain</span></div></div>
+</div>
 
-            // Check if the user cancels the prompt again
-            if (passcode === null) {
-                alert("Redirecting to the homepage.");
-                window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
-                return; // Exit the script
-            }
-        }
-    }());
-</script>!-->
-    <div class="project">
-        <a href="index.html" class="backhome">Monica Moore</a>
-        <h2 class=company>Orum</h2>
-        <h1>Analytics</h1>
-            <p>Our analytics experience was out of date, sparse, and not meeting our customer's needs. Thus, it was one of the biggest reasons cited as a cause for churn to our competitors.</p>
+<main class="reading case-body">
+<section class="case-section">
+  <h2>The challenge</h2>
+  <p>Managers rely on analytics to assess their teams, identify problems, and coach reps more effectively. But the existing experience was sparse, hard to scan, and not giving customers the level of visibility they needed. It was also becoming a real business problem: customers were explicitly citing analytics when comparing Orum to competitors.</p>
+  <div class="goal-grid">
+    <div><span class="eyebrow">User goal</span><p>Give sales teams the data they need to assess performance, identify what needs attention, and improve their dialing strategy.</p></div>
+    <div><span class="eyebrow">Business goal</span><p>Reduce churn risk and make analytics a stronger reason to stay with Orum.</p></div>
+  </div>
+</section>
 
-            <h3>Goals</h3>
-            <p><span style="font-weight:bold;">User Goal:</span> Enhance the Analytics experience to provide sales teams with the data needed to assess + improve performance + dialing strategy</p>
-            <p><span style="font-weight:bold;">Business Goal:</span> Reduce churn + save key accounts.</p>
+<section class="case-section">
+  <h2>Understanding what managers actually needed</h2>
+  <p>Coaching and the SDR manager persona were a newer focus for our team, so I conducted a broader research project and interviewed a dozen SDR managers to understand their role and how they coached their teams.</p>
+  <p>Three responsibilities came up consistently:</p>
+  <div class="insight-grid insight-grid--3" role="img" aria-label="Three core aspects of SDR coaching">
+    <div class="insight"><span>01</span><strong>Giving feedback on calls</strong></div>
+    <div class="insight"><span>02</span><strong>KPIs and analytics</strong></div>
+    <div class="insight"><span>03</span><strong>Providing enablement resources</strong></div>
+  </div>
+  <blockquote>One of the most critical parts of an SDR manager’s role is analyzing performance data to find where the team can improve.</blockquote>
+  <p>The research also showed that users sat on a spectrum. Some managers cared mostly about top-line KPIs, while others wanted to investigate every detail. Reps ranged from brand new to highly experienced. The analytics experience needed to work across both spectrums without overwhelming people who wanted a simpler view.</p>
+  <div class="spectrum" role="img" aria-label="User spectrum from KPI Manager to Data-Obsessed Manager, and New Rep to High Performing Rep">
+    <div class="spectrum__row"><div>The KPI<br>Manager</div><div class="spectrum__line"></div><div>The Data-Obsessed<br>Manager</div></div>
+    <div class="spectrum__row"><div>The New<br>Rep</div><div class="spectrum__line"></div><div>The High<br>Performing Rep</div></div>
+  </div>
+</section>
 
-            <h3>User Research</h3>
-            <p>Coaching and the SDR manager persona was our team's new initiative to focus on. So, I conducted a general research project where I interviewed a dozen SDR managers to learn all about their role and how they coach their teams. I found that there's 3 key aspects to coaching a team of SDRs:</p>
-            <img src="img/keyaspects.png" class="embed">
-            <p>One of the most critical aspects of an SDR manager's role is to analyze analytics to assess performance and find areas for improvement.</p>
-            <p>I compiled the research into a deck. The section relevant to this project, analytics, is below.</p>
+<section class="case-section">
+  <h2>Key product decisions</h2>
+  <p>The difficult part of this project wasn’t simply adding more charts. It was deciding which questions the product needed to answer, what information deserved prominence, and how much depth to expose at once.</p>
+  <div class="decision-list">
+    <div class="decision"><strong>01 · Depth</strong><p>Design for both KPI-focused users and data-heavy users. Headline metrics needed to be immediately understandable, while deeper analysis remained available for people who wanted it.</p></div>
+    <div class="decision"><strong>02 · Scope</strong><p>Prioritize the highest-value analytics questions first. Based on research, customer demand, technical feasibility, and competitive pressure, we focused on trends, a conversion funnel, account performance, objections, and when-to-call insights.</p></div>
+    <div class="decision"><strong>03 · Structure</strong><p>Avoid one overloaded dashboard. Separate the experience around distinct questions so people could quickly understand where to go depending on what they were trying to diagnose.</p></div>
+  </div>
+</section>
 
-            <iframe class="embed" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="550" src="https://embed.figma.com/proto/1mPTBtCh3IKC2q0HU2Zj3H/User-Research?page-id=437%3A9&node-id=437-11&node-type=canvas&viewport=-48%2C587%2C0.08&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+<section class="case-section">
+  <h2>What needed to change</h2>
+  <p>The existing analytics experience also had several usability problems. Important information was hard to scan, controls and filters were limited, and some interactions added unnecessary work.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/oldanalytics.png" alt="Annotated teardown of the old Orum analytics experience" loading="lazy" decoding="async"></div><figcaption>Annotated teardown of the existing analytics experience.</figcaption></figure>
+</section>
 
-            <!--<img src="img/analyticsfeedback.png">!-->
+<section class="case-section">
+  <h2>Working through the information</h2>
+  <p>I spent more time than usual in low- and mid-fidelity design because much of the work was deciding what information belonged where, how to group it, and which visualization made the data easiest to understand.</p>
+  <p>I iterated on different approaches while working closely with engineering to understand what was technically feasible.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/analyticsmedfi.png" alt="Mid-fidelity Orum analytics design" loading="lazy" decoding="async"></div><figcaption>Mid-fidelity explorations helped work through hierarchy and data presentation.</figcaption></figure>
+</section>
 
-            <h3>Personas</h3>
-            <p>Some key personas also became apparent. There were managers who are data obsessed, wanting to know every metric, and managers who just care about the main KPIs. New reps and high performing reps also have very different needs. How do we make analytics robust enough for the data-obsessed and easy enough for users new to using data?</p>
+<section class="case-section">
+  <h2>The redesigned analytics system</h2>
+  <h3>How is my team performing?</h3>
+  <p>Rep Performance became the main entry point. I surfaced overall conversion rates at the top, removed the need to toggle the performance table, and added a conversion funnel and trend graph so teams could understand both current performance and change over time.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/repperformance.png" alt="Final Rep Performance analytics dashboard" loading="lazy" decoding="async"></div><figcaption>Rep Performance</figcaption></figure>
+  <h3>Which accounts are working?</h3>
+  <p>Account Performance gave teams a way to understand which accounts were driving results and which might need a different strategy.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/accountperformance.png" alt="Account Performance dashboard" loading="lazy" decoding="async"></div><figcaption>Account Performance</figcaption></figure>
+  <h3>Why are prospects saying no?</h3>
+  <p>The Objections dashboard made objection patterns visible, helping managers identify common blockers and coaching opportunities.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/objections.png" alt="Objections analytics dashboard" loading="lazy" decoding="async"></div><figcaption>Objections</figcaption></figure>
+  <h3>When should we call?</h3>
+  <p>The When to Call view helped teams compare when reps were dialing against when prospects were most likely to pick up.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/whentocall.png" alt="When to Call analytics dashboard" loading="lazy" decoding="async"></div><figcaption>When to Call</figcaption></figure>
+</section>
 
-            <img class="embed" src="img/personaspectrum.png">
+<section class="case-section">
+  <h2>Rollout and impact</h2>
+  <p>We rolled the redesign out over several weeks, and I interviewed another dozen customers to understand their early reactions. Feedback was overwhelmingly positive, and smaller issues were captured as follow-up improvements.</p>
+  <blockquote>After launch, daily usage increased 18%, average session time increased from 22 to 30 minutes, and the redesign helped retain four major accounts that had been at risk of churn.</blockquote>
+</section>
 
+<section class="case-section">
+  <h2>Taking analytics beyond the dashboard</h2>
+  <p>Research also showed that managers were spending considerable time manually creating performance summaries for their teams. We saw an opportunity to save them time by extending analytics into weekly recap emails.</p>
+  <p>I leaned into the competitive nature of sales teams with a leaderboard and a more playful visual treatment. Managers received a team view, while reps received a version focused on their own performance.</p>
+  <div class="figure-grid figure-grid--2 figure-grid--medium">
+    <figure class="figure"><div class="figure__frame"><img src="img/orumemailmvp1.png" alt="Weekly analytics recap email for managers" loading="lazy" decoding="async"></div><figcaption>Manager recap</figcaption></figure>
+    <figure class="figure"><div class="figure__frame"><img src="img/orumemailmvp2.png" alt="Weekly analytics recap email for reps" loading="lazy" decoding="async"></div><figcaption>Rep recap</figcaption></figure>
+  </div>
+</section>
 
-            <h3>User Stories + Scoping</h3>
+<section class="case-section">
+  <h2>Where I wanted to take it next</h2>
+  <p>A natural next step was using AI to turn the data into actionable recommendations to help users understand not only what was happening, but what they could do differently based on the patterns we were seeing.</p>
+  <figure class="figure figure--narrow"><div class="figure__frame"><img src="img/orumemailai.png" alt="Concept for an AI-generated weekly analytics recap with recommendations" loading="lazy" decoding="async"></div></figure>
+</section>
 
-            <p>From compiling all the research, we generated the following possible user stories, broken down by role.</p>
-            <img class="embed" src="img/analyticsuserstories.png">
+</main>
 
-            <p>We couldn't do them all, so prioritized based on:</p>
-            <ul>
-                <li>Frequency of user request</li>
-                <li>Significance of impact</li>
-                <li>Technical feasibility</li>
-                <li>Competitor features</li>
-
-            </ul>
-
-            <p>Looking at all the user feedback, as well as what competitors had, the main data we decided to add was:</p>
-            <ul>
-                <li>Trends</li>
-                <li>A conversion funnel</li>
-                <li>An Account performance dashboard</li>
-                <li>An Objections dashboard</li>
-                <li>A When to Call dashboard</li>
-            </ul>
-
-            
-            <!--<img class="embed" src="img/analyticspersona1.png">
-            <img class="embed" src="img/analyticspersona2.png">!-->
-
-            <!--<img class="embed" src="img/analyticsworkflow.png">-->
-
-            <!--<p>An aspect of this scoping was also looking at what would bring us to parity with, as well as differentiate us from our close competitor, Nooks.</p>
-            <img style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/analyticscomp.png">-->
-
-            <h3>Usability Issues in Existing Analytics</h3>
-            <p>There was also plenty of feedback around the existing analytics that I wanted to address.</p>
-
-            <img src="img/oldanalytics.png">
-
-            <h3>Low - Mid Fidelity Iterations</h3>
-            <p>More time was spent in this stage than usual, since a big part of analytics design is figuring what to display, and in what format. I was ideating on different ideas, while also collaborating with engineering to figure out what was feasible.</p>
-            <img class="embed" src="img/analyticsmedfi.png">
-
-            <h3>High Fidelity Designs</h3>
-            <p>I updated the Rep Performance page to include the overall conversion rates at the top. I removed the need to toggle the performance table, as this was a big annoyance for users. There's also now a conversion funnel and a trends graph, so teams can see whether they're improving. We also improved the disposition graphs so that users can easily filter by outcome, and can see them broken down by rep.</p>
-            <img class="embed" src="img/repperformance.png">
-
-            <p>There's a new Account Performance page, which is similar to rep performance, but shows the stats for each account.</p>
-            <img class="embed" src="img/accountperformance.png">
-
-            <p>On the Objections page, managers can see which objections their team is encountering on calls and how well they're overcoming them. They can also see if some team members are doing better than others. This is an invaluable resource for diagnosing issues and coaching.</p>
-            <img class="embed" src="img/objections.png">
-
-            <p>Lastly, we added a When to Call tab, where users can see when prospects are most likely to pick up compared to when their reps are dialing. They can use this info to optimize their dialing schedules.</p>
-            <img src="img/whentocall.png">
-
-            <h3>Rollout + Feedback</h3>
-            <p>We rolled out to our customers over the course of a few weeks, and I booked interviews with a dozen customers to get their early impressions. Feedback was overwhelmingly positive, but there were a few things to change here and there, so we created a Jira epic of fast follows that we improved as the feedback came in.</p>
-
-            <h3>Outcomes</h3>
-            <ul>
-                <li>Analytics daily usage among reps increased by 18%</li>
-                <li>Average session time increased from 22min to 30min</li>
-                <li>Saved 4 major key accounts that were at risk of churning</li>
-                <li>Still monitoring overall impact on churn</li>
-            </ul>
-
-            <h3>Analytics Recap Emails</h3>
-            <p>In the user interviews, we noticed managers were spending considerable time creating performance summaries to send to their teams. We figured we could save them time by supplementing the dashboards with recap emails.</p>
-
-            <p>I designed the emails to play on the fun, competitive nature of sales teams by adding a leaderboard and utilizing a fun visual design.</p>
-
-            <p>The manager would see an email for the teams they manage.</p>
-
-            <img class="embed" style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/orumemailmvp1.png">
-
-            <p>The reps would receive an email that highlights their personal stats.</p>
-
-            <img class="embed" style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/orumemailmvp2.png">
-
-            <h3>Future Iteration: Utilizing AI to Provide Recommendations</h3>
-            <p>As a next step, we'd like to use AI to provide users with actionable insights and recommendations on how to improve, based on what we're seeing.</p>
-            <img style="max-width: 550px; display: block; margin-left: auto;margin-right: auto;" src="img/orumemailai.png">
-
-            <!--<h2 class="analyticsheader">Project 3: Displaying Live Stats in the Dialer</h2>
-            <p>One of the main uses of analytics for reps is to see if they're hitting their targets. We were finding they were having to jump back and forth between the analytics tab and dialer during their sessions. We hypothesize that integrating live stats into the dialer will help reps meet their targets and be more aware of their performance.</p>
-
-            <p>I designed a widget in the dialer to show the user their stats for the day.</p>
-            <img class="embed" src="img/statsopen.png">
-
-            <p>When the user reaches a goal, they receive a congratulatory toast, and the team can see it in the updates panel.</p>
-            <img class="embed" src="img/goalmet.png">
-
-            <p>We'll also notify them of their personal best.</p>
-            <img class="embed" src="img/personalbest.png">
-
-            <p>Users can set their goals in personal settings.</p>
-            <img class="embed" src="img/personalsettings.png">
-
-            <h3>Summary</h3>
-            <p>While Projects 2 and 3 are still in progress, we believe that together these improvements will provide a robust analytics experience to help managers assess and correct performance, and to help reps monitor and reach their goals.</p>!-->
-
-
-        <div class="next">
-            <p>
-            <a href="calllibrary.html">Next Project: Orum Call Library</a>
-            </p>
-        </div>
-    </div>
-
-
-
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="call-library.html">Orum — Call Library + Call History →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
 </body>
 </html>

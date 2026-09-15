@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Clio Grow and Clio Manage were sold as a suite but maintained separate contact databases. I worked on unifying the contact experience so legal teams could trust Clio as a more complete source of truth.">
+  <title>Contact Unification — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<!--
+  EDITING:
+  - Shared visual system: site.css
+  - Project hero/summary/tags/metrics: edit directly in this file
+  - Case-study story: edit the <main class="reading case-body"> sections
+  - Existing product images are referenced from monicamoore.ca/img/
+-->
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
+
+<header class="reading case-hero">
+  <p class="case-company">Clio</p>
+  <h1 class="case-title">Contact Unification</h1>
+  <p class="case-summary">Clio Grow and Clio Manage were sold as a suite but maintained separate contact databases. I worked on unifying the contact experience so legal teams could trust Clio as a more complete source of truth.</p>
+  <div class="tags"><span class="tag tag--accent">Platform</span><span class="tag">Data Model</span></div>
+  
+</header>
+
+<div class="shell">
+  <figure class="hero-figure">
+    <img src="img/managelist.png" alt="Contact Unification project image" fetchpriority="high" decoding="async">
+  </figure>
+  <div class="metric-grid metric-grid--3"><div class="metric"><strong>214</strong><span>votes on Grow’s top requested feature</span></div><div class="metric"><strong>30%</strong><span>of NPS detractors related to Grow / Manage integration</span></div><div class="metric"><strong>&gt;$40k / mo</strong><span>estimated MRR impact</span></div></div>
+</div>
+
+<main class="reading case-body">
+<section class="case-section">
+  <h2>The business and customer problem</h2>
+  <p>Clio Grow handles intake, while Clio Manage handles client and case management after intake. Although the products were sold as a suite, they still had separate contact databases.</p>
+  <p>Users manually exported data between products, created duplicates without realizing it, and couldn’t rely on Clio as one complete source of truth.</p>
+  <div class="goal-grid">
+    <div><span class="eyebrow">Customer signal</span><p>Contact unification was Clio Grow’s top requested feature with 214 votes.</p></div>
+    <div><span class="eyebrow">Business signal</span><p>30% of NPS detractors were related to Grow / Manage integration, with an estimated MRR impact above $40,000 USD per month.</p></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <h2>Understand the system before redesigning it</h2>
+  <p>I started by mapping every contact field and interface in both products. I then interviewed firms about how they created, updated, categorized, and moved contacts through their legal workflows.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/currentstatecontacts.png" alt="Mapping contact fields and surfaces across Clio Grow and Manage" loading="lazy" decoding="async"></div></figure>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/contactsflow.png" alt="Observed legal-firm contact workflows spanning Grow and Manage" loading="lazy" decoding="async"></div></figure>
+</section>
+
+<section class="case-section">
+  <h2>The core problem</h2>
+  <div class="decision-list">
+    <div class="decision"><strong>Manual synchronization</strong><p>Updates in one product didn’t automatically appear in the other, forcing firms to export and re-import data to stay accurate.</p></div>
+    <div class="decision"><strong>Duplicate contacts</strong><p>Users often created another record because they didn’t know a contact already existed in the other product, increasing the risk of outdated or incomplete information.</p></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <h2>Bring the experiences closer without pretending they’re identical</h2>
+  <p>I critiqued the existing contact interfaces, explored low- and high-fidelity variations, and updated the two products so their contact information and ordering were consistent while each product retained its established interaction patterns.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/crit.png" alt="Critique of existing contact interfaces across Clio Grow and Manage" loading="lazy" decoding="async"></div></figure>
+
+  <h3>Contact creation</h3>
+  <div class="figure-grid figure-grid--2">
+    <figure class="figure"><div class="figure__frame"><img src="img/managecreatecontact.png" alt="Updated Clio Manage contact creation form" loading="lazy" decoding="async"></div><figcaption>Manage</figcaption></figure>
+    <figure class="figure"><div class="figure__frame"><img src="img/growcreatecontact.png" alt="Updated Clio Grow contact creation form" loading="lazy" decoding="async"></div><figcaption>Grow</figcaption></figure>
+  </div>
+
+  <h3>Contact lists</h3>
+  <div class="figure-grid figure-grid--2">
+    <figure class="figure"><div class="figure__frame"><img src="img/managelist.png" alt="Updated Clio Manage contact list" loading="lazy" decoding="async"></div><figcaption>Manage</figcaption></figure>
+    <figure class="figure"><div class="figure__frame"><img src="img/growlist.png" alt="Updated Clio Grow contact list" loading="lazy" decoding="async"></div><figcaption>Grow</figcaption></figure>
+  </div>
+</section>
+
+<section class="case-section">
+  <h2>Testing changed what unification needed to include</h2>
+  <p>Users liked the idea of unified contacts, but the testing surfaced important risks around clutter and duplicates. The distinction between contact types and tags was also unclear.</p>
+  <div class="insight-grid insight-grid--3">
+    <div class="insight"><span>01</span><strong>Unification felt more seamless</strong><p>Most users believed a unified contact system would make their work easier.</p></div>
+    <div class="insight"><span>02</span><strong>Clutter was a real concern</strong><p>Users worried Manage would fill with contacts they didn’t need there.</p></div>
+    <div class="insight"><span>03</span><strong>Duplicates could create more work</strong><p>Users expected the transition itself to generate duplicate records.</p></div>
+  </div>
+  <p>I explored a single labelling system to replace the confusing split between contact types and tags, combining preset, automatic, and customizable labels.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/cliolabels.png" alt="Exploration of a unified Labels system in Clio" loading="lazy" decoding="async"></div></figure>
+</section>
+
+<section class="case-section">
+  <h2>Scope the platform work into phases</h2>
+  <p>I worked with the PM and Engineering Manager to prioritize the work. We split the broader unification effort into phases while also addressing duplicate contacts in parallel.</p>
+  <div class="phase-list">
+    <div><strong>Phase 1</strong><p>Unify basic contact information and remove manual export/import.</p></div>
+    <div><strong>Phase 2</strong><p>Feature parity, including labels and referral information.</p></div>
+    <div><strong>Phase 3</strong><p>Contact-management UX improvements such as filtering and deprioritization.</p></div>
+    <div><strong>Parallel track</strong><p>Contact deduplication to reduce the risk and workload created by duplicate data.</p></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <h2>Use a smaller MVP to solve an urgent duplicate problem</h2>
+  <p>We knew full unification would require robust duplicate handling. At the same time, a separate bug had already created large numbers of duplicates for customers.</p>
+  <p>A full review-and-merge UI would take significant time. For the MVP, we automated removal of safe, identical duplicates and let customers download a CSV if they wanted to review what had been detected.</p>
+  <div class="figure-grid figure-grid--2">
+    <figure class="figure"><div class="figure__frame"><img src="img/duplicateemail.png" alt="Clio email notifying a customer of duplicate contacts" loading="lazy" decoding="async"></div><figcaption>Notification</figcaption></figure>
+    <figure class="figure"><div class="figure__frame"><img src="img/dedupe1.png" alt="Starting duplicate cleanup in Clio Manage" loading="lazy" decoding="async"></div><figcaption>Start cleanup</figcaption></figure>
+  </div>
+  <p>Because cleanup could take a while, users weren’t trapped on the page while it ran.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/dedupe2.png" alt="Clio duplicate cleanup in progress" loading="lazy" decoding="async"></div></figure>
+</section>
+
+</main>
+
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="analytics.html">Orum — Analytics →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
+</body>
+</html>

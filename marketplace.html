@@ -1,65 +1,332 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Monica Moore</title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="all" href="css/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="portfolio.css">
-    <link rel="shortcut icon" href="img/favicon.ico" >
-  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Top Hat Marketplace — product design case study by Monica Moore. Redesigning discovery, search, content pages, and importing for prospective and existing customers.">
+  <title>Marketplace — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
 </head>
-
-
 <body>
-    <div class="project">
-        <a href="index.html" class="backhome">Monica Moore</a>
-        <h2 class=company>Top Hat</h2>
-        <h1>Marketplace</h1>
-        <p>The Top Hat Marketplace is a place for people to discover our content offering, including textbooks, slides, and question packs. There's both an external facing marketplace, with the goal to appeal to new customers, and an internal marketplace where existing customers can import supplementary material. Prior to this project, an old internal marketplace existed, but not an external one. The goal was to create one marketplace service that met both internal and external needs.</p>
-        <h3>User Tests on Old Internal Marketplace</h3>
-        <img src="img/oldmarketplace.png" class="embed">
-        <p>I created a user testing plan (see it <a href="https://docs.google.com/document/d/1L2kXXCeWB3i9j9rvZWcv2m-fPETHRXoK04LzTLOoW1k/edit?usp=sharing" target="_blank">here</a>) and ran it with 5 post-secondary educators on usertesting.com. Primarily, we observed users struggling to navigate. This provided valuable insight into how professors expect to be able to navigate to find a textbook.</p>
-        <p>We also saw that the search was inadequate and that importing content took too long. It would be much better if importing could happen asynchronously in the background.</p>
-        <h3>Working with Marketing</h3>
-        <p>Since demand generation is a key purpose of the external marketplace, this project was a close collaboration with the Marketing department, particularly when it came to SEO optimization. We tested out variations of the textbook landing pages using various analytics including heat mapping.</p>
-        <h3>Home Page</h3>
-        <p>At the top is a hero video playing, which can be expanded to view in its entirety to learn about Top Hat's content offering. On top, is an emphasis on search, since we found that profs are usually looking for something specific when in the market for a new textbook, or looking to add new content to their course.</p>
-        <img src="img/marketplacehome.png" class="embed">
-        <p>Below, are links to domains and more specific subjects. Educators usually only teach within one domain, with perhaps a couple subjects, so it made sense to immediately and prominently filter the content this way, rather than highlighting featured content that may provide no relevance to the user.</p>
-        <h3>Subject Pages</h3>
-        <img src="img/subjectpage.png" class="embed">
-        <p>The idea is that the user can browse by categories and narrow down to more specific subjects. They can easily switch between the specific subjects. To go to a different subject category, they would have to go back to the home page though. This was chosen because it's highly unlikely that professors will be teaching in two completely different domains. </p>
-        <h3>Search</h3>
-        <p>A lot of emphasis was placed on improving search, since our users are often looking for something specific and use search to find it. Hence, I placed the most emphasis on search on the home page.</p>
-        <img src="img/searchhome.png" class="embed">
-        <p>On the search results page, users can further refine by subject, content type, and price.</p>
-        <img src="img/searchresults.png">
-        <h3>Content Page</h3>
-        <p>I worked closely with Marketing to determine what content should appear on the content page itself, which varied depending on the textbook. The point of conversion is to book a sales demo, but the user can also preview the content from this page as well. In the internal marketplace, existing customers can read all of the content.</p>
-        <img src="img/contentpage.png">
-        <h3>Importing Content</h3>
-        <p>With the new internal marketplace, we were looking to improve the importing experience. Previously, users could only choose 1 course to import to. They would also have to wait while it imported, which can take quite some time. Now, when the user clicks "Add to Course", a modal opens up where they can select multiple courses if they wish.</p>
-        <img src="img/selectcourses.png" class="embed">
-        <p>The user then selects whether the content is optional or mandatory, with mandatory being selected by default.</p>
-        <img src="img/mandatory.png" class="embed">
-        <p>They're then told that importing has begun.</p>
-        <img src="img/importsuccess.png" class="embed">
-        <p>When they go back into their course, it shows that the content is importing and the progress. They're able to continue using Top Hat while this happens, which was not previously possible.</p>
-        <img src="img/importing.png">
-        <h3>Mobile</h3>
-        <p>I also had to design it responsively for mobile, some of which is shown below.</p>
-        <img src="img/mobilemarketplace.png">
-        <div class="next">
-            <p>
-            <a href="cliocontacts.html">Next Project: Clio Contact Unification</a>
-            </p>
-        </div>
+
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
+
+<header class="reading case-hero">
+  <p class="case-company">Top Hat</p>
+  <h1 class="case-title">Marketplace</h1>
+  <p class="case-summary">
+    Top Hat needed one marketplace that could attract prospective customers and still serve
+    existing professors importing supplementary content. I redesigned discovery, search,
+    content pages, and the import workflow across desktop and mobile.
+  </p>
+  <div class="tags">
+    <span class="tag tag--accent">Marketplace</span>
+    <span class="tag">Discovery</span>
+  </div>
+</header>
+
+<div class="shell">
+  <figure class="hero-figure">
+    <img
+      src="img/marketplacehome.png"
+      alt="Top Hat Marketplace home page"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </figure>
+
+
+<main class="reading case-body">
+
+  <section class="case-section">
+    <h2>One marketplace, two audiences</h2>
+
+    <p>
+      Top Hat's Marketplace is where people discover textbooks, slides, question packs, and other
+      course content. Before this project, there was an old internal marketplace for existing
+      customers but no external marketplace for prospective customers.
+    </p>
+
+    <p>
+      Rather than maintain two separate products, the goal was to create one marketplace service
+      that could support both acquisition and in-product content discovery.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Understanding the existing experience</h2>
+
+    <p>
+      I created a test plan and ran usability testing with five post-secondary educators on the
+      existing internal marketplace. Users struggled with navigation, search was too limited,
+      and importing content was slow and blocked the rest of the experience while it completed.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/oldmarketplace.png"
+          alt="Old Top Hat internal marketplace"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+    </figure>
+
+    <p>
+      The external marketplace also had a demand-generation role, so I collaborated closely with
+      Marketing on SEO and used analytics and heat mapping to understand how prospective customers
+      were engaging with textbook landing pages.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Key product decisions</h2>
+
+    <div class="decision-list">
+      <div class="decision">
+        <strong>01 · Make search prominent</strong>
+        <p>Professors often arrive looking for something specific, so search became one of the most prominent actions on the home page.</p>
+      </div>
+
+      <div class="decision">
+        <strong>02 · Organize around disciplines</strong>
+        <p>Subject and domain navigation was more useful than generic featured content because educators typically teach within a narrow discipline.</p>
+      </div>
+
+      <div class="decision">
+        <strong>03 · Support two jobs with one content page</strong>
+        <p>The external version supports preview and conversion, while signed-in customers can access and import content into their courses.</p>
+      </div>
+
+      <div class="decision">
+        <strong>04 · Make importing asynchronous</strong>
+        <p>Professors should be able to choose multiple destinations, start an import, and keep working while it runs in the background.</p>
+      </div>
     </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Redesigning discovery</h2>
+
+    <p>
+      The new home page centers the two most useful ways to find content: search for something
+      specific or browse by subject. This replaced featured content that often had little relevance
+      to what an individual professor actually taught.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/marketplacehome.png"
+          alt="Redesigned Top Hat Marketplace home page"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+    </figure>
+
+    <p>
+      From a broad discipline, users can drill into more specific subject areas rather than browse
+      one undifferentiated catalog.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/subjectpage.png"
+          alt="Top Hat Marketplace subject browsing page"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Making search useful enough to rely on</h2>
+
+    <p>
+      Search needed to work both as an entry point and as a serious discovery tool. I designed a
+      search-first state that made it easy to begin a query before layering in more advanced controls.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/searchhome.png"
+          alt="Top Hat Marketplace search starting state"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+    </figure>
+
+    <p>
+      Results can then be narrowed by the dimensions educators actually care about, including
+      subject, content type, and price.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/searchresults.png"
+          alt="Top Hat Marketplace search results with filters"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>One content page that works before and after purchase</h2>
+
+    <p>
+      The Marketplace content page had to serve different jobs depending on who was viewing it.
+      For prospective customers, it needed enough information and preview content to support a
+      decision and move them toward a demo. Existing customers could access the full content and
+      start importing it into one or more courses.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/contentpage.png"
+          alt="Top Hat Marketplace content detail page"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>A faster import workflow for existing customers</h2>
+
+    <p>
+      The old flow allowed professors to import into only one course at a time and made them wait
+      for the entire process to finish. I redesigned the flow around batch selection and background
+      processing.
+    </p>
+
+    <h3>Select multiple destination courses</h3>
+
+    <p>
+      Professors can choose all of the courses that need the material in a single step instead of
+      repeating the same import workflow course by course.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/selectcourses.png"
+          alt="Selecting multiple destination courses for a Marketplace import"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>Set whether the content is required</h3>
+
+    <p>
+      Because imported Marketplace content could be optional or mandatory for students, that choice
+      was incorporated directly into the import setup rather than handled separately afterward.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/mandatory.png"
+          alt="Choosing whether Marketplace content is mandatory for students"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>Confirm the import immediately</h3>
+
+    <p>
+      Once the import begins, the user gets a clear confirmation instead of being trapped in a
+      loading state waiting for a potentially long-running process.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/importsuccess.png"
+          alt="Successful Top Hat Marketplace import confirmation"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+    </figure>
+
+    <h3>Let the work finish in the background</h3>
+
+    <p>
+      Import progress is then visible from within the course while the user continues working.
+      This removed the blocking wait from the core workflow.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/importing.png"
+          alt="Marketplace content importing in the background inside a Top Hat course"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Responsive by design</h2>
+
+    <p>
+      The external Marketplace needed to support discovery outside the desktop Top Hat product,
+      so the core home, browsing, search, and content experiences were designed responsively.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/mobilemarketplace.png"
+          alt="Responsive mobile Top Hat Marketplace screens"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+</main>
+
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="test-handback.html">Top Hat — Test Handback →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
+
 </body>
 </html>

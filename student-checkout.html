@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Student Checkout — product design case study by Monica Moore. Redesigning Top Hat's purchase and access-key experience to reduce confusion, support volume, and improve subscription selection.">
+  <title>Student Checkout — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
+
+<header class="reading case-hero">
+  <p class="case-company">Top Hat</p>
+  <h1 class="case-title">Student Checkout</h1>
+
+  <p class="case-summary">
+    Checkout was Top Hat’s largest source of student complaints and consumed significant Support time.
+    I redesigned the end-to-end purchase and access-key experience to make what students were buying,
+    what it cost, and how to get access much clearer.
+  </p>
+
+  <div class="tags">
+    <span class="tag tag--accent">Ecommerce</span>
+    <span class="tag">Growth</span>
+  </div>
+</header>
+
+<div class="shell">
+  <figure class="hero-figure">
+    <img
+      src="img/studentcheckout.png"
+      alt="Redesigned Top Hat student checkout"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </figure>
+
+  <div class="metric-grid metric-grid--3">
+    <div class="metric">
+      <strong>75%</strong>
+      <span>reduction in checkout-related support tickets</span>
+    </div>
+    <div class="metric">
+      <strong>2×</strong>
+      <span>1-year subscriptions after the pricing redesign</span>
+    </div>
+    <div class="metric">
+      <strong>87%</strong>
+      <span>users reported a positive or neutral checkout experience</span>
+    </div>
+  </div>
+</div>
+
+<main class="reading case-body">
+
+  <section class="case-section">
+    <h2>The challenge</h2>
+
+    <p>
+      The student checkout had been built years earlier and had become Top Hat’s largest source
+      of student complaints. Students often didn’t understand what they were purchasing or what
+      it cost, and bookstore access-key redemption was especially convoluted.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/uxteardown.png"
+          alt="UX teardown of the old Top Hat checkout"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <figcaption>An initial teardown helped identify where the existing experience was creating confusion.</figcaption>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Benchmarking the old experience</h2>
+
+    <p>
+      Before redesigning anything, I wanted a baseline. I recruited 10 students who had never used
+      Top Hat checkout and asked each of them to complete two tasks: pay by credit card and redeem
+      a pre-purchased bookstore code. For each task I measured the task-completion rate, the error-free rate, and the time-on-task. The bookstore task had very abysmal results.
+    </p>
+
+    <div class="stat-strip">
+      <div>
+        <strong>40%</strong>
+        <span>bookstore task completion</span>
+      </div>
+      <div>
+        <strong>10%</strong>
+        <span>bookstore task error-free rate</span>
+      </div>
+      <div>
+        <strong>5:05</strong>
+        <span>Avg time to complete</span>
+      </div>
+    </div>
+
+    <p>
+      The testing confirmed that pricing, the product offering, and especially bookstore redemption
+      needed much clearer communication. It also gave us a baseline we could compare against after
+      launch.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Aligning the team before designing</h2>
+
+    <p>
+      Checkout touched far more than Product and Engineering. Pricing, bookstores, finance,
+      support workflows, marketing, and physical access cards all shaped the experience.
+    </p>
+
+    <p>
+      I ran a workshop with nine stakeholders from across Top Hat to align on the problems we were
+      solving, surface constraints, and generate possible approaches before moving into detailed
+      interaction design.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/billingworkshop.png"
+          alt="Cross-functional Top Hat checkout design workshop"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <figcaption>The workshop was a separate alignment and ideation step after benchmark research.</figcaption>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>The first iteration failed an important comprehension test</h2>
+
+    <p>
+      My first checkout concept used clear steps on the left and a receipt-style bill summary on
+      the right. In testing, students often missed the bill summary and believed they were only
+      paying for Top Hat Classroom and missed the textbook price altogether.
+    </p>
+
+    <p>
+      That was unacceptable for a purchase experience, so I changed direction.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/billingfirstiteration.png"
+          alt="First checkout iteration with a bill summary on the right"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Key product decisions</h2>
+
+    <div class="decision-list">
+      <div class="decision">
+        <strong>01 · Confirm before charging</strong>
+        <p>
+          Start with a welcome page that confirms the course and required products before asking
+          students to choose how they’ll pay.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>02 · Keep purchase details visible</strong>
+        <p>
+          Move the items and pricing into the main checkout flow rather than relying on a separate
+          summary that could be missed.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>03 · Make redemption explicit</strong>
+        <p>
+          Give every required product its own labelled access-key input so students understand
+          when multiple codes are needed.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>04 · Treat offline materials as UX</strong>
+        <p>
+          The bookstore cards were part of the same journey, so terminology and product cues
+          needed to match the digital checkout.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>The redesigned checkout flow</h2>
+
+    <p>
+      Students first see the course they’re joining and the products it requires. From there,
+      they can redeem access keys or continue to credit-card checkout.</p>
+    <p>  I intentionally left pricing off of this page, as there is often a discrepancy between online pricing and bookstore pricing, which led to many complaints + confusion. This way, students who already purchased at the bookstore, would not see any prices. 
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/studentcheckout.png"
+          alt="Course and product confirmation page"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <p>
+      Credit-card checkout keeps the purchase details above the payment information so students
+      can see exactly what they are being charged before entering payment details.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/checkoutpage.png"
+          alt="Top Hat credit-card checkout"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <p>
+      For students who purchased through a bookstore, the access-key modal maps each code
+      directly to the product it unlocks rather than treating redemption as one ambiguous step. This was to address a key usability problem that users were often unaware that each item required its own access key. I worked closely with engineering to ensure there was extensive error handling. If the user put the code in an the wrong input field, it would still accept it!
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/accesskey.png"
+          alt="Top Hat access-key redemption"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <p>
+      The flow was also designed responsively rather than treating mobile as an afterthought.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/mobilecheckout.png"
+          alt="Responsive Top Hat checkout flow"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Extending the experience to the bookstore</h2>
+
+    <p>
+      For bookstore customers, the checkout journey actually started with a physical card.
+      The existing cards used inconsistent terms — license key, content coupon code, subscription
+      code — and offered very little instruction.
+    </p>
+
+    <p>
+      I worked with a Marketing designer and coordinated with Marketing, Finance, the print company,
+      and bookstores so the physical and digital parts of the experience used consistent terminology
+      and clearer product cues.
+    </p>
+
+    <div class="figure-grid figure-grid--2">
+      <figure class="figure">
+        <div class="figure__frame">
+          <img
+            src="img/oldcards.png"
+            alt="Old Top Hat bookstore access cards"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>Before</figcaption>
+      </figure>
+
+      <figure class="figure">
+        <div class="figure__frame">
+          <img
+            src="img/newcards.png"
+            alt="Redesigned Top Hat bookstore access cards"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>After</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Next semester — helping students make a better pricing decision</h2>
+
+    <p>
+      The following semester, we revisited how subscription pricing was presented. Previously,
+      students were shown prices without much context for how long they might actually use Top Hat.
+    </p>
+
+    <p>
+      We redesigned the subscription options to make the monthly cost and upfront charge easier
+      to compare, and added institution-level usage context — for example, how many courses at the
+      student’s school were already using Top Hat. That gave students more information to judge
+      whether a longer subscription was likely to be worthwhile.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="studentcheckout-pricing.png"
+          alt="Top Hat checkout redesign showing subscription pricing and school usage context"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <figcaption>
+        Subscription options made the tradeoff clearer, while school-level usage helped students
+        understand the likelihood that they would use Top Hat again.
+      </figcaption>
+    </figure>
+
+    <blockquote>
+      After changing how the subscription options were presented, the number of students choosing
+      the 1-year subscription doubled.
+    </blockquote>
+  </section>
+
+  <section class="case-section">
+    <h2>Results</h2>
+
+    <div class="stat-strip">
+      <div>
+        <strong>≈75%</strong>
+        <span>fewer checkout-related support tickets</span>
+      </div>
+      <div>
+        <strong>2×</strong>
+        <span>1-year subscription selection</span>
+      </div>
+      <div>
+        <strong>123k</strong>
+        <span>survey responses</span>
+      </div>
+    </div>
+
+    <p>
+      Checkout-related support tickets fell from 3,054 to 820 — roughly a three-quarter reduction
+      in the issue that had originally made checkout such a costly problem for the business.
+    </p>
+
+    <p>
+      Thirty percent of students, or 123,000 people, answered the post-checkout survey. 56% rated
+      the new experience positively and 32% neutrally. Most negative feedback was about price rather
+      than difficulty using the checkout itself.
+    </p>
+
+    <blockquote>
+      The redesign dramatically reduced Support volume, while the following semester’s pricing
+      iteration doubled adoption of the 1-year subscription.
+    </blockquote>
+  </section>
+
+</main>
+
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="intro-courses.html">Top Hat — Intro Courses →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
+
+</body>
+</html>

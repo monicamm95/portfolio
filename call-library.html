@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Managers and reps were already using Orum calls to coach and train — but much of the workflow lived in documents and loose links outside the product. I designed a Call Library and reworked Call History so useful calls were easier to save, find, and review.">
+  <title>Call Library + Call History — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<!--
+  EDITING:
+  - Shared visual system: site.css
+  - Project hero/summary/tags/metrics: edit directly in this file
+  - Case-study story: edit the <main class="reading case-body"> sections
+  - Existing product images are referenced from monicamoore.ca/img/
+-->
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
+
+<header class="reading case-hero">
+  <p class="case-company">Orum</p>
+  <h1 class="case-title">Call Library + Call History</h1>
+  <p class="case-summary">Managers and reps were already using Orum calls to coach and train, but much of the workflow lived in documents and loose links outside the product. I designed a Call Library and reworked Call History so useful calls were easier to save, find, and review.</p>
+  <div class="tags"><span class="tag tag--accent">Coaching</span><span class="tag">0→1</span></div>
+  
+</header>
+
+<div class="shell">
+  <figure class="hero-figure">
+    <img src="img/librarycallplaying.png" alt="Call Library + Call History project image" fetchpriority="high" decoding="async">
+  </figure>
+</div>
+
+<main class="reading case-body">
+<section class="case-section">
+  <h2>The opportunity</h2>
+  <p>One of Orum’s goals was to help reps book more meetings — not only by connecting them with more prospects, but by helping them perform better once a call connected. Coaching from sales managers was a major part of that.</p>
+  <p>In research with a dozen SDR managers, three coaching responsibilities came up consistently:</p>
+  <div class="insight-grid insight-grid--3">
+    <div class="insight"><span>01</span><strong>Giving feedback on calls</strong></div>
+    <div class="insight"><span>02</span><strong>KPIs and analytics</strong></div>
+    <div class="insight"><span>03</span><strong>Providing enablement resources</strong></div>
+  </div>
+  <blockquote>Managers were already coaching with Orum calls — but much of the workflow happened outside Orum.</blockquote>
+</section>
+
+<section class="case-section">
+  <h2>What users were doing instead</h2>
+  <p>Managers spent a lot of time looking for calls to review. They kept training documents outside Orum with links to recordings. Reps maintained their own lists of calls to bring into 1:1s for feedback.</p>
+  <div class="user-grid">
+    <div class="user-card"><h3>Sales Manager</h3><ul><li>Creates a library of calls to train the team and onboard new reps</li><li>Runs weekly coaching sessions reviewing calls as a group</li><li>Reviews calls during 1:1s with reps</li><li>Finds it time-consuming to find calls to review</li></ul></div>
+    <div class="user-card"><h3>Sales Rep</h3><ul><li>Brings calls to weekly 1:1s to get feedback</li><li>Listens to successful calls from experienced reps</li><li>Reviews their own calls to understand what went well and what could improve</li></ul></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <h2>Key product decisions</h2>
+  <div class="decision-list">
+    <div class="decision"><strong>01 · A dedicated library</strong><p>I considered folding saved calls into Call History, but we had a longer-term vision for a Library that could eventually hold all types of sales resources. Call Library became the first step toward that system.</p></div>
+    <div class="decision"><strong>02 · Familiar playback</strong><p>I borrowed patterns from Call History and common audio products so the interface would feel immediately understandable: play from the list, keep playback persistent, and open details without losing context.</p></div>
+    <div class="decision"><strong>03 · Fix the adjacent workflow</strong><p>Call Library and Call History were tightly connected. Rather than reproduce a cumbersome playback pattern for consistency, we invested in improving Call History too.</p></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <h2>A library built around coaching</h2>
+  <p>By default, users see every saved call in a scannable table. Calls can be played immediately or opened for more information.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/libraryallcalls.png" alt="All calls in the Call Library" loading="lazy" decoding="async"></div></figure>
+  <p>Playing a call opens the transcript in a side panel while a persistent audio bar appears at the bottom, keeping the user in the same context.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/librarycallplaying.png" alt="Call Library with transcript and playback controls" loading="lazy" decoding="async"></div></figure>
+  <p>Playlists can be private or shared across the organization, supporting both individual coaching and team-wide training.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/libraryplaylist.png" alt="Shared and private playlists in Call Library" loading="lazy" decoding="async"></div></figure>
+</section>
+
+<section class="case-section">
+  <h2>Reworking Call History at the same time</h2>
+  <p>The way to add calls to the Library was from Call History, but Call History required users to open a call before they could listen to it. I explored keeping the new Library consistent with that pattern, but we decided consistency wasn’t a good reason to preserve a usability problem.</p>
+  <div class="figure-grid figure-grid--2">
+    <figure class="figure"><div class="figure__frame"><img src="img/callhistorybefore.png" alt="Call History before the redesign" loading="lazy" decoding="async"></div><figcaption>Before</figcaption></figure>
+    <figure class="figure"><div class="figure__frame"><img src="img/callhistory.png" alt="Updated Call History with playback from the table" loading="lazy" decoding="async"></div><figcaption>After</figcaption></figure>
+  </div>
+  <p>The key improvement was being able to play directly from the table and move between calls using the same persistent audio model.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/callhistorypanel.png" alt="Updated Call History detail panel and audio bar" loading="lazy" decoding="async"></div></figure>
+  <figure class="figure figure--medium"><div class="figure__frame"><img src="img/calllibraryadd.png" alt="Adding a call to Call Library" loading="lazy" decoding="async"></div><figcaption>Calls can be added from the detail panel or audio bar.</figcaption></figure>
+</section>
+
+<section class="case-section">
+  <h2>What we learned after launch</h2>
+  <p>I tested the experience with Orum customers and on UserTesting.com. Feedback was overwhelmingly positive and the feature was used immediately after release.</p>
+  <blockquote>One assumption was wrong: we initially allowed only managers to add calls to the general team library. Managers were too short on time and relied on reps to help curate examples. Once we changed the permission model, usage increased significantly.</blockquote>
+  <p>We also saw an increase in the number of calls listened to in Call History after introducing the new playback experience.</p>
+</section>
+
+</main>
+
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="battlecards.html">Orum — Battlecards + AI Assist →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
+</body>
+</html>

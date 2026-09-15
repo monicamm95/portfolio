@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Top Hat Mobile Pages — product design case study by Monica Moore. Building a stronger mobile reading experience for interactive textbooks and assignments.">
+  <title>Mobile Pages — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
+
+<header class="reading case-hero">
+  <p class="case-company">Top Hat</p>
+  <h1 class="case-title">Mobile Pages</h1>
+  <p class="case-summary">
+    Top Hat Pages are interactive textbook readings and assignments that can contain text,
+    images, videos, and questions. The mobile experience lagged far behind web, so I built a
+    vision for a reading experience students could comfortably use anywhere.
+  </p>
+  <div class="tags">
+    <span class="tag tag--accent">Mobile</span>
+    <span class="tag">Reading Experience</span>
+  </div>
+</header>
+
+<main class="reading case-body">
+
+  <section class="case-section">
+    <h2>Building a vision for mobile Pages</h2>
+
+    <p>
+      Students wanted to read their textbooks on their phones wherever they were, but the mobile
+      experience was not up to par with web. To define what a strong mobile Pages experience should
+      include, I looked at the problem from several angles.
+    </p>
+
+    <div class="decision-list">
+      <div class="decision">
+        <strong>01 · Compare against web</strong>
+        <p>Identify which capabilities were required simply to reach parity with the existing web reading experience.</p>
+      </div>
+      <div class="decision">
+        <strong>02 · Competitive analysis</strong>
+        <p>Look at other mobile reading apps and identify mobile-specific patterns or opportunities that did not exist on web.</p>
+      </div>
+      <div class="decision">
+        <strong>03 · User interviews</strong>
+        <p>Talk to students about how they used textbooks, where they read, and what they needed on mobile.</p>
+      </div>
+      <div class="decision">
+        <strong>04 · Product data</strong>
+        <p>Understand which web features students used most frequently and how they were using them.</p>
+      </div>
+      <div class="decision">
+        <strong>05 · In-app feedback</strong>
+        <p>Create an ongoing way to measure the experience and hear directly from students after launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Getting in-app feedback</h2>
+
+    <p>
+      I designed an in-app survey that would occasionally appear while a student was reading.
+      It served two purposes: give us a quantitative measure we could track over time, and collect
+      qualitative feedback about what was still frustrating or missing.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/pagessurvey.png"
+          alt="In-app feedback survey for Top Hat Mobile Pages"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>What was needed to reach parity with web?</h2>
+
+    <p>
+      The web app already had a fairly robust reading experience, so the first goal was making sure
+      mobile could support the same core study behaviours.
+    </p>
+
+    <div class="decision-list">
+      <div class="decision"><strong>Readable formatting</strong><p>Text styles, spacing, tables, lists, and other content needed to work well on a small screen.</p></div>
+      <div class="decision"><strong>Inline questions</strong><p>Students should be able to answer without losing the surrounding reading context.</p></div>
+      <div class="decision"><strong>Table of contents</strong><p>Students needed a fast way to understand structure and jump between sections.</p></div>
+      <div class="decision"><strong>Highlighting + notes</strong><p>Study annotations created on web needed to exist on mobile too.</p></div>
+      <div class="decision"><strong>Search</strong><p>Students needed a mobile equivalent to quickly finding a term in the text.</p></div>
+      <div class="decision"><strong>Progress</strong><p>The experience needed to communicate progress through assigned questions and reading.</p></div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>What could mobile do better?</h2>
+
+    <p>
+      Parity was only the baseline. Mobile also created a few opportunities that were especially
+      relevant for reading away from a desk.
+    </p>
+
+    <div class="decision-list">
+      <div class="decision"><strong>Offline reading</strong><p>Download content before a commute or anywhere Wi-Fi may be unreliable.</p></div>
+      <div class="decision"><strong>Font-size controls</strong><p>Let students adapt the reading experience to their own comfort.</p></div>
+      <div class="decision"><strong>Night mode</strong><p>Support longer reading sessions in darker environments.</p></div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Improving readability</h2>
+
+    <p>
+      The first step was improving the fundamentals. Previously, much of the content felt raw on
+      mobile and tables were not formatted adequately. I defined typography, spacing, and responsive
+      content treatments that made Pages feel like a real reading experience rather than a desktop
+      document squeezed onto a phone.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/readability.png"
+          alt="Top Hat Mobile Pages readability improvements"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Inline questions</h2>
+
+    <p>
+      One of Top Hat's main textbook features was interactive questions. In the mobile app,
+      however, questions opened in a separate modal. That made it harder for students to refer
+      back to the text while answering.
+    </p>
+
+    <p>
+      I moved questions directly into the reading flow, matching the web experience and keeping
+      the relevant context visible.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/inlinequestions.png"
+          alt="Inline interactive questions in Top Hat Mobile Pages"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Bottom navigation</h2>
+
+    <p>
+      The remaining reading tools needed to be accessible without permanently taking up valuable
+      screen space. I added a bottom navigation that appears at the start of the page and when a
+      student scrolls upward, but disappears while they are actively reading.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/pagesnav.png"
+          alt="Bottom navigation for Top Hat Mobile Pages"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Index</h2>
+
+    <p>
+      Students can open the table of contents and jump to another section through a half-page index.
+      The panel can also expand upward to full screen.
+    </p>
+
+    <p>
+      I tested a version that always opened full screen, but students preferred the half-screen
+      treatment because they could keep the surrounding text in view while deciding where to go.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/index.png"
+          alt="Half-page table of contents for Top Hat Mobile Pages"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Highlighting + notes</h2>
+
+    <p>
+      Students could already highlight text and take notes on web. It was important that those
+      study behaviours carried over to mobile rather than making the phone experience feel like a
+      read-only version of the textbook.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/highlighting.png"
+          alt="Highlighting and note-taking in Top Hat Mobile Pages"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Search</h2>
+
+    <p>
+      Students wanted to be able to search the text, so I designed a search experience that shows
+      the number of matches and gives the student simple controls for moving between results.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/pagessearch.png"
+          alt="Search within Top Hat Mobile Pages"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Offline mode</h2>
+
+    <p>
+      Finally, students wanted to read when they didn't have reliable Wi-Fi — particularly during
+      commutes. Offline mode lets them download textbook content ahead of time and continue reading
+      wherever they are.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/offlinemode.png"
+          alt="Offline reading in Top Hat Mobile Pages"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+</main>
+
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="multi-section-management.html">Top Hat — Multi-Section Management →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
+
+</body>
+</html>

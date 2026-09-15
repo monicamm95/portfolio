@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Top Hat Intro Courses — product design case study by Monica Moore. Turning standalone textbooks into full course solutions using a Before, During, and After Class framework.">
+  <title>Intro Courses — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
+
+  <style>
+    .video-embed{
+      width:min(var(--wide),calc(100vw - 64px));
+      margin:34px 0 0 50%;
+      transform:translateX(-50%);
+      padding:12px;
+      background:var(--frame);
+      border-radius:14px;
+    }
+    .video-embed__inner{
+      position:relative;
+      width:100%;
+      aspect-ratio:16/9;
+      overflow:hidden;
+      border-radius:7px;
+      background:#111;
+    }
+    .video-embed iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+    @media(max-width:800px){
+      .video-embed{width:calc(100vw - 40px)}
+    }
+  </style>
+
+  <style>
+    .hero-figure video{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+  </style>
+
+</head>
+<body>
+
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
+
+<header class="reading case-hero">
+  <p class="case-company">Top Hat</p>
+  <h1 class="case-title">Intro Courses</h1>
+
+  <p class="case-summary">
+    Top Hat’s digital textbooks weren’t competitive enough with traditional publishers because
+    professors expected a complete set of course materials, not a standalone book. I helped turn
+    the offering into a full course solution built around the Before, During, and After Class
+    framework, while solving the navigation problems that appeared once much more content was
+    added to the product.
+  </p>
+
+  <div class="tags">
+    <span class="tag tag--accent">Product Strategy</span>
+    <span class="tag">Information Architecture</span>
+  </div>
+</header>
+
+<div class="shell">
+  <figure class="hero-figure">
+    <video controls="" poster="https://tophat.com/wp-content/uploads/intro-courses-video-thumbnail.jpg" src="https://tophat.com/wp-content/uploads/Top-Hat-Intro-Courses-Subtitled.mp4" class="fade-and-slide-up"></video>
+  </figure>
+
+  <div class="metric-grid">
+    <div class="metric">
+      <strong>10% → 20%</strong>
+      <span>sales win rate for Intro Course textbooks</span>
+    </div>
+  </div>
+</div>
+
+<main class="reading case-body">
+
+  <section class="case-section">
+    <h2>From textbooks to full course solutions</h2>
+
+    <p>
+      Top Hat had an innovative online textbook offering, but it was not competitive enough with
+      traditional publishers. Professors expected more than a textbook: they were used to receiving
+      supporting lecture materials, assignments, assessments, and instructor resources alongside it.
+    </p>
+
+    <p>
+      The books were also difficult to sell alongside the rest of Top Hat because the content did
+      not fit seamlessly into a professor’s existing course workflow.
+    </p>
+
+    <p>
+      The product direction was to stop thinking about these as standalone textbooks and start
+      selling complete course solutions organized around a Before, During, and After Class framework.
+    </p>
+  </section>
+<section class="case-section">
+    <h2>Key hypotheses to test</h2>
+
+    <div class="decision-list">
+      <div class="decision">
+        <strong>Before, During, + After Class would resonate</strong>
+        <p>
+          The framework gives professors readings to assign before class, lecture material to use
+          during class, and homework to assign afterward.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>Student comprehension data would improve teaching</strong>
+        <p>
+          If instructors could see where students struggled in the reading, they could adapt the
+          upcoming lecture and spend more time on the concepts students had not understood.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>User research exposed a product problem</h2>
+
+    <p>
+      The content team assembled a few weeks of material in the new format and used it to pitch the
+      idea to professors. The content itself tested well, but putting that much material into a Top
+      Hat course exposed a major issue: the existing navigation had not been designed to handle
+      large amounts of structured content.
+    </p>
+
+    <p>
+      Professors liked the offering, but they found the course difficult to navigate and were not
+      grasping the Before, During, and After Class setup in its existing form.
+    </p>
+
+    <blockquote>
+      It became clear that selling the Intro Course successfully would require product changes,
+      not just better content.
+    </blockquote>
+  </section>
+
+  <section class="case-section">
+    <h2>Exploring the ideal experience</h2>
+
+    <p>
+      Before solving for the existing platform, I wanted to understand whether the underlying ideas
+      were strong. I quickly designed an idealized version of a course that made the BDA framework
+      and student-comprehension insights explicit.
+    </p>
+
+    <p>
+      We used this concept in interviews to separate two questions: did professors value the new
+      course model, and could the current Top Hat UI communicate it effectively?
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/BlueSky.png"
+          alt="Blue-sky Top Hat Intro Course design organized around Before, During, and After Class"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>The Module Lobby</h2>
+
+    <p>
+      Research suggested that instructors needed one place where they could see and interact with
+      everything associated with a module. We called this concept the “Module Lobby.”
+    </p>
+
+    <p>
+      To continue testing the idea before committing to implementation details, I explored multiple
+      blue-sky versions of what that lobby could be.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/IntroCourseTimeline.png"
+          alt="Blue-sky timeline-style Module Lobby for an Intro Course"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/BlueSky2.png"
+          alt="Alternate blue-sky Module Lobby for an Intro Course"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Making it work in Top Hat</h2>
+
+    <p>
+      Once the Module Lobby concept was validated, I needed to find a solution that worked within
+      Top Hat’s existing product and also benefited professors who would never adopt an Intro Course.
+    </p>
+
+    <p>
+      I decided to build around folders. Each course module could be a folder containing subfolders
+      for Before Class, During Class, and After Class. The existing folder-preview area could then
+      become a useful Module Lobby rather than introducing an entirely separate navigation model.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>The old folder experience</h2>
+
+    <p>
+      The old folder preview was extremely limited. Selecting a folder in the content tree simply
+      listed its contents on the right; those items were not navigable and users could not perform
+      meaningful actions from the preview.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/oldfolderpreview.png"
+          alt="Old Top Hat folder preview"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Redesigning folder previews</h2>
+
+    <p>
+      I redesigned the preview to clearly expose nested folders and their contents. Instructors
+      could navigate directly from the pane and assign or present material without first finding
+      the same item again in the narrow content tree.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/module5.png"
+          alt="Redesigned folder preview showing Before, During, and After Class content"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <p>
+      The same component also needed to work for normal folders without nested BDA structure.
+      In that case, the content is simply listed directly.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/welcomenotes.png"
+          alt="Redesigned folder preview for a folder without subfolders"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <p>
+      I also added quick actions on hover so instructors could assign or present content without
+      opening it first.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/introcoursehover.png"
+          alt="Quick assign and present actions on hover in the redesigned folder preview"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Improving course navigation</h2>
+
+    <p>
+      Previously, every folder in the content tree expanded by default. That was manageable in a
+      small course, but disastrous once an Intro Course contained dozens of modules and subfolders.
+      Users had to manually collapse the tree just to make it navigable.
+    </p>
+
+    <p>
+      I changed the model so folders begin collapsed in a new session. A professor can select a
+      module and use the much larger preview pane to navigate its contents, while still expanding
+      the tree manually when they want that level of detail.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/navigation.gif"
+          alt="Animated demonstration of the redesigned Top Hat course navigation"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <figcaption>
+        The preview pane becomes a primary navigation surface while the tree stays compact.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Breadcrumbs preserve context</h2>
+
+    <p>
+      Once instructors could navigate deeply through the preview pane, they needed a reliable way
+      back up the hierarchy. I added breadcrumbs above the title and kept the content tree in sync
+      with the user’s location so they could always understand where they were in the course.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/breadcrumbs.png"
+          alt="Breadcrumb navigation in a Top Hat Intro Course"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Testing Student Insights</h2>
+
+    <p>
+      The second major hypothesis was that comprehension data could make the course more useful to
+      professors. Instead of immediately investing in a full in-product analytics experience, we
+      chose a deliberately lightweight first iteration.
+    </p>
+
+    <p>
+      Professors received the insights manually by email. This let us validate which data was
+      useful, observe how instructors changed their teaching because of it, and iterate quickly
+      before committing engineering time to a permanent product surface.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/insightsemail.png"
+          alt="Top Hat Insights and Intervention Report sent to professors"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Validation and results</h2>
+
+    <p>
+      We first tested the navigation internally to remove obvious usability problems, then tested
+      with professors — both existing Top Hat users and instructors who had not used the platform.
+      The redesigned navigation proved intuitive and let users reach their goals quickly.
+    </p>
+
+    <p>
+      We continued validating the BDA framework and Insights Report in the real teaching environment:
+      professors received the reports, we attended classes to observe how the information affected
+      their lectures, and we sat in on sales demos throughout the process to hear how prospective
+      customers reacted to the offering.
+    </p>
+
+    <blockquote>
+      The strongest validation was commercial: the sales win rate for these textbooks increased
+      from 10% to 20%.
+    </blockquote>
+  </section>
+
+</main>
+
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="mobile-pages.html">Top Hat — Mobile Pages →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
+
+</body>
+</html>

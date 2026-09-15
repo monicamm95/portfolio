@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Top Hat Test could administer secure exams but had no digital equivalent of handing a graded test back. I designed the review experience for both professors and students, including the office-hours use case and all seven question types.">
+  <title>Test Handback — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<!--
+  EDITING:
+  - Shared visual system: site.css
+  - Project hero/summary/tags/metrics: edit directly in this file
+  - Case-study story: edit the <main class="reading case-body"> sections
+  - Existing product images are referenced from monicamoore.ca/img/
+-->
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
+
+<header class="reading case-hero">
+  <p class="case-company">Top Hat</p>
+  <h1 class="case-title">Test Handback</h1>
+  <p class="case-summary">Top Hat Test could administer secure exams but had no digital equivalent of handing a graded test back. I designed the review experience for both professors and students, including the office-hours use case and all seven question types.</p>
+  <div class="tags"><span class="tag tag--accent">Assessment</span><span class="tag">Workflow</span></div>
+  
+</header>
+
+<div class="shell">
+  <figure class="hero-figure">
+    <img src="img/thtv2.png" alt="Test Handback project image" fetchpriority="high" decoding="async">
+  </figure>
+  <div class="metric-grid metric-grid--3"><div class="metric"><strong>8 / 10</strong><span>students preferred the second concept</span></div><div class="metric"><strong>10</strong><span>students tested</span></div><div class="metric"><strong>7</strong><span>question types designed for handback</span></div></div>
+</div>
+
+<main class="reading case-body">
+<section class="case-section">
+  <h2>Map the digital experience to something students already understand</h2>
+  <p>Top Hat Test could administer secure exams, but professors had no way to hand completed tests back for students to review. The experience needed to match the expectations people already had from paper tests.</p>
+  <div class="feature-list">
+    <div><strong>Fast for professors</strong><p>Hand the test back once grades are ready.</p></div>
+    <div><strong>Clear for students</strong><p>Show total grade, correct and incorrect responses, and the correct answer.</p></div>
+    <div><strong>Useful for studying</strong><p>Let students use the reviewed test to prepare for future assessments.</p></div>
+    <div><strong>Support office hours</strong><p>Some professors reuse tests and only allow individual students to review them in person, so handback also needed an individual-release model.</p></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <h2>Version 1 — reuse the existing Review pattern</h2>
+  <p>My first approach applied Top Hat’s existing Review mode to Test. It was familiar and relatively straightforward to build, but students had to toggle between their submitted answer and the correct answer.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/thtv1student.png" alt="First Test Handback concept using Review mode" loading="lazy" decoding="async"></div></figure>
+  <p>Professors disliked not being able to see both answers together and repeatedly used the language “Hand Back” instead of “Review.”</p>
+</section>
+
+<section class="case-section">
+  <h2>Version 2 — optimize for review, separate practice</h2>
+  <p>The second version put submitted and correct answers together in the normal handback flow and moved practice into a separate mode. I also used the opportunity to modernize the question presentation.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/thtv2.png" alt="Second Test Handback concept" loading="lazy" decoding="async"></div></figure>
+</section>
+
+<section class="case-section">
+  <h2>Testing with students</h2>
+  <p>We brought 10 students into the office who had recently taken a Top Hat Test. I tested both versions in alternating order and asked which they preferred.</p>
+  <blockquote>8 of 10 students preferred Version 2 because it was clearer for reviewing their results. They liked Practice Mode too, but preferred it as a separate activity.</blockquote>
+</section>
+
+<section class="case-section">
+  <h2>The final experience</h2>
+  <p>For professors, Hand Back appears once the test ends and student responses exist. Tests can be released to everyone or to individual students, supporting the office-hours scenario.</p>
+  <figure class="figure figure--wide"><div class="figure__frame"><img src="img/profhandback.png" alt="Professor controls for handing a Top Hat Test back" loading="lazy" decoding="async"></div></figure>
+  <p>On the student side, I designed the correct/submitted answer treatment across all seven question types so correctness could be understood at a glance while still being explicitly labelled.</p>
+  <figure class="figure figure--narrow"><div class="figure__frame"><img src="img/allqtypes.png" alt="Test Handback across seven question types" loading="lazy" decoding="async"></div></figure>
+  <p>I also redesigned the question inputs with the intention of eventually updating the question system more broadly across Top Hat.</p>
+  <figure class="figure figure--narrow"><div class="figure__frame"><img src="img/questioninputs.png" alt="Redesigned Top Hat question inputs" loading="lazy" decoding="async"></div></figure>
+</section>
+
+</main>
+
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="pof-live-onboarding.html">Plenty of Fish — Live Onboarding →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
+</body>
+</html>

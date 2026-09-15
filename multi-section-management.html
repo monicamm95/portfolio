@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Top Hat Multi-Section Management — product design case study by Monica Moore. Designing a master-course system for large coordinated courses with dozens of sections, instructors, and hundreds of students.">
+  <title>Multi-Section Management — Monica Moore</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<nav class="shell utility" aria-label="Portfolio navigation">
+  <a href="index.html">← All work</a>
+  <div class="utility__right">
+    <a href="index.html">Monica Moore</a>
+    <a href="#">Resume</a>
+    <a href="#">LinkedIn ↗</a>
+  </div>
+</nav>
+
+<header class="reading case-hero">
+  <p class="case-company">Top Hat</p>
+  <h1 class="case-title">Multi-Section Management</h1>
+
+  <p class="case-summary">
+    A new publishing partnership required Top Hat to support complex multi-section courses —
+    some with dozens of sections, 20–30 instructors, and 1,500+ students. I helped define the
+    user model and designed a master-course system that let coordinators manage shared content,
+    sections, instructors, and permissions without duplicating work.
+  </p>
+
+  <div class="tags">
+    <span class="tag tag--accent">Enterprise Workflow</span>
+    <span class="tag">Information Architecture</span>
+  </div>
+</header>
+
+<div class="shell">
+  <figure class="hero-figure">
+    <img
+      src="img/courselobby.png"
+      alt="Top Hat multi-section course lobby"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </figure>
+
+  <div class="metric-grid metric-grid--3">
+    <div class="metric">
+      <strong>$3M</strong>
+      <span>revenue opportunity unlocked by supporting multi-section courses</span>
+    </div>
+    <div class="metric">
+      <strong>20–30</strong>
+      <span>teaching staff in a large coordinated course</span>
+    </div>
+    <div class="metric">
+      <strong>1,500+</strong>
+      <span>students across roughly 70 sections in a large course</span>
+    </div>
+  </div>
+</div>
+
+<main class="reading case-body">
+
+  <section class="case-section">
+    <h2>The opportunity</h2>
+
+    <p>
+      Due to a partnership with a textbook publisher, Top Hat needed to support management of
+      multi-section courses. These courses could include dozens of sections, different instructors,
+      hundreds or even thousands of students, and different degrees of control across sections.
+    </p>
+
+    <p>
+      Supporting them properly would open approximately $3M in revenue, but the existing product
+      was not designed for this level of coordination.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Understanding the users</h2>
+
+    <p>
+      Multi-section courses introduced many roles, including two that were new to Top Hat:
+      Course Coordinators and Lab Coordinators. The PM and I interviewed people across each group
+      to understand their responsibilities and where control needed to sit.
+    </p>
+
+    <div class="decision-list">
+      <div class="decision">
+        <strong>Course Coordinator</strong>
+        <p>Defines the overall curriculum and content and may also teach sections themselves.</p>
+      </div>
+      <div class="decision">
+        <strong>Professor</strong>
+        <p>Teaches one or more sections and may have flexibility in how they teach their students.</p>
+      </div>
+      <div class="decision">
+        <strong>Teaching Assistant</strong>
+        <p>Often teaches one or more sections but usually follows a more prescriptive course structure.</p>
+      </div>
+      <div class="decision">
+        <strong>Lab Coordinator</strong>
+        <p>Manages lab sections and creates lab content that lines up with the affiliated course.</p>
+      </div>
+    </div>
+
+    <p>
+      Secondary users included students, Support, onboarding reps, and account managers.
+      Support was especially important because they were already doing most of the section setup
+      and management on behalf of professors — often spending 3–4 hours setting up a large course.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Course Coordinator personas</h2>
+
+    <p>
+      Four recurring Course Coordinator types emerged from the research. We prioritized the
+      Prescriptive Coordinator and the Customizer because their problems were both common and deep.
+    </p>
+
+    <div class="persona-matrix">
+      <div class="persona-matrix__head">
+        <span>Persona</span>
+        <span>Core problem</span>
+        <span>What they need</span>
+      </div>
+
+      <div>
+        <strong>Prescriptive Coordinator</strong>
+        <p>Hard to know whether instructors are delivering the course consistently.</p>
+        <p>Provide prescriptive course materials and reduce unwanted flexibility.</p>
+      </div>
+
+      <div>
+        <strong>Customizer</strong>
+        <p>Existing books never match exactly how they want to teach.</p>
+        <p>Author or customize course content to fit their own approach.</p>
+      </div>
+
+      <div>
+        <strong>Consistent Grader</strong>
+        <p>Grading can vary between instructors.</p>
+        <p>More consistent and fair grading across sections.</p>
+      </div>
+
+      <div>
+        <strong>Insightful Coordinator</strong>
+        <p>Hard to know how instructors and sections are performing relative to one another.</p>
+        <p>Compare section performance and instructor behaviour.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>There wasn't one kind of multi-section course</h2>
+
+    <p>
+      Interviews revealed several fundamentally different course structures. A solution designed
+      only around one professor teaching repeated sections would fail as soon as coordination,
+      tutorials, labs, or varied instructor autonomy entered the picture.
+    </p>
+
+    <h3>One professor, multiple sections</h3>
+
+    <p>
+      This was the simplest case. The course content stays essentially the same across sections,
+      with differences mainly in enrolled students and dates.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/1profmanysections.png"
+          alt="One professor teaching multiple sections"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>Different instructors coordinated by a Course Coordinator</h3>
+
+    <p>
+      Here, a coordinator oversees the overall course while a mix of professors and TAs teach
+      individual sections. Instructor independence can vary considerably: TAs may follow a strict
+      regimen while professors have more flexibility.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/ccsection.png"
+          alt="Course Coordinator overseeing sections taught by different instructors"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>Tutorial sections</h3>
+
+    <p>
+      Students attend the same lecture but split into smaller tutorial sections, often led by TAs
+      and usually involving more hands-on work.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/tutorials.png"
+          alt="Lecture course with smaller tutorial sections"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>Labs</h3>
+
+    <p>
+      Lab-based courses often have a separate lab component with its own assignments and grades.
+      Labs are divided into sections because of space constraints and need to stay coordinated with
+      the lecture content.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/labs.png"
+          alt="Course with lecture and lab sections managed by a Lab Coordinator"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>The current Top Hat workarounds</h2>
+
+    <p>
+      Support described two ways large courses were being handled at the time. Neither worked well:
+    </p>
+
+    <div class="decision-list">
+      <div class="decision">
+        <strong>Separate course for every section</strong>
+        <p>
+          This preserved section separation, but every content change, setting, or update had to
+          be repeated across each course.
+        </p>
+      </div>
+      <div class="decision">
+        <strong>Put every student into one course</strong>
+        <p>
+          This avoided duplicated setup, but Top Hat could no longer distinguish between sections.
+          It also broke down for section-specific activities such as attendance.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      The workflow was so time-consuming that Support, rather than the customer, handled much of
+      the management work.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Key user goals we prioritized</h2>
+
+    <p>
+      From coordinator interviews, we narrowed the first version around four core goals.
+      These became the criteria we used to judge solution concepts.
+    </p>
+
+    <div class="decision-list">
+      <div class="decision">
+        <strong>Keep the course consistent</strong>
+        <p>
+          Ensure students receive a relatively uniform education regardless of which section or
+          instructor they have.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>Preserve instructor flexibility</strong>
+        <p>
+          Allow experienced instructors to adapt their section based on progress and teaching style
+          when the coordinator permits it.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>Manage a large teaching staff</strong>
+        <p>
+          Make it realistic to oversee 20–30 instructors with different levels of teaching experience
+          and monitor section progress.
+        </p>
+      </div>
+
+      <div class="decision">
+        <strong>Manage a large student cohort</strong>
+        <p>
+          Support approximately 1,500+ students across roughly 70 sections while keeping enrollment
+          and grades accounted for.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Prioritizing the problems for V1</h2>
+
+    <p>
+      Across interviews, the same operational problems appeared repeatedly. For the MVP, we focused
+      on the most important issues we could realistically solve first.
+    </p>
+
+    <div class="decision-list">
+      <div class="decision"><strong>Duplicate content creation</strong><p>Uploading the same content separately for every section.</p></div>
+      <div class="decision"><strong>Duplicate editing</strong><p>Repeating the same content changes across every section.</p></div>
+      <div class="decision"><strong>Duplicate configuration</strong><p>Re-entering course settings section by section.</p></div>
+      <div class="decision"><strong>Permissions</strong><p>No way to prevent TAs or section instructors from editing shared course content.</p></div>
+      <div class="decision"><strong>Course lobby clutter</strong><p>Dozens of separate section courses overwhelm the course list.</p></div>
+      <div class="decision"><strong>Section identification</strong><p>Sections are difficult for students and instructors to distinguish.</p></div>
+      <div class="decision"><strong>Instructor setup</strong><p>Instructors needed a Top Hat account before they could be added to a course.</p></div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Mapping the user journeys</h2>
+
+    <p>
+      After discovery, the rough product model became clearer: coordinators needed a central place
+      to create shared course content and manage sections, while individual sections still needed
+      enough independence for instructors to teach differently when allowed.
+    </p>
+
+    <h3>Before the course begins</h3>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/BeforeCourse.png"
+          alt="Multi-section course setup journey before a course begins"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>During the course</h3>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/DuringCourse.png"
+          alt="Multi-section course journey during the semester"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>An iterative design process</h2>
+
+    <p>
+      I ran workshops with people across the company, led a cross-functional team to gather input,
+      and created low-fidelity prototypes in Balsamiq. I tested those prototypes with internal
+      employees and a diverse range of professors and coordinators, iterating until the usability
+      issues we observed were resolved before moving into high fidelity.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/msmprocess.png"
+          alt="Multi-section management workshops, sketches, and low-fidelity prototypes"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>The solution: a master course</h2>
+
+    <p>
+      The core concept became a master course — the Multi-Section Manager — where the Course
+      Coordinator creates shared content, creates sections, and assigns instructors.
+    </p>
+
+    <p>
+      When content is ready, the coordinator syncs it into the sections. Each section behaves
+      similarly to an individual course, but receives its base content from the Manager. Depending
+      on permissions, section instructors can add their own content without changing the shared base.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Creating a multi-section course</h2>
+
+    <p>
+      I extended the existing course-creation flow with a “This course has multiple sections”
+      option. Coordinators can enter the number of sections and either name them manually or
+      auto-number them — useful because many institutions already use patterns such as 001, 002,
+      and 003.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/createcourse.png"
+          alt="Creating a Top Hat course with multiple sections"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>The Multi-Section Manager</h2>
+
+    <p>
+      After creation, coordinators land in the Multi-Section Manager. I kept it visually close to
+      a regular Top Hat course to preserve familiarity, and used the empty state to provide lightweight
+      in-product onboarding.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/emptyMSM.png"
+          alt="Empty state onboarding in the Multi-Section Manager"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>Shared base content + deliberate syncing</h3>
+
+    <p>
+      The Base Content tab is where the coordinator authors the shared course. Once the content is
+      ready, they explicitly sync it to the sections.
+    </p>
+
+    <p>
+      We intentionally did not auto-sync every edit. Coordinators might not want sections updated
+      before the content was finalized, and constant background changes would be confusing for
+      section instructors.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/syncmsm.png"
+          alt="Base Content tab with Sync All Content to Sections action"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Managing sections</h2>
+
+    <p>
+      The Sections tab gives coordinators one place to manage every section: add or remove sections,
+      assign instructors, see student counts, inspect class averages, and enter individual sections.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/sectiontab.png"
+          alt="Empty Multi-Section Manager Sections tab"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <h3>Section details and class times</h3>
+
+    <p>
+      Editing a section opens a modal where coordinators can add instructors by email. Instructors
+      who do not yet have an account can be invited rather than blocking setup.
+    </p>
+
+    <p>
+      I also designed Class Times as a delighter. Research showed that instructors and students often
+      referred to sections by their meeting time, so including this information made sections easier
+      to identify and created a useful foundation for future features.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/sectiondetails.png"
+          alt="Editing section instructors and class times"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <p>
+      Once populated, the section table gives coordinators an at-a-glance view across the whole course.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/sectiontabfilled.png"
+          alt="Filled Multi-Section Manager section table"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Redesigning the Course Lobby</h2>
+
+    <p>
+      One of the major pain points in the old workaround was a Course Lobby overwhelmed by dozens
+      of individual section courses. The new collapsible course card groups the Manager and its
+      sections together so coordinators can move between them without losing the relationship
+      between the overall course and its sections.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/courselobby.png"
+          alt="Coordinator view of a multi-section course in the Course Lobby"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+
+    <p>
+      Section instructors see a similar grouped structure, but only the sections they teach and
+      without access to the Multi-Section Manager unless that access is granted.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/courselobbyinstructor.png"
+          alt="Section instructor view of the multi-section Course Lobby"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+  <section class="case-section">
+    <h2>Inside an individual section</h2>
+
+    <p>
+      The common case was that section instructors could not edit the Base Content synced from the
+      Manager, but could add their own material.
+    </p>
+
+    <p>
+      Shared Base Content is labelled with a crown so instructors can tell it apart from content
+      created locally in their section. Edit and Delete controls are removed when permissions do
+      not allow changes.
+    </p>
+
+    <figure class="figure figure--wide">
+      <div class="figure__frame">
+        <img
+          src="img/section.png"
+          alt="Individual Top Hat section showing locked Base Content and instructor-created content"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </figure>
+  </section>
+
+</main>
+
+<footer class="shell next-project">
+  <div>
+    <small>Next project</small>
+    <a class="next-project__title" href="marketplace.html">Top Hat — Marketplace →</a>
+  </div>
+  <a href="index.html">All work</a>
+</footer>
+
+</body>
+</html>
