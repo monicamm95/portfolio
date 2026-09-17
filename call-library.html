@@ -8,6 +8,32 @@
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
+
+  <script>
+    var password = "vancouver";
+    (function passcodeprotect() {
+        var passcode = prompt("Enter the password");
+
+        // Check if the user cancels the prompt
+        if (passcode === null) {
+            alert("Redirecting to the homepage.");
+            window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
+            return; // Exit the script
+        }
+
+        // Incorrect password loop
+        while (passcode !== password) {
+            passcode = prompt("Incorrect password. Enter the password again or click Cancel to go back.");
+
+            // Check if the user cancels the prompt again
+            if (passcode === null) {
+                alert("Redirecting to the homepage.");
+                window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
+                return; // Exit the script
+            }
+        }
+    }());
+</script>
 <!--
   EDITING:
   - Shared visual system: site.css
@@ -19,8 +45,8 @@
   <a href="index.html">← All work</a>
   <div class="utility__right">
     <a href="index.html">Monica Moore</a>
-    <a href="#">Resume</a>
-    <a href="#">LinkedIn ↗</a>
+    <!--<a href="#">Resume</a>!-->
+    <a href="https://www.linkedin.com/in/monica-moore-09709b59/">LinkedIn ↗</a>
   </div>
 </nav>
 
