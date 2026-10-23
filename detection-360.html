@@ -3,63 +3,234 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Detection 360 — product design case study by Monica Moore. Redesigning and automating the workflow customers use to report missed attacks and false positives at Abnormal Security.">
-  <title>Detection 360 — Monica Moore</title>
+  <meta name="description" content="Email Remediation — product design case study by Monica Moore. Improving security workflows across Search & Respond and Detection 360 at Abnormal Security.">
+  <title>Email Remediation — Monica Moore</title>
   <link rel="stylesheet" href="site.css">
 
-  <!-- Only page-specific styling: responsive Figma embed -->
+  <!-- Page-specific layouts; other typography and layouts use the existing site.css. -->
   <style>
-    .figma-embed{
-      width:min(var(--wide),calc(100vw - 64px));
-      margin:34px 0 0 50%;
-      transform:translateX(-50%);
-      padding:12px;
-      background:var(--frame);
-      border-radius:14px;
+    .figma-embed {
+      width: min(var(--wide, 1120px), calc(100vw - 40px));
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 34px 0;
+      padding: 12px;
+      background: var(--frame, #f3f3f5);
+      border-radius: 14px;
+      box-sizing: border-box;
     }
-    .figma-embed__inner{
-      position:relative;
-      width:100%;
-      aspect-ratio:16/9;
-      overflow:hidden;
-      border-radius:7px;
-      background:#fff;
+    .figma-embed__inner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 7px;
+      background: #fff;
     }
-    .figma-embed iframe{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      border:0;
+    .figma-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
-    @media(max-width:800px){
-      .figma-embed{width:calc(100vw - 40px)}
+
+    /* Full-width, vertically stacked before/after comparisons. */
+    .comparison {
+      width: min(var(--wide, 1120px), calc(100vw - 40px));
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 34px 0 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      box-sizing: border-box;
+    }
+    .comparison figure { width: 100%; margin: 0; min-width: 0; }
+    .comparison .figure__frame {
+      width: 100%;
+      box-sizing: border-box;
+      padding: clamp(10px, 2vw, 20px);
+      border-radius: 12px;
+      background: var(--frame, #f3f3f5);
+    }
+    .comparison .figure__frame a { display: block; width: 100%; }
+    .comparison img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 760px;
+      object-fit: contain;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+    .comparison figcaption {
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+    .comparison figcaption strong { display: block; margin-bottom: 3px; }
+
+    /* Simple, compact problem and success lists at normal body-text size. */
+    .case-compact-points {
+      padding-left: 1.3em;
+      margin: 14px 0 24px;
+      font-size: inherit;
+      line-height: 1.6;
+    }
+    .case-compact-points li { margin: 0 0 9px; padding-left: .1em; }
+    .case-compact-points li:last-child { margin-bottom: 0; }
+    .case-compact-points strong { font-size: inherit; font-weight: 700; color: inherit; }
+
+    /* Research findings use the site's normal text styling. */
+    .research-points {
+      margin: 14px 0 22px;
+      padding-left: 1.4em;
+    }
+    .research-points li { margin-bottom: 10px; }
+
+    /* In-column process list; unlike a wide carousel, never extends off-screen. */
+    .workflow-steps {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 100%;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: workflow;
+    }
+    .workflow-steps li {
+      counter-increment: workflow;
+      display: grid;
+      grid-template-columns: 46px minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      column-gap: 15px;
+      padding: 17px 20px;
+      background: var(--frame, #f3f3f5);
+      border-radius: 12px;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+    .workflow-steps li::before {
+      content: counter(workflow, decimal-leading-zero);
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      align-self: center;
+      font-size: .86rem;
+      font-weight: 700;
+      opacity: .6;
+    }
+    .workflow-steps strong {
+      grid-column: 2;
+      grid-row: 1;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .workflow-steps small {
+      grid-column: 2;
+      grid-row: 2;
+      display: block;
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+
+    /* Custom, balanced impact layout independent of global metric-grid styles. */
+    .impact-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 28px 0 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .impact-stat {
+      min-width: 0;
+      padding: 24px;
+      background: var(--frame, #f3f3f5);
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+    .impact-stat--wide { grid-column: 1 / -1; }
+    .impact-stat__number {
+      display: block;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(2.3rem, 4.1vw, 3.3rem);
+      line-height: 1.1;
+      margin: 0 0 10px;
+      font-weight: 400;
+      color: #252327;
+    }
+    .impact-stat__label {
+      display: block;
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .impact-stat__detail {
+      display: block;
+      line-height: 1.55;
+      color: #65616b;
+      font-size: .94rem;
+    }
+    .case-note { margin-top: 20px; font-size: .94rem; color: #666; }
+    @media (max-width: 650px) {
+      .impact-stats { grid-template-columns: minmax(0, 1fr); }
+      .impact-stat--wide { grid-column: 1; }
+      .impact-stat { padding: 19px; }
+      .workflow-steps li { padding: 15px; }
+      .figma-embed__inner { aspect-ratio: 4 / 3; }
+      .comparison { gap: 24px; }
     }
   </style>
 </head>
 <body>
+<script>
+    var password = "vancouver";
+    (function passcodeprotect() {
+        var passcode = prompt("Enter the password");
 
+        // Check if the user cancels the prompt
+        if (passcode === null) {
+            alert("Redirecting to the homepage.");
+            window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
+            return; // Exit the script
+        }
+
+        // Incorrect password loop
+        while (passcode !== password) {
+            passcode = prompt("Incorrect password. Enter the password again or click Cancel to go back.");
+
+            // Check if the user cancels the prompt again
+            if (passcode === null) {
+                alert("Redirecting to the homepage.");
+                window.location.href = "https://www.monicamoore.ca";  // Redirects on cancel
+                return; // Exit the script
+            }
+        }
+    }());
+</script>
 <nav class="shell utility" aria-label="Portfolio navigation">
   <a href="index.html">← All work</a>
   <div class="utility__right">
     <a href="index.html">Monica Moore</a>
-    <!--<a href="#">Resume</a>!-->
     <a href="https://www.linkedin.com/in/monica-moore-09709b59/">LinkedIn ↗</a>
   </div>
 </nav>
 
 <header class="reading case-hero">
   <p class="case-company">Abnormal Security</p>
-  <h1 class="case-title">Detection 360</h1>
-
+  <h1 class="case-title">Email Remediation</h1>
   <p class="case-summary">
-    Detection 360 is where customers report missed attacks and false positives and get a response
-    from Abnormal. I redesigned the experience to make cases easier to scan, support detailed
-    automated insights, and reduce the manual work required from the security team.
+    I redesigned workflows across Search &amp; Respond and Detection 360 to help security teams
+    investigate and resolve email detection errors with less effort and greater clarity.
   </p>
-
   <div class="tags">
-    <span class="tag tag--accent">Automation</span>
+    <span class="tag tag--accent">Workflow Design</span>
     <span class="tag">Cybersecurity</span>
     <span class="tag">Enterprise</span>
   </div>
@@ -67,443 +238,307 @@
 
 <div class="shell">
   <figure class="hero-figure">
-    <img
-      src="img/d360redesign.png"
-      alt="Redesigned Detection 360 experience"
-      fetchpriority="high"
-      decoding="async"
-    >
+    <img src="img/d360redesign.png" alt="Redesigned Detection 360 case management and investigation results" fetchpriority="high" decoding="async">
   </figure>
-
   <div class="metric-grid">
-    <div class="metric">
-      <strong>100%</strong>
-      <span>of Detection 360 responses automated</span>
-    </div>
-    <div class="metric">
-      <strong>177 / week</strong>
-      <span>manual documents eliminated</span>
-    </div>
-    <div class="metric">
-      <strong>~90 hrs / week</strong>
-      <span>security analyst effort saved</span>
-    </div>
+    <div class="metric"><strong>79%</strong><span>fewer clicks in the remediation workflow</span></div>
+    <div class="metric"><strong>+23 pp</strong><span>information comprehension score</span></div>
+    <div class="metric"><strong>~90 hrs / week</strong><span>internal effort saved</span></div>
   </div>
 </div>
 
 <main class="reading case-body">
 
   <section class="case-section">
-    <h2>Context</h2>
-
+    <h2>The challenge</h2>
     <p>
-      Abnormal learns the behavior of every identity in a company’s email environment and analyzes
-      the risk of every event to block attacks. By understanding what is normal, it can detect and
-      prevent malicious and unwanted emails that bypass traditional security solutions.
+      Abnormal Security helps companies detect and block sophisticated email attacks that traditional
+      security tools miss. But detection isn't perfect: malicious emails can get through, and
+      legitimate emails can be incorrectly flagged.
+    </p>
+    <p>
+      Security teams use <strong>Search &amp; Respond</strong> to find and remediate those emails,
+      and <strong>Detection 360</strong> to report detection errors and review Abnormal's investigations.
     </p>
 
-    <p>
-      Sometimes, Abnormal gets it wrong. Detection 360 is where customers report missed attacks
-      and false positives and receive a response from Abnormal.
-    </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360before.png"
-          alt="Detection 360 before the redesign"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-      <figcaption>The Detection 360 experience before the redesign.</figcaption>
-    </figure>
-  </section>
-
-  <section class="case-section">
-    <h2>The hypothesis</h2>
-
-    <p>
-      For high-profile customers — or particularly serious missed attacks — Abnormal’s Support team
-      would sometimes write a custom document explaining why the attack was missed and how the issue
-      would be addressed.
-    </p>
-
+    <h3>User problem</h3>
     <blockquote>
-      If we could provide useful automated insights for every submission, we could save company time
-      while improving the customer experience by providing meaningful feedback for every case.
+      Security teams struggle to quickly and confidently remediate email detection errors,
+      putting their organizations at risk.
     </blockquote>
+    <p>
+      Disconnected workflows and limited visibility make it difficult to investigate emails
+      and take appropriate action.
+    </p>
+
+    <h3>Business problems</h3>
+    <ul class="case-compact-points">
+      <li><strong>High operational costs:</strong> Manual investigation responses and Cause of Error reports consumed significant internal resources.</li>
+      <li><strong>Limited feedback to improve detection:</strong> Cumbersome reporting discouraged users from flagging missed attacks, reducing the feedback needed to improve detection algorithms.</li>
+      <li><strong>Risk to customer trust:</strong> Unclear investigation outcomes made Abnormal's detection decisions difficult to understand and trust.</li>
+    </ul>
+
+    <h3>Defining success</h3>
+    <p>I established a baseline through usability testing, then compared it with the redesigned experience.</p>
+    <ul class="case-compact-points">
+      <li><strong>Remediation efficiency:</strong> Reduce manual steps, data entry, and movement between products.</li>
+      <li><strong>Information comprehension:</strong> Improve users' ability to find and interpret threat verdicts, statuses, and investigation findings.</li>
+      <li><strong>Operational efficiency:</strong> Reduce employee time spent producing customer investigation responses.</li>
+    </ul>
+
+    <h3>The original end-to-end workflow</h3>
+    <p>Even a single missed attack could require several handoffs across systems and teams.</p>
+    <ol class="workflow-steps">
+      <li><strong>Find the email</strong><small>Search for and investigate the reported message.</small></li>
+      <li><strong>Remediate</strong><small>Take action in Search &amp; Respond.</small></li>
+      <li><strong>Report it</strong><small>Manually copy email details into Detection 360.</small></li>
+      <li><strong>Wait for a response</strong><small>Internal analysts investigate and sometimes prepare a manual report.</small></li>
+      <li><strong>Check back</strong><small>Return to Detection 360 to find the outcome.</small></li>
+    </ol>
   </section>
 
   <section class="case-section">
-    <h2>User research</h2>
-
+    <h2>Research &amp; approach</h2>
     <p>
-      I interviewed customers to better understand why they were using Detection 360, what they
-      expected to learn from it, and what information mattered most when reviewing a case. The full research presentation is embedded below.
+      I conducted separate customer research studies across Search &amp; Respond and Detection 360.
+      Looking across both studies helped reveal friction within each product and across the broader remediation workflow.
     </p>
 
+    <h3>What the research revealed</h3>
+    <ul class="research-points">
+      <li>Limited search options made emails difficult to find.</li>
+      <li>Threat verdicts, remediation history, and investigation outcomes were difficult to understand.</li>
+      <li>Remediation actions were limited, with no easy way to undo a decision.</li>
+      <li>Reporting missed attacks required manually copying details between products.</li>
+      <li>Investigation responses were often generic and lacked useful explanations.</li>
+    </ul>
+    <p>
+      False positives were reported <strong>2.5× more often</strong> than missed attacks.
+      Customer interviews suggested that the extra work required to report missed attacks was one contributing factor.
+    </p>
 
+    <h3>Research presentation</h3>
+    <p>The research behind the Detection 360 findings is embedded below.</p>
+    <!-- Replace iframe src with the combined Search & Respond + Detection 360 research deck when ready. -->
     <div class="figma-embed">
       <div class="figma-embed__inner">
-        <iframe
-          title="Detection 360 user research"
-          loading="lazy"
-          allowfullscreen
-          src="https://embed.figma.com/proto/1mPTBtCh3IKC2q0HU2Zj3H/Detection-360?content-scaling=fixed&embed-host=share&node-id=302-939&node-type=frame&page-id=0%3A3807&scaling=scale-down-width">
-        </iframe>
+        <iframe title="Detection 360 customer research presentation" loading="lazy" allowfullscreen
+          src="https://embed.figma.com/proto/1mPTBtCh3IKC2q0HU2Zj3H/Detection-360?content-scaling=fixed&amp;embed-host=share&amp;node-id=302-939&amp;node-type=frame&amp;page-id=0%3A3807&amp;scaling=scale-down-width"></iframe>
       </div>
     </div>
-  </section>
 
-  <section class="case-section">
-    <h2>Problems with the existing experience</h2>
-
+    <h3>Design approach &amp; constraints</h3>
     <p>
-      Based on the research and my own analysis, I identified a number of issues in the current UI:
-      it was difficult to scan, the table contained too much information at once, hierarchy was weak,
-      and the structure would not scale well to the longer automated insights we planned to add.
+      I focused on targeted improvements that could ship incrementally rather than overhauling two established products.
+      I worked with PM and two engineering pods to design within three important constraints:
     </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360breakdown.png"
-          alt="Annotated critique of the existing Detection 360 experience"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-      <figcaption>Annotated critique of the existing experience.</figcaption>
-    </figure>
-
-    <h3>Redesign goals</h3>
-
     <div class="decision-list">
-      <div class="decision">
-        <strong>01 · Readability</strong>
-        <p>Make the page much easier to scan and understand quickly.</p>
-      </div>
-      <div class="decision">
-        <strong>02 · Scale</strong>
-        <p>Design for the addition of detailed insights, which could be lengthy.</p>
-      </div>
-      <div class="decision">
-        <strong>03 · Hierarchy</strong>
-        <p>Highlight the most important information and reduce competition between fields.</p>
-      </div>
-      <div class="decision">
-        <strong>04 · Comprehension</strong>
-        <p>Make the status and meaning of a case understandable even when a user is scanning.</p>
-      </div>
+      <div class="decision"><strong>Evolve within the platform</strong><p>Preserve Abnormal's existing remediation and classification framework.</p></div>
+      <div class="decision"><strong>Balance simplicity with technical depth</strong><p>Keep complex security metadata accessible without overwhelming users.</p></div>
+      <div class="decision"><strong>Support analyst workflows</strong><p>Automate customer responses while fitting the ways internal analysts investigated and resolved cases.</p></div>
+    </div>
+    <p class="case-note">Research, design, validation, and releases overlapped across initiatives rather than following one large redesign cycle.</p>
+  </section>
+
+  <section class="case-section">
+    <h2>Improving Search &amp; Respond</h2>
+    <p>I focused on making it easier for security teams to find, understand, and remediate emails with less manual work.</p>
+
+    <h3>Making search more robust</h3>
+    <p>
+      Search was too limited for users who needed to locate a specific message quickly.
+      I expanded the search criteria and made email status easier to assess in results.
+    </p>
+    <div class="comparison" role="group" aria-label="Before and after Search and Respond search design">
+      <figure>
+        <div class="figure__frame"><a href="img/sr-search-before.png" target="_blank" rel="noopener"><img src="img/sr-search-before.png" alt="Original Search and Respond search experience" loading="lazy" decoding="async"></a></div>
+        <figcaption><strong>Before</strong>Limited search criteria and status visibility.</figcaption>
+      </figure>
+      <figure>
+        <div class="figure__frame"><a href="img/sr-search-after.png" target="_blank" rel="noopener"><img src="img/sr-search-after.png" alt="Redesigned Search and Respond with expanded criteria and clearer status" loading="lazy" decoding="async"></a></div>
+        <figcaption><strong>After</strong>More precise filters and clearer message information.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Making remediation status and history clearer</h3>
+    <p>
+      Security teams needed to understand not just the current verdict, but what had happened to an email over time.
+      I made remediation status and previous actions visible alongside message details.
+    </p>
+    <div class="comparison" role="group" aria-label="Before and after remediation history design">
+      <figure>
+        <div class="figure__frame"><a href="img/sr-history-before.png" target="_blank" rel="noopener"><img src="img/sr-history-before.png" alt="Original email details without a clear remediation history" loading="lazy" decoding="async"></a></div>
+        <figcaption><strong>Before</strong>Limited context about actions and status.</figcaption>
+      </figure>
+      <figure>
+        <div class="figure__frame"><a href="img/sr-history-after.png" target="_blank" rel="noopener"><img src="img/sr-history-after.png" alt="Redesigned email details with remediation status and history" loading="lazy" decoding="async"></a></div>
+        <figcaption><strong>After</strong>A visible history of remediation actions and outcomes.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Providing more remediation options</h3>
+    <p>
+      The original controls offered limited actions and no straightforward way to undo a remediation.
+      The design needed more flexibility without breaking Abnormal's platform-wide logic: a classification such as spam
+      or graymail didn't always map to a specific mailbox folder, and configurations varied by customer.
+    </p>
+    <p>
+      Working with Engineering, I expanded the actions while preserving the granular classification
+      feedback that helped Abnormal improve detection.
+    </p>
+    <div class="comparison" role="group" aria-label="Before and after remediation actions design">
+      <figure class="figure figure--narrow">
+        <div class="figure__frame"><a href="img/sr-remediation-before.png" target="_blank" rel="noopener"><img src="img/sr-remediation-before.png" alt="Original limited remediation options" loading="lazy" decoding="async"></a></div>
+        <figcaption><strong>Before</strong>Limited controls and no simple undo.</figcaption>
+      </figure>
+      <figure>
+        <div class="figure__frame"><a href="img/sr-remediation-after.png" target="_blank" rel="noopener"><img src="img/sr-remediation-after.png" alt="Expanded remediation options in the redesigned interface" loading="lazy" decoding="async"></a></div>
+        <figcaption><strong>After</strong>More remediation actions within the existing classification framework.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Connecting remediation to Detection 360</h3>
+    <p>
+      One of the biggest improvements was eliminating the manual handoff between products.
+      Instead of copying email fields into a separate Detection 360 report, relevant information
+      could be submitted automatically from the remediation workflow.
+    </p>
+    <div class="comparison" role="group" aria-label="Before and after missed attack reporting workflow">
+      <figure class="figure figure--narrow">
+        <div class="figure__frame"><a href="img/sr-report-before.png" target="_blank" rel="noopener"><img src="img/sr-report-before.png" alt="Original manual Detection 360 missed attack report form" loading="lazy" decoding="async"></a></div>
+        <figcaption><strong>Before</strong>Manually copying subject, sender, and recipient details.</figcaption>
+      </figure>
+      <figure>
+        <div class="figure__frame"><a href="img/sr-report-after.png" target="_blank" rel="noopener"><img src="img/sr-report-after.png" alt="Redesigned connected reporting experience in Search and Respond" loading="lazy" decoding="async"></a></div>
+        <figcaption><strong>After</strong>Reporting integrated into the remediation flow.</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="case-section">
-    <h2>The redesigned Detection 360</h2>
-
+    <h2>Redesigning Detection 360</h2>
     <p>
-      I redesigned the experience around an expandable table. Missed attacks and false positives
-      are combined in one table by default, with filtering available when the user needs to narrow
-      the results.
+      The next challenge was helping customers understand investigation outcomes — and giving them
+      better explanations of why detection errors happened.
     </p>
 
+    <h3>Making room for detailed, automated reports</h3>
     <p>
-      I paid particular attention to which information belonged in the collapsed row versus the
-      expanded view. The row needed to communicate the critical state quickly, while expansion
-      created room for submission details, analysis and insights, remediation status, and campaign
-      information.
+      Previously, Abnormal wrote detailed Cause of Error reports manually for select cases, while
+      most customers received short, generic responses. The goal was to automate those more useful,
+      longer explanations for every case. But Detection 360's existing table was already crowded and
+      wasn't designed to display that much information.
     </p>
-
     <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360redesign.png"
-          alt="Expandable Detection 360 table redesign"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-      <figcaption>The selected row expands in place so the user can get more information without losing the surrounding case list.</figcaption>
+      <div class="figure__frame"><img src="img/d360before.png" alt="Original Detection 360 table before the redesign, with crowded case data and limited space for investigation reports" loading="lazy" decoding="async"></div>
+      <figcaption>Before: the original table left little room for detailed investigation explanations.</figcaption>
     </figure>
-  </section>
-
-  <section class="case-section">
-    <h2>Testing an alternate direction</h2>
-
     <p>
-      I also designed a version where all of the case information was displayed directly in the
-      table. It made more information visible without interaction, but it made the page substantially
-      denser.
+      I needed to make the case list easier to scan while creating room for customers to read the
+      full automated report when they wanted more detail.
     </p>
-
-    <p>
-      Customers preferred the expandable version because it let them scan the list quickly and only
-      gather more detail when they needed it.
-    </p>
-
     <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360alternate.png"
-          alt="Alternate Detection 360 design with all case information shown in the table"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-      <figcaption>Alternate version with all case information visible at once.</figcaption>
-    </figure>
-  </section>
-
-  <section class="case-section">
-    <h2>Designing the variations</h2>
-
-    <p>
-      The expanded row was not a single static template. It needed to communicate different states
-      depending on the report type, investigation status, outcome, and remediation state.
-    </p>
-
-    <p>
-      I designed the major variations so the structure stayed consistent while the content and
-      status treatment adapted to the case.
-    </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360variation1.png"
-          alt="Detection 360 variations for multiple statuses and outcomes"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-      <figcaption>System-level exploration across the major report and remediation states.</figcaption>
+      <div class="figure__frame"><img src="img/d360breakdown.png" alt="Annotated critique of the original Detection 360 interface and its information hierarchy" loading="lazy" decoding="async"></div>
+      <figcaption>My review of the existing information hierarchy and what needed to change.</figcaption>
     </figure>
 
+    <h3>Simplifying investigation results</h3>
+    <p>
+      I redesigned the case list as an expandable table. Users could quickly scan report types,
+      statuses, and verdicts, then open a row for the full analysis, remediation details, and history.
+      This kept the interface readable without sacrificing technical depth.
+    </p>
+    <figure class="figure figure--wide">
+      <div class="figure__frame"><img src="img/d360redesign.png" alt="Final Detection 360 expandable table design" loading="lazy" decoding="async"></div>
+      <figcaption>Final design: key outcomes in the row, with detailed investigation information available on expansion.</figcaption>
+    </figure>
+
+    <h3>Testing an alternate direction</h3>
+    <p>
+      I also tested a version that displayed investigation details directly in each row.
+      While it reduced the need to expand individual cases, it made the list substantially denser.
+      <strong>Customers preferred the expandable version</strong>: they could scan quickly and only dive deeper when needed.
+    </p>
+    <figure class="figure figure--wide">
+      <div class="figure__frame"><img src="img/d360alternate.png" alt="Alternate Detection 360 design tested with customers" loading="lazy" decoding="async"></div>
+      <figcaption>Alternate tested: more information shown by default, at the expense of scanability.</figcaption>
+    </figure>
+
+    <h3>Designing for different investigation states</h3>
+    <p>
+      The same layout needed to accommodate different report types, verdicts, investigation outcomes,
+      and remediation statuses. I explored the variations to make sure the structure remained consistent
+      while accurately representing each case.
+    </p>
+    <figure class="figure figure--wide">
+      <div class="figure__frame"><img src="img/d360variation1.png" alt="Detection 360 design states for multiple investigation outcomes" loading="lazy" decoding="async"></div>
+      <figcaption>System-level exploration across report and remediation states.</figcaption>
+    </figure>
     <div class="figure-grid figure-grid--2">
       <figure class="figure">
-        <div class="figure__frame">
-          <img
-            src="img/d360variation2.png"
-            alt="Detection 360 pending analysis state"
-            loading="lazy"
-            decoding="async"
-          >
-        </div>
+        <div class="figure__frame"><img src="img/d360variation2.png" alt="Detection 360 pending analysis state" loading="lazy" decoding="async"></div>
         <figcaption>Pending analysis</figcaption>
       </figure>
-
       <figure class="figure">
-        <div class="figure__frame">
-          <img
-            src="img/d360variation3.png"
-            alt="Detection 360 false positive resolved state"
-            loading="lazy"
-            decoding="async"
-          >
-        </div>
+        <div class="figure__frame"><img src="img/d360variation3.png" alt="Detection 360 resolved false positive state" loading="lazy" decoding="async"></div>
         <figcaption>False positive / resolved</figcaption>
       </figure>
     </div>
-  </section>
 
-  <section class="case-section">
-    <h2>Content design was a major part of the product</h2>
-
+    <h3>Designing the automated explanations</h3>
     <p>
-      A significant part of this project was designing the messaging itself. The response needed
-      to be detailed enough to be useful to security teams, structured enough for engineering to
-      generate automatically, and understandable enough that it still felt like a human explanation
-      rather than a machine-generated status message.
+      Making space for longer reports was only part of the challenge. I also designed reusable language
+      patterns based on analysts' findings — detailed enough for security teams, structured enough to
+      automate, and clear enough to understand.
     </p>
-
-    <h3>Build reusable reasoning patterns</h3>
-
-    <p>
-      For example, a false-positive explanation could be caused by a suspicious link, vocabulary,
-      an unknown sender, an attachment, or a combination of signals. We needed sentence structures
-      that could adapt to those combinations without sounding broken or robotic.
-    </p>
-
     <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360content1.png"
-          alt="Content design variations for automated false-positive reasoning"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-      <figcaption>Examples of reusable language for different false-positive causes.</figcaption>
+      <div class="figure__frame"><img src="img/d360content1.png" alt="Reusable writing patterns for automated false-positive reasoning" loading="lazy" decoding="async"></div>
+      <figcaption>Reusable explanation patterns for different false-positive causes.</figcaption>
+    </figure>
+    <p>
+      More complex responses needed to connect multiple detection signals, gaps, and planned remediation
+      steps into a coherent explanation of both what happened and what Abnormal would do next.
+    </p>
+    <figure class="figure figure--wide">
+      <div class="figure__frame"><img src="img/d360content2.png" alt="Generated Detection 360 explanation of the detection gap and proposed remediation" loading="lazy" decoding="async"></div>
+      <figcaption>A response assembled from investigation findings and remediation details.</figcaption>
     </figure>
 
-    <h3>Explain both what happened and what Abnormal would do about it</h3>
-
+    <h3>Closing the feedback loop</h3>
     <p>
-      The content also needed to communicate remediation clearly. In more complex cases, multiple
-      detection gaps and planned improvements could need to be assembled into one coherent response.
+      Customers also had to keep returning to Detection 360 to see whether a case was resolved.
+      I designed email notifications to proactively share investigation outcomes and link back to the case.
     </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360content2.png"
-          alt="Automated Detection 360 remediation explanation"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-      <figcaption>A generated response explaining both the detection gap and planned remediation.</figcaption>
-    </figure>
-  </section>
-
-  <section class="case-section">
-    <h2>Roadmap and post-launch iterations</h2>
-
-    <p>
-      After the initial redesign was released, we continued iterating based on feedback from the
-      original research and from customers using the new experience. I worked with the PM and
-      engineering to build a roadmap of follow-up improvements.
-    </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360roadmap.png"
-          alt="Detection 360 post-launch roadmap"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-      <figcaption>The roadmap combined research findings, customer feedback, UX improvements, and new functionality.</figcaption>
-    </figure>
-  </section>
-
-  <section class="case-section">
-    <h2>Additional workflow improvements</h2>
-
-    <h3>More powerful filtering</h3>
-
-    <p>
-      Customers needed more ways to quickly locate the cases they were looking for, so we expanded
-      filtering across details such as sender, recipient, subject, submitter, case number, time,
-      status, and VIP state.
-    </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360filters.png"
-          alt="Expanded Detection 360 filtering"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-    </figure>
-
-    <h3>Email notifications</h3>
-
-    <p>
-      Users were regularly returning to Detection 360 just to check whether a report had been
-      addressed — or missing that it had been resolved because they did not remember to check.
-      We added email notifications so they could leave the dashboard and still know when a case
-      was complete.
-    </p>
-
     <figure class="figure figure--narrow">
-      <div class="figure__frame">
-        <img
-          src="img/d360emails.png"
-          alt="Detection 360 case resolution email"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-    </figure>
-
-    <h3>Downloading results</h3>
-
-    <p>
-      Customers needed to use Detection 360 results in their own reporting, so we added the ability
-      to download case data as a spreadsheet.
-    </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360download.png"
-          alt="Download spreadsheet action in Detection 360"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-    </figure>
-
-    <h3>Contact Support directly from a case</h3>
-
-    <p>
-      Users sometimes needed additional help with a case. The existing support workflow was
-      convoluted and error-prone for both the customer and Support, so we let users contact
-      Support directly from the relevant report.
-    </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360support.png"
-          alt="Contacting Support directly from a Detection 360 case"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-    </figure>
-
-    <h3>More precise timestamps</h3>
-
-    <p>
-      Customers wanted to know exactly when an attack was remediated and when the case was resolved,
-      so we added timestamps to the case timeline.
-    </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360timestamps.png"
-          alt="Detection 360 timeline with precise timestamps"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
-    </figure>
-
-    <h3>Cancel a mistaken submission</h3>
-
-    <p>
-      Sometimes a customer submitted a report by mistake. Previously there was no way to stop it,
-      so we added a cancellation action while the case was still pending.
-    </p>
-
-    <figure class="figure figure--wide">
-      <div class="figure__frame">
-        <img
-          src="img/d360cancel.png"
-          alt="Cancel submission action in Detection 360"
-          loading="lazy"
-          decoding="async"
-        >
-      </div>
+      <div class="figure__frame"><img src="img/d360emails.png" alt="Email notification showing a resolved Detection 360 investigation" loading="lazy" decoding="async"></div>
+      <figcaption>Case-resolution notification.</figcaption>
     </figure>
   </section>
 
   <section class="case-section">
-    <h2>Outcome</h2>
-
-    <blockquote>
-      We automated 100% of responses to Detection 360 submissions, eliminating 177 manually written
-      documents per week and saving the security analyst team roughly 90 hours of effort every week.
-    </blockquote>
+    <h2>Measuring impact</h2>
+    <p>
+      I compared the redesigned workflow with the original usability benchmark and evaluated
+      the operational impact of automating customer responses.
+    </p>
+    <div class="impact-stats" aria-label="Project outcomes">
+      <div class="impact-stat">
+        <strong class="impact-stat__number">79%</strong>
+        <span class="impact-stat__label">Fewer clicks</span>
+        <span class="impact-stat__detail">29 → 6 clicks across the remediation-to-results workflow</span>
+      </div>
+      <div class="impact-stat">
+        <strong class="impact-stat__number">+23 pp</strong>
+        <span class="impact-stat__label">Information comprehension</span>
+        <span class="impact-stat__detail">68% → 91% average score in comparative usability testing</span>
+      </div>
+      <div class="impact-stat impact-stat--wide">
+        <strong class="impact-stat__number">100%</strong>
+        <span class="impact-stat__label">Of Detection 360 customer responses automated</span>
+        <span class="impact-stat__detail">Eliminating approximately 177 manually written documents each week and saving an estimated 90 hours of internal effort</span>
+      </div>
+    </div>
   </section>
-
 </main>
 
 <footer class="shell next-project">
@@ -513,6 +548,5 @@
   </div>
   <a href="index.html">All work</a>
 </footer>
-
 </body>
 </html>
