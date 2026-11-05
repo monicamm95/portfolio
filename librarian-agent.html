@@ -270,58 +270,37 @@
   </div>
 </section>
 
-<section class="case-section reading">
+<section class="case-section">
   <span class="eyebrow">Future vision</span>
-  <h2>From review assistant to proactive Librarian</h2>
+  <h2>From review assistant to conversational Librarian</h2>
+  <p>The first release focused on helping reviewers make better decisions with less investigation. My longer-term vision is to make the Librarian an assistant users could talk to, then move beyond individual reviews to prevent issues and handle more routine work as trust grew.</p>
 
-  <p>
-    The first version focused on helping users make individual review decisions faster.
-    Over time, I’d push the Librarian further upstream, from assisting with work that
-    already exists to continuously deciding what deserves attention in the first place.
-  </p>
-
-  <figure class="figure figure--small">
-    <div class="figure__frame"><img src="img/agentvision.png" alt="Graph showing how agent can change as users gain trust" loading="lazy" decoding="async"></div>
-
+  <div class="section-intro">
+    <h3>Bring conversation into the Reviews workflow</h3>
+    <p>Instead of a static recommendation, the Librarian could offer contextual conversation alongside a review. Users could ask why something was flagged, explore the evidence, refine a proposed answer, and take action without leaving the workflow. This would alighn with Loopio's broader vision of chat-based agents across the product.</p>
+  </div>
+  <figure class="figure figure--medium">
+    <div class="figure__frame"><img src="img/librarian-conversational-vision.png" alt="Concept for a conversational Librarian sidebar inside a project review, with explanations, sources, and suggested follow-up questions" loading="lazy" decoding="async"></div>
+    <figcaption>Concept: in-context assistance that lets reviewers explore and act on recommendations.</figcaption>
   </figure>
 
-  <div class="decision-list">
-  <div class="decision">
-    <strong>Triage</strong>
-      <p>
-        Prioritize the highest-impact issues across cleanup, scheduled reviews,
-        and project suggestions instead of asking users to work through a backlog.
-      </p>
+  <div class="section-intro">
+    <h3>Make maintenance more proactive</h3>
+    <p>Over time, the Librarian could prioritize high-impact maintenance, catch duplicates and conflicts earlier in the workflow, and coordinate follow-up work across owners and reviewers — preventing issues instead of only cleaning them up later.</p>
   </div>
+  <figure class="figure figure--medium">
+    <div class="figure__frame"><img src="img/librarian-proactive-vision.png" alt="Concept for an inline warning that a similar Library entry already exists before new content is added" loading="lazy" decoding="async"></div>
+    <figcaption>Concept: flag potential duplicates before they enter the Library.</figcaption>
+  </figure>
 
-    <div class="decision">
-    <strong>Proactive guidance</strong>
-      <p>
-        Surface patterns across the Library, recommend the next best maintenance
-        task, and let users ask the Librarian what needs attention.
-      </p>
+  <div class="section-intro">
+    <h3>Increase autonomy as the Librarian earns trust</h3>
+    <p>Not every action needs the same oversight. The Librarian could start by suggesting actions for users to approve, then gradually automate low-risk, reversible tasks. High-impact content changes would remain reviewable, with users in control.</p>
   </div>
-
-    <div class="decision">
-    <strong>Prevention</strong>
-      <p>
-        Prioritize the highest-impact issues across cleanup, scheduled reviews,
-        and project suggestions instead of asking users to work through a backlog.
-      </p>
-  </div>
-
-    <div class="decision">
-    <strong>Earned autonomy</strong>
-      <p>
-        As trust builds, allow teams to automate low-risk actions while keeping
-        high-impact changes reviewable and reversible.
-      </p>
-  </div>
-
-
-</div>
-
-
+  <figure class="figure figure--small">
+    <div class="figure__frame"><img src="img/agentvision.png" alt="Future autonomy model progressing from assistant to gatekeeper to manager as trust increases" loading="lazy" decoding="async"></div>
+    <figcaption>A phased approach to autonomy, based on the risk of each action and the trust earned over time.</figcaption>
+  </figure>
 </section>
 
 </main>
