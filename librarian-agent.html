@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Librarian Agent — product design case study by Monica Moore. Unifying fragmented Library maintenance into one AI-assisted review workflow.">
-  <title>Librarian Agent — Monica Moore</title>
-  <link rel="stylesheet" href="site.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Librarian Agent: product design case study by Monica Moore. Unifying fragmented Library maintenance into one AI-assisted review workflow." name="description"/>
+<title>Librarian Agent | Monica Moore</title>
+<link href="site.css" rel="stylesheet"/>
 </head>
 <body>
 <script>
@@ -33,285 +34,244 @@
         }
     }());
 </script>
-  
-
-<nav class="shell utility" aria-label="Portfolio navigation">
-  <a href="index.html">← All work</a>
-  <div class="utility__right">
-    <a href="index.html">Monica Moore</a>
-    <!--<a href="#">Resume</a>!-->
-    <a href="https://www.linkedin.com/in/monica-moore-09709b59/">LinkedIn ↗</a>
-  </div>
+<nav aria-label="Portfolio navigation" class="shell utility">
+<a href="index.html">← All work</a>
+<div class="utility__right">
+<a href="index.html">Monica Moore</a>
+<!--<a href="#">Resume</a>!-->
+<a href="https://www.linkedin.com/in/monica-moore-09709b59/">LinkedIn ↗</a>
+</div>
 </nav>
-
 <header class="reading case-hero">
-  <p class="case-company">Loopio</p>
-  <h1 class="case-title">Librarian Agent</h1>
-  <p class="case-summary">Loopio helps teams answer RFPs and security questionnaires using a central Library of approved, reusable content. As those Libraries grew, keeping them accurate became increasingly difficult. I designed a Librarian Agent that surfaces stale, duplicate, and conflicting content, recommends how to resolve it, and brings Library maintenance into one review experience.</p>
-  <div class="tags">
-    <span class="tag tag--accent">AI</span>
-    <span class="tag">Product Strategy</span>
-    <span class="tag">Enterprise SaaS</span>
-  </div>
-  <p class="case-meta">Senior Product Designer · Took over early in discovery · Led concept development, prototyping, usability testing, and engineering scoping</p>
+<p class="case-company">Loopio</p>
+<h1 class="case-title">Librarian Agent</h1>
+<p class="case-summary">Loopio’s AI relied on a Library of reusable answers, but maintaining that content was increasingly difficult. I led the design of a Librarian Agent to investigate quality issues, explain its recommendations, and help users resolve them through a workflow designed for review and decision-making, not just chat.</p>
+<div class="tags">
+<span class="tag tag--accent">AI</span>
+<span class="tag">Product Strategy</span>
+<span class="tag">Enterprise SaaS</span>
+</div>
+<p class="case-meta">Senior Product Designer · Took over early in discovery · Led concept development, prototyping, usability testing, and engineering scoping</p>
 </header>
-
 <div class="shell">
-  <figure class="hero-figure">
-    <img src="img/librarian-stale.png" alt="Unified Loopio Reviews queue with project suggestions, scheduled reviews, and Library cleanup issues" fetchpriority="high" decoding="async">
-  </figure>
-
-
+<figure class="hero-figure">
+<img alt="Unified Loopio Reviews queue with project suggestions, scheduled reviews, and Library cleanup issues" decoding="async" fetchpriority="high" src="img/librarian-stale.png"/>
+</figure>
 <main class="reading case-body">
-
 <section class="case-section">
-  <h2>The challenge</h2>
-  <p>Customers depended on the Library as a reusable source of truth, but keeping it accurate required constant manual work. As content decayed, people trusted search and AI answers less — which made maintenance even harder to sustain.</p>
-
-  <div class="goal-grid">
-    <div><span class="eyebrow">User goal</span><p>Know what needs attention, understand why, and resolve Library issues without spending hours investigating.</p></div>
-    <div><span class="eyebrow">Business goal</span><p>Improve Library quality so customers get more value from search and AI, while reducing a major source of churn risk.</p></div>
-  </div>
-
-  <figure class="figure figure--medium">
-    <div class="figure__frame"><img src="img/problem-cycle.png" alt="Problem definition showing the cycle of manual upkeep, stale content, SME disengagement, and declining trust" loading="lazy" decoding="async"></div>
-    <figcaption>Discovery showed a reinforcing cycle: manual upkeep → content decay → SME disengagement → declining trust.</figcaption>
-  </figure>
-
-  <div class="section-intro">
-    <h3>Discovery surfaced four recurring pain points</h3>
-    <p>Library quality wasn’t breaking down because of one isolated issue. Across customer feedback, UserVoice data, and internal teams, four recurring problems were making the Library harder to maintain and less trustworthy over time.</p>
-  </div>
-
-  <div class="insight-grid insight-grid--2">
-    <div class="insight"><span>01</span><strong>Library bloat + decay</strong><p>Stale, duplicate, and low-confidence content reduced Library reliability.</p></div>
-    <div class="insight"><span>02</span><strong>SME review friction</strong><p>High-friction workflows created bottlenecks and made it harder to keep content current.</p></div>
-    <div class="insight"><span>03</span><strong>Initial migration</strong><p>Setting up, cleaning, and structuring a new Library required significant manual effort.</p></div>
-    <div class="insight"><span>04</span><strong>Content drift</strong><p>Changes made in projects and external sources created conflicts, gaps, and outdated Library content.</p></div>
-  </div>
-
-
-  <blockquote>Some customers were already exporting their Libraries, running them through external AI, and coordinating cleanup in spreadsheets before re-uploading. The maintenance problem was real and users were already inventing their own workarounds.</blockquote>
+<h2>The challenge: better content, better AI</h2>
+<p>Loopio helps teams answer RFPs and security questionnaires from a Library of approved content. As Libraries grew, outdated, duplicated, and conflicting answers accumulated. Maintenance was time-consuming, and unreliable source content undermined both search and AI-generated answers.</p>
+<div class="goal-grid">
+<div><span class="eyebrow">User problem</span><p>Library managers needed to find and resolve issues without manually investigating every answer.</p></div>
+<div><span class="eyebrow">Business problem</span><p>Library maintenance was the second most-cited churn reason. Better content quality was also critical to AI performance.</p></div>
+</div>
+<figure class="figure figure--medium"><div class="figure__frame"><img alt="Cycle of manual upkeep, content decay, disengagement, and declining trust" loading="lazy" src="img/problem-cycle.png"/></div><figcaption>Poor Library quality created an ongoing cycle of manual effort and eroding trust.</figcaption></figure>
+<p>One customer removed 76% of their Library in a six-month cleanup; their AI answer acceptance rate then improved by 26%. The opportunity was clear, but <strong>which maintenance problem should an agent solve, and how much responsibility should it take?</strong></p>
+<h3>Four opportunities emerged from discovery</h3>
+<p>Customer feedback, UserVoice, and internal teams pointed to four recurring problems.</p>
+<div class="insight-grid insight-grid--2">
+<div class="insight"><span>01</span><strong>Library bloat and decay</strong><p>Duplicate, outdated, and conflicting content accumulated over time.</p></div>
+<div class="insight"><span>02</span><strong>SME review friction</strong><p>Subject matter experts struggled to keep pace with reviews.</p></div>
+<div class="insight"><span>03</span><strong>Initial migration</strong><p>New customers faced substantial work preparing content for import.</p></div>
+<div class="insight"><span>04</span><strong>Content drift</strong><p>Changes made elsewhere didn't reliably flow back to the Library.</p></div>
+</div>
+</section>
+<section class="case-section">
+<h2>Finding the right problem for an agent</h2>
+<p>Rather than jump straight to a solution, we created four low-fidelity concepts addressing different maintenance needs. In customer sessions, we asked people to rank their pain points, discuss their experience with AI, and react to relevant concepts.</p>
+<figure class="figure figure--medium"><div class="figure__frame"><img alt="Early automated Library cleanup concept" loading="lazy" src="img/librarianconcept1.png"/></div><figcaption>Early concept: automated Library cleanup.</figcaption></figure>
+<figure class="figure figure--medium"><div class="figure__frame"><img alt="Early initial Library building concept" loading="lazy" src="img/librarianconcept2.png"/></div><figcaption>Another direction explored: helping customers build their initial Library.</figcaption></figure>
+<h3>Why cleanup won</h3>
+<p>Library bloat and decay was the top-ranked pain point for 6 of 10 customers. It was a strong fit for AI: the Librarian could do the investigative work, while a human made consequential decisions.</p>
+<div class="problem-grid problem-grid--three">
+<div class="problem-card"><strong>Stale</strong><p>Content that might no longer be accurate.</p></div>
+<div class="problem-card"><strong>Duplicates</strong><p>Entries answering substantially the same question.</p></div>
+<div class="problem-card"><strong>Conflicts</strong><p>Entries making incompatible factual claims.</p></div>
+</div>
+<figure class="figure figure--medium"><div class="figure__frame"><img alt="Digital intern mental model: AI does investigative work with human supervision" loading="lazy" src="img/digital-intern.png"/></div><figcaption>Research pointed toward a supervised assistant: useful, but fallible.</figcaption></figure>
+</section>
+<section class="case-section">
+<h2>Defining what the Librarian should do</h2>
+<p>Across all three cleanup problems, I defined a consistent model: <strong>investigate → explain → recommend → act with approval</strong>. Longer term, the Librarian could help prevent issues before they entered the Library.</p>
+<div class="decision-list">
+<div class="decision"><strong>Investigate and explain</strong><p>Identify an issue and show the relevant content, reasoning, and evidence.</p></div>
+<div class="decision"><strong>Recommend, don't silently change</strong><p>Suggest a resolution, but leave updates, merges, and deletions to the reviewer.</p></div>
+<div class="decision"><strong>Support different levels of trust</strong><p>Make it easy to act quickly or inspect more detail before deciding.</p></div>
+</div>
 </section>
 
-<section class="case-section">
-  <h2>Testing where AI could actually help</h2>
-  <p>We explored five concepts rather than assuming every Library problem needed an agent. The goal was to understand where AI could remove meaningful work, and where a simpler product fix would be more appropriate.</p>
-
-
-    <figure><img src="img/librarianconcept1.png" alt="Automated Library Cleanup concept"><figcaption>Cleanup + maintenance</figcaption></figure>
-    <figure><img src="img/librarianconcept2.png" alt="Automated initial Library building concept"><figcaption>Initial migration</figcaption></figure>
-
-</section>
 
 <section class="case-section">
-  <span class="eyebrow">Choosing a direction</span>
-  <h2>Cleanup gave us the clearest place to start</h2>
-  <p>Concept testing gave us a clear decision point. Library bloat and decay was the top-ranked Library pain point for 6 of 10 customers, and cleanup matched the role users were comfortable giving AI: do the investigative work, explain the issue, and recommend what to do next.</p>
 
-  <p>We narrowed the first release around three recurring problems that directly undermine trust in the Library:</p>
-  <div class="problem-grid problem-grid--three">
-    <div class="problem-card"><strong>Duplicates</strong><p>Multiple entries saying the same thing made it harder to know which answer to trust.</p></div>
-    <div class="problem-card"><strong>Stale content</strong><p>Outdated language, old claims, and neglected reviews could quietly become unreliable.</p></div>
-    <div class="problem-card"><strong>Conflicts</strong><p>Contradictory answers forced users to investigate which claim was actually correct.</p></div>
+<h2>An AI agent doesn't have to be a chatbot</h2>
+<p>Once we knew <em>what</em> the Librarian should solve, I explored <em>how</em> it should fit into the workflow. The same intelligence could be delivered through three very different interaction models.</p>
+<div class="section-intro">
+  <h3>01 / Chat-based agent</h3>
+  <p>Flexible for questions and explanations, but difficult to surface and work through a large number of existing issues. The amount of content needed for comparisons wouldn't scale well in chat.</p>
+</div>
+<figure class="figure figure--medium">
+  <div class="figure__frame">
+    <img src="img/librarian-chat-concept.png" alt="Early concept of a conversational Librarian agent" loading="lazy" decoding="async">
   </div>
-
-  <div class="decision-callout">
-    <strong>The problem to solve</strong>
-    <p>Help Library managers quickly understand what is wrong, why it was flagged, and what action will make the Library more trustworthy, without asking AI to make irreversible decisions for them.</p>
+</figure>
+<div class="section-intro">
+  <h3>02 / Embedded in projects</h3>
+  <p>Useful for catching issues as people worked, but couldn't provide a complete view of existing Library maintenance.</p>
+</div>
+<figure class="figure figure--medium">
+  <div class="figure__frame">
+    <img src="img/librarian-embedded-concept.png" alt="Early concept of Librarian assistance embedded in project work" loading="lazy" decoding="async">
   </div>
-</section>
-
-<section class="case-section">
-  <h2>Key product decisions</h2>
-  <p>The testing changed what “agentic” meant for this product. Users wanted the Librarian to do more thinking, not more acting.</p>
-
-  <div class="decision-list">
-    <div class="decision"><strong>AI assistance, not autonomy</strong><p>Find issues and recommend a resolution, but require human approval before high-stakes changes.</p></div>
-    <div class="decision"><strong>Show the evidence</strong><p>Every recommendation needed a reason, supporting sources, and enough context to make a decision.</p></div>
-    <div class="decision"><strong>Prioritize, don’t create a backlog</strong><p>Surface the most useful work first instead of overwhelming admins with thousands of issues.</p></div>
+</figure>
+<div class="section-intro">
+  <h3>03 / Structured maintenance queue</h3>
+  <p>Supported a backlog of issues, rich comparisons, and persistent review state, while allowing the Librarian to do the investigation and recommend actions.</p>
+</div>
+<figure class="figure figure--medium">
+  <div class="figure__frame">
+    <img src="img/librarian-queue-concept.png" alt="Early concept of a structured Librarian maintenance queue" loading="lazy" decoding="async">
   </div>
-
-  <figure class="figure figure--medium">
-    <div class="figure__frame"><img src="img/digital-intern.png" alt="Research synthesis describing the agent as a supervised digital intern" loading="lazy" decoding="async"></div>
-    <figcaption>The mental model that emerged from concept testing: helpful and fallible, with a human supervisor.</figcaption>
-  </figure>
-</section>
-
-<section class="case-section">
-  <h2>Defining how the Librarian should help</h2>
-  <p>Once the problem was narrowed, I defined a shared interaction model so duplicates, stale content, and conflicts would feel like one coherent system rather than three separate tools.</p>
-
-  <div class="decision-list">
-    <div class="decision"><strong>Investigate</strong><p>Detect meaningful issues using content, metadata, usage, review history, and source information.</p></div>
-    <div class="decision"><strong>Explain</strong><p>Show the exact signal, conflicting text, duplicate overlap, or outdated language that triggered the issue.</p></div>
-    <div class="decision"><strong>Recommend</strong><p>Suggest what to keep, update, merge, delete, or route to a reviewer — and explain why.</p></div>
-    <div class="decision"><strong>Act</strong><p>Let users edit the recommendation, choose another path, dismiss it, or send it to someone else.</p></div>
-    <div class="decision"><strong>Prevent</strong><p>Use what the Librarian learns to warn about duplicates, conflicts, and missing metadata upstream.</p></div>
+</figure>
+<figure class="figure figure--medium">
+  <div class="figure__frame" style="overflow-x:auto;padding:0.55rem 0.85rem;">
+    <table style="width:100%;border-collapse:collapse;text-align:center;font-size:0.82rem;line-height:1.35;" aria-label="Comparison of agent interaction models">
+      <thead><tr style="border-bottom:1px solid #ccc"><th style="padding:0.55rem 0.45rem;text-align:left;min-width:175px;">Evaluation criteria</th><th style="padding:0.55rem 0.35rem;">Chat</th><th style="padding:0.55rem 0.35rem;">In project</th><th style="padding:0.55rem 0.35rem;">Queue</th></tr></thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #ddd"><td style="padding:0.55rem 0.45rem;text-align:left;">Proactively surfaces existing issues</td><td>No</td><td>Partial</td><td>✓</td></tr>
+        <tr style="border-bottom:1px solid #ddd"><td style="padding:0.55rem 0.45rem;text-align:left;">Supports backlog / triage</td><td>No</td><td>No</td><td>✓</td></tr>
+        <tr style="border-bottom:1px solid #ddd"><td style="padding:0.55rem 0.45rem;text-align:left;">Rich comparison context</td><td>Partial</td><td>Partial</td><td>✓</td></tr>
+        <tr style="border-bottom:1px solid #ddd"><td style="padding:0.55rem 0.45rem;text-align:left;">Persistent workflow state</td><td>No</td><td>No</td><td>✓</td></tr>
+        <tr><td style="padding:0.55rem 0.45rem;text-align:left;">Good for explanation</td><td>✓</td><td>Partial</td><td>Partial</td></tr>
+      </tbody>
+    </table>
   </div>
-</section>
+  <figcaption>Evaluating which interaction model best supported the work Library managers needed to do.</figcaption>
+</figure>
+<div class="decision-callout"><strong>Why I chose the queue</strong><p>Library cleanup involved reviewing large volumes of content, comparing evidence, and tracking decisions over time. That wouldn't scale well as a conversation. A queue gave the work structure; conversational AI could still help explain recommendations when needed.</p></div>
+</section><section class="case-section">
 
-<section class="case-section">
-  <span class="eyebrow">The pivot</span>
-  <h2>I realized I was designing another queue.</h2>
-  <p>My first direction was a broader Cleanup Agent that would replace the existing duplicate-cleanup tool and add stale-content and conflict resolution. But while designing it, I realized the deeper problem: Loopio already split maintenance across Reviews from Library, Reviews from Projects, and Duplicate Cleanup. A better cleanup tool still left users managing multiple places.</p>
-
-  <p>So I stepped back and redesigned the information architecture instead.</p>
-
-  <div class="pivot" aria-label="Before and after maintenance model">
-    <div class="pivot-panel">
-      <p class="pivot-title">Before</p>
-      <div class="queue-list">
-        <div class="queue-item">Reviews from Library</div>
-        <div class="queue-item">Reviews from Projects</div>
-        <div class="queue-item">Duplicate cleanup</div>
-      </div>
-    </div>
-    <div class="pivot-arrow">→</div>
-    <div class="pivot-panel pivot-panel--after">
-      <p class="pivot-title">After</p>
-      <div class="unified-review-box">
-        <strong>One Reviews experience</strong>
-        <p>Project suggestions · Scheduled reviews · Library cleanup</p>
-        <span>Librarian assistance across every review</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- OPTIONAL IMAGE TO ADD LATER:
+<h2>The pivot: I was designing another maintenance queue</h2>
+<p>The queue was the right interaction model, but my initial standalone Cleanup Agent would have introduced another destination. Loopio already divided maintenance across Reviews from Library, Reviews from Projects, and Duplicate Cleanup.</p>
+<p>Rather than add a fourth place to work, I proposed one unified Reviews experience, with Librarian assistance woven into existing and new review types.</p>
+<div aria-label="Before and after maintenance model" class="pivot">
+<div class="pivot-panel">
+<p class="pivot-title">Before</p>
+<div class="queue-list">
+<div class="queue-item">Reviews from Library</div>
+<div class="queue-item">Reviews from Projects</div>
+<div class="queue-item">Duplicate cleanup</div>
+</div>
+</div>
+<div class="pivot-arrow">→</div>
+<div class="pivot-panel pivot-panel--after">
+<p class="pivot-title">After</p>
+<div class="unified-review-box">
+<strong>One Reviews experience</strong>
+<p>Project suggestions · Scheduled reviews · Library cleanup</p>
+<span>Librarian assistance across every review</span>
+</div>
+</div>
+</div>
+<!-- OPTIONAL IMAGE TO ADD LATER:
        Replace the pivot diagram above with a polished before/after IA visual if you make one.
        Suggested filename: img/librarian-before-after.png -->
 </section>
-
 <section class="case-section">
-  <h2>The redesigned Library maintenance system</h2>
-  <p>The Librarian became a layer of decision support across every kind of review — not a separate tool users had to remember to visit.</p>
-
-  <h3>One queue for everything that needs attention</h3>
-  <p>Users could move between Project suggestions, Scheduled reviews, and Library cleanup without leaving the Reviews experience. Cleanup issues appeared alongside existing work with type, source, owner, and due-date context.</p>
-  <figure class="figure figure--wide">
-    <div class="figure__frame"><img src="img/reviewqueue.png" alt="Unified Reviews queue" loading="lazy" decoding="async"></div>
-  </figure>
-
-  <h3>The Librarian gave every review a second set of eyes</h3>
-  <p>Recommendations were paired with expandable reasoning and linked sources. The agent could agree with a human suggestion, flag a concern, or surface context the reviewer might otherwise have to hunt down manually.</p>
-  <figure class="figure figure--wide">
-    <div class="figure__frame"><img src="img/librarian-recommendation.png" alt="Librarian recommendation with reasoning" loading="lazy" decoding="async"></div>
-    <figcaption>The recommendation is visible, explainable, and still leaves the final decision with the user.</figcaption>
-  </figure>
-
-
-  <h3>Stale content: make outdated answers faster to review</h3>
-  <p>The Librarian surfaced stale content with a clear reason for the flag and a suggested update, helping reviewers quickly understand what changed and what to do next. They could edit or approve the update, assign it for review, delete the entry, or dismiss the issue.</p>
-
-  <figure class="figure figure--wide">
-    <div class="figure__frame"><img src="img/librarian-stale.png" alt="Stale content" loading="lazy" decoding="async"></div>
-  </figure>
-
-  <h3>Duplicates: build the merged result before removing anything</h3>
-  <p>The Librarian picked a recommended surviving entry based on usage, completeness, and wording, then pulled unique details from the duplicates into a proposed final answer. Users could edit the result, inspect every entry that would be removed, and review the merge before confirming it.</p>
-
-  <figure class="figure figure--wide">
-    <div class="figure__frame"><img src="img/librarian-duplicates.png" alt="Duplicate content" loading="lazy" decoding="async"></div>
-  </figure>
-
-
-  <h3>Conflicts: resolve the claim, not just the entries</h3>
-  <p>For conflicting content, I grouped entries around the claims they made. The Librarian preselected the claim it believed was correct using source evidence and review recency, but users could choose another claim, edit individual entries, mark something as not a conflict, or review exactly what would change before applying it.</p>
-
-    <figure class="figure figure--wide">
-    <div class="figure__frame"><img src="img/librarian-conflicts.png" alt="conflicting content" loading="lazy" decoding="async"></div>
-  </figure>
-
-
-    <h3>Project suggestions: turn project work into better Library content</h3>
-  <p>When users answer questions in a project, they can suggest that new or updated content be added back to the Library for future reuse. The Librarian reviewed those suggestions against what was already in the Library: checking whether the answer should update an existing entry, create a new one, or be rejected because it duplicated or conflicted with existing content. If a linked source contradicted the suggestion, the Librarian could recommend keeping the current Library content instead.</p>
-
-
-  <figure class="figure figure--wide">
-    <div class="figure__frame"><img src="img/librarian-project-suggestion.png" alt="Project suggestion" loading="lazy" decoding="async"></div>
-  </figure>
-
-
-  <h3>Scheduled reviews: make existing work smarter too</h3>
-  <p>Scheduled reviews were already a manual maintenance task. The Librarian acted like an assistant inside that existing workflow — surfacing relevant context, checking for potential issues, and recommending what to do next so reviewers could make the same human decision with less investigation.</p>
-
-    <figure class="figure figure--wide">
-    <div class="figure__frame"><img src="img/librarian-scheduled-review.png" alt="Project suggestion" loading="lazy" decoding="async"></div>
-  </figure>
+<h2>Designing the review experience</h2>
+<p>Across the high-fidelity screens, I designed for two ways of working: reviewers could move quickly by following the Librarian’s recommendation, or dig into sources and change the proposed action when they disagreed. The primary action followed the recommendation, but users could still edit content and choose a different resolution.</p>
+<h3>One queue, with enough context to prioritize</h3>
+<p>I brought scheduled reviews, project suggestions, and cleanup issues together, while keeping type, source, assignee, and due date visible. The goal was to help managers decide what to tackle next without opening each item or switching tools.</p>
+<figure class="figure figure--wide">
+<div class="figure__frame"><img alt="Unified Reviews queue" decoding="async" loading="lazy" src="img/reviewqueue.png"/></div>
+</figure>
+<h3>Recommendations first, evidence when needed</h3>
+<p>The Librarian’s recommendation and corresponding primary action are immediately visible, so routine reviews can move quickly. Sources and reasoning are available for anyone who wants to verify the suggestion, while editing and alternative actions remain accessible. The AI provides a default, not a mandate.</p>
+<figure class="figure figure--wide">
+<div class="figure__frame"><img alt="Librarian recommendation with reasoning" decoding="async" loading="lazy" src="img/librarian-recommendation.png"/></div>
+<figcaption>The recommendation is visible, explainable, and still leaves the final decision with the user.</figcaption>
+</figure>
+<h3>Stale content: make the recommended update quick, but optional</h3>
+<p>The Librarian explains why an answer may be outdated and puts its suggested resolution on the fastest path. Reviewers can inspect sources, edit the answer, delegate it, or dismiss the issue instead of accepting the recommendation.</p>
+<figure class="figure figure--wide">
+<div class="figure__frame"><img alt="Stale content" decoding="async" loading="lazy" src="img/librarian-stale.png"/></div>
+</figure>
+<h3>Duplicates: make consolidation easy to review</h3>
+<p>Because duplicate review is fundamentally a comparison task, I tested both stacked and side-by-side column layouts. Users preferred columns because they made similarities and differences easier to scan. I also explored having the Librarian generate a merged answer that preserved unique information from duplicates. Customers liked the concept, but we scoped it out to ship sooner. The more focused approach recommended which entry to keep while letting users inspect the duplicates and control the resolution.</p>
+<figure class="figure figure--wide">
+<div class="figure__frame"><img alt="Duplicate content" decoding="async" loading="lazy" src="img/librarian-duplicates.png"/></div>
+</figure>
+<h3>Conflicts: resolve facts, not just individual answers</h3>
+<p>We were moving toward a fact-based Library where AI could understand claims about a company. The same outdated claim might appear in several answers, so simply choosing a winning entry wouldn’t solve the underlying inconsistency. I grouped entries by competing claims, allowing users to evaluate the evidence, choose the correct fact, and review the affected answers.</p>
+<figure class="figure figure--wide">
+<div class="figure__frame"><img alt="conflicting content" decoding="async" loading="lazy" src="img/librarian-conflicts.png"/></div>
+</figure>
+<h3>Project suggestions: check new answers against existing knowledge</h3>
+<p>Today, users have to investigate whether a new answer from a project should be added to the Library, including whether it duplicates or conflicts with existing knowledge. The Librarian could take on that investigation, then recommend creating a new entry, updating an existing one, or leaving the Library unchanged, while keeping the final decision with the reviewer.</p>
+<figure class="figure figure--wide">
+<div class="figure__frame"><img alt="Project suggestion" decoding="async" loading="lazy" src="img/librarian-project-suggestion.png"/></div>
+</figure>
+<h3>Scheduled reviews: reduce investigation, not accountability</h3>
+<p>Scheduled reviews also require manual investigation. Reviewers need to check whether content is still accurate, examine relevant context, and decide what should change. The Librarian could do much of that investigation upfront, surface the evidence, and recommend an action, so reviewers can move faster while remaining responsible for what is approved.</p>
+<figure class="figure figure--wide">
+<div class="figure__frame"><img alt="Project suggestion" decoding="async" loading="lazy" src="img/librarian-scheduled-review.png"/></div>
+</figure>
 </section>
-
 <section class="case-section">
-  <h2>Testing shaped the solution</h2>
-  <p>I iterated on the prototype across multiple usability sessions with customers and internal users. Testing validated the unified Reviews direction, but it also changed the details of how the Librarian needed to behave.</p>
-
-  <div class="insight-grid insight-grid--3">
-    <div class="insight"><span>01</span><strong>Make evidence easy to inspect</strong><p>I increased the visibility of sources, reasoning, and the exact text behind a recommendation so users could decide without leaving the workflow to investigate.</p></div>
-    <div class="insight"><span>02</span><strong>Keep actions explicit</strong><p>Merge, delete, update, and conflict-resolution flows became more reviewable, with clearer previews of what would change before anything was applied.</p></div>
-    <div class="insight"><span>03</span><strong>Assist rather than take over</strong><p>The Librarian’s language and interaction model were refined around recommendations and context, while the reviewer stayed responsible for the final decision.</p></div>
-  </div>
-
-  <div class="quote-grid">
-    <div class="quote-card"><p>“I like that it’s all in one queue instead of jumping between different areas.”</p></div>
-    <div class="quote-card"><p>“I wouldn’t want it to just update things automatically.”</p></div>
-    <div class="quote-card"><p>“If it shows me the source and why it’s suggesting the change, I’d feel comfortable using it.”</p></div>
-  </div>
-
+<h2>What usability testing reinforced</h2>
+<p>I tested whether customers could understand an issue, evaluate the Librarian's recommendation, inspect the evidence, and confidently choose what happened next.</p>
+<div class="insight-grid insight-grid--3">
+<div class="insight"><span>01</span><strong>One place to work</strong><p>Customers welcomed having review and cleanup tasks together instead of moving between areas.</p></div>
+<div class="insight"><span>02</span><strong>Visible evidence</strong><p>Sources and reasoning were essential to judging whether an AI recommendation was credible.</p></div>
+<div class="insight"><span>03</span><strong>Human approval</strong><p>Customers wanted help deciding, but weren't comfortable with automatic updates to the Library.</p></div>
+</div>
+<div class="quote-grid">
+<div class="quote-card"><p>“I like that it’s all in one queue instead of jumping between different areas.”</p></div>
+<div class="quote-card"><p>“If it shows me the source and why it’s suggesting the change, I’d feel comfortable using it.”</p></div>
+<div class="quote-card"><p>“I wouldn’t want it to just update things automatically.”</p></div>
+</div>
 </section>
-
 <section class="case-section case-section--outcome">
-  <span class="eyebrow">Outcome</span>
-  <h2>From cleanup tool to a smarter maintenance system</h2>
-  <p>What started as a narrow cleanup agent evolved into one Reviews experience that made both new and existing maintenance work smarter.</p>
-  <p>The final direction brought scheduled reviews, project suggestions, and Library cleanup into one place, with the Librarian acting as an assistant across each workflow. Research and usability testing consistently reinforced the same model: surface the right context, explain the recommendation, and keep the user in control.</p>
-  <div class="status-card">
-    <strong>Ready for implementation</strong>
-    <p>By the end of the project, the concept had been validated with customers and was being scoped with engineering for implementation when I left Loopio.</p>
-  </div>
-</section>
 
+<h2>A phased path from concept to product</h2>
+<p>We scoped implementation in stages: first build unified Reviews using existing infrastructure, then add cleanup workflows (duplicates, stale content, conflicts), and finally bring Librarian recommendations into existing reviews as agent capabilities matured.</p>
+<div class="status-card"><strong>Stage reached</strong><p>The unified Reviews design reached engineering handoff. The broader agent experience had been tested with customers and was being scoped when I left Loopio; it wasn't a fully launched product.</p></div>
+</section>
 <section class="case-section">
-  <span class="eyebrow">Future vision</span>
-  <h2>From review assistant to conversational Librarian</h2>
-  <p>The first release focused on helping reviewers make better decisions with less investigation. My longer-term vision is to make the Librarian an assistant users could talk to, then move beyond individual reviews to prevent issues and handle more routine work as trust grew.</p>
 
-  <div class="section-intro">
-    <h3>Bring conversation into the Reviews workflow</h3>
-    <p>Instead of a static recommendation, the Librarian could offer contextual conversation alongside a review. Users could ask why something was flagged, explore the evidence, refine a proposed answer, and take action without leaving the workflow. This would alighn with Loopio's broader vision of chat-based agents across the product.</p>
-  </div>
-  <figure class="figure figure--medium">
-    <div class="figure__frame"><img src="img/librarian-conversational-vision.png" alt="Concept for a conversational Librarian sidebar inside a project review, with explanations, sources, and suggested follow-up questions" loading="lazy" decoding="async"></div>
-    <figcaption>Concept: in-context assistance that lets reviewers explore and act on recommendations.</figcaption>
-  </figure>
-
-  <div class="section-intro">
-    <h3>Make maintenance more proactive</h3>
-    <p>Over time, the Librarian could prioritize high-impact maintenance, catch duplicates and conflicts earlier in the workflow, and coordinate follow-up work across owners and reviewers — preventing issues instead of only cleaning them up later.</p>
-  </div>
-  <figure class="figure figure--medium">
-    <div class="figure__frame"><img src="img/librarian-proactive-vision.png" alt="Concept for an inline warning that a similar Library entry already exists before new content is added" loading="lazy" decoding="async"></div>
-    <figcaption>Concept: flag potential duplicates before they enter the Library.</figcaption>
-  </figure>
-
-  <div class="section-intro">
-    <h3>Increase autonomy as the Librarian earns trust</h3>
-    <p>Not every action needs the same oversight. The Librarian could start by suggesting actions for users to approve, then gradually automate low-risk, reversible tasks. High-impact content changes would remain reviewable, with users in control.</p>
-  </div>
-  <figure class="figure figure--small">
-    <div class="figure__frame"><img src="img/agentvision.png" alt="Future autonomy model progressing from assistant to gatekeeper to manager as trust increases" loading="lazy" decoding="async"></div>
-    <figcaption>A phased approach to autonomy, based on the risk of each action and the trust earned over time.</figcaption>
-  </figure>
+<h2>Where the interaction model could go next</h2>
+<p>Choosing structured UI first didn’t mean abandoning conversation. My future vision combined the strengths of both, while increasing autonomy only where risk and trust justified it.</p>
+<div class="section-intro">
+<h3>Bring conversation into the Reviews workflow</h3>
+<p>A contextual chat alongside each review could let users ask follow-up questions, inspect evidence, refine recommendations, and act without losing their place. Conversation would complement the structured workflow, not replace it.</p>
+</div>
+<figure class="figure figure--medium">
+<div class="figure__frame"><img alt="Concept for a conversational Librarian sidebar inside a project review, with explanations, sources, and suggested follow-up questions" decoding="async" loading="lazy" src="img/librarian-conversational-vision.png"/></div>
+<figcaption>Concept: in-context assistance that lets reviewers explore and act on recommendations.</figcaption>
+</figure>
+<div class="section-intro">
+<h3>Make maintenance more proactive</h3>
+<p>Over time, the Librarian could prioritize high-impact maintenance, catch duplicates and conflicts earlier in the workflow, and coordinate follow-up work across owners and reviewers, preventing issues instead of only cleaning them up later.</p>
+</div>
+<figure class="figure figure--medium">
+<div class="figure__frame"><img alt="Concept for an inline warning that a similar Library entry already exists before new content is added" decoding="async" loading="lazy" src="img/librarian-proactive-vision.png"/></div>
+<figcaption>Concept: flag potential duplicates before they enter the Library.</figcaption>
+</figure>
+<div class="section-intro">
+<h3>Increase autonomy as the Librarian earns trust</h3>
+<p>Not every action needs the same oversight. The Librarian could start by suggesting actions for users to approve, then gradually automate low-risk, reversible tasks. High-impact content changes would remain reviewable, with users in control.</p>
+</div>
+<figure class="figure figure--small">
+<div class="figure__frame"><img alt="Future autonomy model progressing from assistant to gatekeeper to manager as trust increases" decoding="async" loading="lazy" src="img/agentvision.png"/></div>
+<figcaption>A phased approach to autonomy, based on the risk of each action and the trust earned over time.</figcaption>
+</figure>
 </section>
-
-</main>
-
+<section class="case-section"><h2>Design the interaction for the job, not the technology</h2><p>This project reinforced that an agent doesn't need to be chat-first. For triage, comparisons, persistent state, and high-impact decisions, structured UI can be the better interface. Conversation is valuable when users need flexibility or explanation, and automation should expand as trust is earned.</p></section></main>
 <footer class="shell next-project">
-  <div>
-    <small>Next project</small>
-    <a class="next-project__title" href="analytics.html">Orum — Analytics →</a>
-  </div>
-  <a href="index.html">All work</a>
+<div>
+<small>Next project</small>
+<a class="next-project__title" href="analytics.html">Orum: Analytics →</a>
+</div>
+<a href="index.html">All work</a>
 </footer>
-
-</body>
+</div></body>
 </html>
